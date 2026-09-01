@@ -1,0 +1,2717 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novel Shop - Blue App</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial,"Noto Sans Thai",sans-serif;
+  background:#dcefff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+
+/* =========================
+   iPHONE
+========================= */
+
+.iphone{
+  width:390px;
+  height:844px;
+  background:#fff;
+  border-radius:45px;
+  box-shadow:0 10px 35px rgba(0,0,0,.25);
+  overflow:hidden;
+  position:relative;
+  border:8px solid #111;
+}
+
+.screen{
+  height:100%;
+  overflow-y:auto;
+  padding-bottom:85px;
+}
+
+/* =========================
+   STATUS BAR
+========================= */
+
+.status-bar{
+  height:45px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 22px;
+  font-size:14px;
+  font-weight:bold;
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 20px;
+}
+
+.header h1{
+  margin:0;
+  font-size:22px;
+}
+
+.header p{
+  margin:4px 0 0;
+  font-size:13px;
+  color:#777;
+}
+
+.profile-container{
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+
+.coin-balance{
+  background:#e8f5ff;
+  border:1px solid #2196f3;
+  padding:5px 8px;
+  border-radius:12px;
+  font-size:10px;
+  font-weight:bold;
+  color:#1976d2;
+  cursor:pointer;
+}
+
+.profile{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#b9e1ff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:20px;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search{
+  margin:10px 20px;
+  background:#eef8ff;
+  border-radius:15px;
+  padding:12px 15px;
+  display:flex;
+  gap:10px;
+  color:#777;
+}
+
+.search input{
+  border:none;
+  outline:none;
+  background:transparent;
+  width:100%;
+  font-size:14px;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section{
+  padding:10px 20px;
+}
+
+.section-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+.section-title h2{
+  font-size:18px;
+  margin:0;
+}
+
+/* =========================
+   CATEGORY
+========================= */
+
+.categories{
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+  padding-bottom:5px;
+}
+
+.category{
+  min-width:75px;
+  padding:10px 8px;
+  background:#e8f5ff;
+  border-radius:12px;
+  text-align:center;
+  font-size:12px;
+  cursor:pointer;
+  white-space:nowrap;
+  color:#1976d2;
+}
+
+.category.active{
+  background:#2196f3;
+  color:white;
+}
+
+/* =========================
+   NOVEL
+========================= */
+
+.novel-list{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  min-height:100px;
+  padding-bottom:10px;
+}
+
+.novel{
+  min-width:155px;
+  width:155px;
+  background:white;
+  border-radius:15px;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  flex-shrink:0;
+  position:relative;
+}
+
+.new-writer-badge{
+  position:absolute;
+  top:6px;
+  left:6px;
+  background:#28a745;
+  color:white;
+  font-size:9px;
+  padding:3px 6px;
+  border-radius:8px;
+  font-weight:bold;
+  z-index:2;
+}
+
+.cover{
+  height:150px;
+  background:#d5edff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:45px;
+}
+
+.novel-info{
+  padding:10px;
+  display:flex;
+  flex-direction:column;
+  flex-grow:1;
+  justify-content:space-between;
+}
+
+.novel-info h3{
+  margin:0;
+  font-size:13px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.author{
+  font-size:11px;
+  color:#777;
+  margin:3px 0;
+}
+
+.rating{
+  font-size:11px;
+  color:#d48a00;
+}
+
+.price{
+  font-size:13px;
+  font-weight:bold;
+  margin-top:4px;
+  color:#1976d2;
+}
+
+.buy-btn{
+  width:100%;
+  margin-top:8px;
+  border:none;
+  border-radius:9px;
+  background:#2196f3;
+  color:white;
+  padding:9px;
+  cursor:pointer;
+  font-size:11px;
+}
+
+.read-btn{
+  background:#28a745;
+}
+
+.buy-btn:active{
+  opacity:.8;
+}
+
+/* =========================
+   TAB
+========================= */
+
+.tab-content{
+  display:none;
+}
+
+.tab-content.active{
+  display:block;
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.no-data{
+  text-align:center;
+  color:#888;
+  padding:35px 10px;
+  width:100%;
+}
+
+.no-data-icon{
+  font-size:45px;
+  margin-bottom:10px;
+}
+
+/* =========================
+   CART
+========================= */
+
+.cart-item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px;
+  background:#fff;
+  border-radius:12px;
+  margin-bottom:10px;
+  box-shadow:0 2px 6px rgba(0,0,0,.06);
+}
+
+.cart-item-details{
+  flex:1;
+  padding-right:8px;
+}
+
+.cart-item-details h4{
+  margin:0;
+  font-size:13px;
+}
+
+.cart-item-details p{
+  margin:4px 0 0;
+  font-size:11px;
+  color:#777;
+}
+
+.remove-btn{
+  background:#ff4d4d;
+  color:white;
+  border:none;
+  border-radius:7px;
+  padding:6px 10px;
+  cursor:pointer;
+  font-size:11px;
+}
+
+.cart-summary{
+  background:#f4faff;
+  padding:15px;
+  border-radius:15px;
+  margin-top:15px;
+}
+
+.payment-options{
+  margin-top:15px;
+}
+
+.payment-option{
+  display:flex;
+  align-items:center;
+  padding:12px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  margin-bottom:8px;
+  cursor:pointer;
+  font-size:12px;
+}
+
+.payment-option.selected{
+  border-color:#2196f3;
+  background:#e8f5ff;
+  color:#1976d2;
+}
+
+.checkout-btn{
+  width:100%;
+  background:#28a745;
+  color:white;
+  border:none;
+  padding:12px;
+  border-radius:10px;
+  font-size:15px;
+  font-weight:bold;
+  margin-top:15px;
+  cursor:pointer;
+}
+
+/* =========================
+   ORDER
+========================= */
+
+.order-card{
+  background:white;
+  border-radius:15px;
+  padding:15px;
+  margin-bottom:12px;
+  box-shadow:0 2px 7px rgba(0,0,0,.08);
+}
+
+.order-header{
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px solid #eee;
+  padding-bottom:9px;
+  margin-bottom:10px;
+}
+
+.order-id{
+  font-size:13px;
+  font-weight:bold;
+}
+
+.order-status{
+  font-size:11px;
+  color:#28a745;
+  font-weight:bold;
+}
+
+.order-product{
+  background:#f4faff;
+  padding:9px;
+  border-radius:9px;
+  font-size:11px;
+  margin-top:6px;
+}
+
+.order-total{
+  border-top:1px solid #eee;
+  padding-top:10px;
+  margin-top:10px;
+  text-align:right;
+  font-weight:bold;
+  font-size:15px;
+  color:#1976d2;
+}
+
+/* =========================
+   ACCOUNT
+========================= */
+
+.account-card{
+  background:#f4faff;
+  border-radius:18px;
+  padding:20px;
+  text-align:center;
+  margin-top:10px;
+}
+
+.account-avatar{
+  width:85px;
+  height:85px;
+  border-radius:50%;
+  background:#b9e1ff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:42px;
+  margin:0 auto 12px;
+}
+
+.coin-card{
+  background:#fff;
+  border:1px solid #b8ddfa;
+  border-radius:15px;
+  padding:15px;
+  margin:15px 0;
+}
+
+.coin-number{
+  font-size:28px;
+  color:#1976d2;
+  font-weight:bold;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+  display:none;
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  z-index:100;
+  justify-content:center;
+  align-items:flex-end;
+}
+
+.modal.active{
+  display:flex;
+}
+
+.modal-content{
+  background:#fff;
+  width:100%;
+  max-height:88%;
+  border-radius:25px 25px 0 0;
+  padding:20px;
+  overflow-y:auto;
+  position:relative;
+  animation:slideUp .3s ease-out;
+}
+
+@keyframes slideUp{
+  from{
+    transform:translateY(100%);
+  }
+  to{
+    transform:translateY(0);
+  }
+}
+
+.close-modal{
+  position:absolute;
+  top:12px;
+  right:20px;
+  font-size:25px;
+  cursor:pointer;
+  color:#777;
+}
+
+/* =========================
+   READER
+========================= */
+
+.reader-text{
+  font-size:13px;
+  line-height:1.7;
+  color:#333;
+  background:#f4faff;
+  padding:12px;
+  border-radius:10px;
+  margin:15px 0;
+  max-height:160px;
+  overflow-y:auto;
+}
+
+.gift-grid{
+  display:flex;
+  gap:10px;
+  margin:10px 0;
+}
+
+.gift-card{
+  flex:1;
+  border:1px solid #ddd;
+  border-radius:10px;
+  padding:10px;
+  text-align:center;
+  cursor:pointer;
+}
+
+.gift-card.selected{
+  border-color:#2196f3;
+  background:#e8f5ff;
+}
+
+/* =========================
+   TOP UP
+========================= */
+
+.topup-title{
+  color:#1976d2;
+  font-size:19px;
+  margin:0 0 15px;
+}
+
+.topup-amounts{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin-bottom:18px;
+}
+
+.topup-amount{
+  border:1px solid #b8ddfa;
+  background:#f4faff;
+  border-radius:10px;
+  padding:10px 5px;
+  text-align:center;
+  cursor:pointer;
+  font-size:11px;
+}
+
+.topup-amount.selected{
+  background:#2196f3;
+  color:white;
+  border-color:#2196f3;
+}
+
+.topup-method{
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:12px;
+  margin-bottom:8px;
+  cursor:pointer;
+  font-size:12px;
+}
+
+.topup-method.selected{
+  border-color:#2196f3;
+  background:#e8f5ff;
+  color:#1976d2;
+}
+
+.qr-box{
+  display:none;
+  text-align:center;
+  background:#f5f5f5;
+  padding:15px;
+  border-radius:12px;
+  margin:10px 0;
+}
+
+.qr-code{
+  width:150px;
+  height:150px;
+  margin:auto;
+  background:
+    linear-gradient(90deg,#000 10px,transparent 10px) 0 0/30px 30px,
+    linear-gradient(#000 10px,transparent 10px) 0 0/30px 30px,
+    #fff;
+  border:10px solid white;
+}
+
+.truemoney-box{
+  display:none;
+  text-align:center;
+  background:#fff4f4;
+  border:1px solid #ffcccc;
+  padding:15px;
+  border-radius:12px;
+  margin:10px 0;
+  color:#e53935;
+}
+
+.topup-confirm{
+  width:100%;
+  border:none;
+  border-radius:10px;
+  padding:12px;
+  background:#2196f3;
+  color:white;
+  font-size:15px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* =========================
+   BOTTOM NAV
+========================= */
+
+.bottom-nav{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  height:75px;
+  background:white;
+  border-top:1px solid #eee;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  z-index:20;
+}
+
+.nav-item{
+  text-align:center;
+  font-size:11px;
+  color:#777;
+  cursor:pointer;
+  position:relative;
+  width:25%;
+}
+
+.nav-item .icon{
+  font-size:21px;
+  display:block;
+  margin-bottom:3px;
+}
+
+.nav-item.active{
+  color:#2196f3;
+  font-weight:bold;
+}
+
+.badge{
+  position:absolute;
+  top:-4px;
+  right:18px;
+  background:#2196f3;
+  color:white;
+  border-radius:50%;
+  padding:2px 6px;
+  font-size:9px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="iphone">
+
+<div class="screen">
+
+<!-- =========================
+     STATUS BAR
+========================= -->
+
+<div class="status-bar">
+  <span>9:41</span>
+  <span>📶 🔋</span>
+</div>
+
+
+<!-- =========================
+     HOME PAGE
+========================= -->
+
+<div id="tab-home" class="tab-content active">
+
+  <div class="header">
+
+    <div>
+      <h1>Novel Shop 📚</h1>
+      <p>สวัสดี 👋 เลือกนิยายที่คุณชอบ</p>
+    </div>
+
+    <div class="profile-container">
+
+      <div
+        class="coin-balance"
+        onclick="topUpCoins()">
+
+        🪙
+        <span id="user-coins">50</span>
+        เหรียญ
+
+      </div>
+
+      <div class="profile">
+        👤
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- SEARCH -->
+
+  <div class="search">
+
+    🔍
+
+    <input
+      type="text"
+      id="search-input"
+      placeholder="ค้นหาชื่อนิยายหรือผู้แต่ง"
+      oninput="handleSearch()">
+
+  </div>
+
+
+  <!-- CATEGORY -->
+
+  <div class="section">
+
+    <div class="section-title">
+      <h2>หมวดหมู่</h2>
+    </div>
+
+    <div class="categories">
+
+      <div
+        class="category active"
+        onclick="filterCategory('ทั้งหมด',this)">
+        ทั้งหมด
+      </div>
+
+      <div
+        class="category"
+        onclick="filterCategory('นักเขียนหน้าใหม่',this)">
+        🌱 หน้าใหม่
+      </div>
+
+      <div
+        class="category"
+        onclick="filterCategory('โรแมนซ์',this)">
+        💗 โรแมนซ์
+      </div>
+
+      <div
+        class="category"
+        onclick="filterCategory('แฟนตาซี',this)">
+        🧙 แฟนตาซี
+      </div>
+
+      <div
+        class="category"
+        onclick="filterCategory('สืบสวน',this)">
+        🔎 สืบสวน
+      </div>
+
+      <div
+        class="category"
+        onclick="filterCategory('นิยายวาย',this)">
+        💜 นิยายวาย
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- NOVELS -->
+
+  <div class="section">
+
+    <div class="section-title">
+      <h2>นิยายทั้งหมด</h2>
+    </div>
+
+    <div
+      class="novel-list"
+      id="main-novel-list">
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     CART PAGE
+========================= -->
+
+<div id="tab-cart" class="tab-content">
+
+  <div class="header">
+
+    <h1>🛒 ตะกร้าสินค้า</h1>
+
+  </div>
+
+  <div
+    class="section"
+    id="cart-items-container">
+  </div>
+
+</div>
+
+
+<!-- =========================
+     ORDERS PAGE
+========================= -->
+
+<div id="tab-orders" class="tab-content">
+
+  <div class="header">
+
+    <h1>📦 คำสั่งซื้อ</h1>
+
+  </div>
+
+  <div
+    class="section"
+    id="orders-container">
+  </div>
+
+</div>
+
+
+<!-- =========================
+     ACCOUNT PAGE
+========================= -->
+
+<div id="tab-account" class="tab-content">
+
+  <div class="header">
+
+    <h1>👤 บัญชีของฉัน</h1>
+
+  </div>
+
+  <div class="section">
+
+    <div class="account-card">
+
+      <div class="account-avatar">
+        👤
+      </div>
+
+      <h2 style="margin:5px 0;">
+        นักอ่านตัวยง
+      </h2>
+
+      <p style="color:#777;font-size:12px;">
+        สมาชิกสายนิยายระดับ Gold
+      </p>
+
+
+      <div class="coin-card">
+
+        <div style="
+          font-size:12px;
+          color:#777;
+          margin-bottom:5px;
+        ">
+          🪙 เหรียญคงเหลือ
+        </div>
+
+        <div class="coin-number">
+          <span id="account-coins">50</span>
+          เหรียญ
+        </div>
+
+      </div>
+
+
+      <button
+        class="buy-btn"
+        style="font-size:14px;"
+        onclick="topUpCoins()">
+
+        🪙 เติมเหรียญ
+
+      </button>
+
+
+      <div style="
+        margin-top:20px;
+        padding:12px;
+        background:#fff;
+        border-radius:12px;
+        text-align:left;
+        font-size:12px;
+      ">
+
+        <p>👤 ชื่อสมาชิก: นักอ่านตัวยง</p>
+
+        <p>⭐ ระดับสมาชิก: Gold</p>
+
+        <p>
+          🛒 สินค้าในตะกร้า:
+          <span id="account-cart-count">0</span>
+          รายการ
+        </p>
+
+        <p>
+          📦 คำสั่งซื้อ:
+          <span id="account-order-count">0</span>
+          รายการ
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     READER MODAL
+========================= -->
+
+<div
+  class="modal"
+  id="reader-modal">
+
+  <div class="modal-content">
+
+    <span
+      class="close-modal"
+      onclick="closeModal()">
+      &times;
+    </span>
+
+    <h2
+      id="modal-title"
+      style="margin-top:0;font-size:17px;">
+    </h2>
+
+    <p
+      id="modal-author"
+      style="color:#777;font-size:12px;">
+    </p>
+
+
+    <div class="reader-text">
+
+      <strong>
+        บทที่ 1: จุดเริ่มต้น
+      </strong>
+
+      <br><br>
+
+      ท้องฟ้าคืนนี้เงียบสงบ
+      ลมพัดแผ่วเบาผ่านยอดไม้
+      ชายหนุ่มยืนมองดวงดาว
+      ด้วยความหวังอันริบหรี่...
+
+      <br><br>
+
+      นี่คือตัวอย่างทดลองอ่าน
+      สำหรับนิยายของนักเขียนหน้าใหม่
+
+    </div>
+
+
+    <!-- COMMENT -->
+
+    <div>
+
+      <strong style="font-size:13px;">
+        💬 คำติชม / แจ้งคำผิด
+      </strong>
+
+      <textarea
+        id="comment-text"
+        placeholder="พิมพ์คำแนะนำ..."
+        style="
+          width:100%;
+          height:65px;
+          border:1px solid #ddd;
+          border-radius:10px;
+          padding:8px;
+          font-size:12px;
+          resize:none;
+          margin-top:6px;
+        ">
+      </textarea>
+
+      <button
+        class="buy-btn"
+        style="background:#6c757d;"
+        onclick="submitComment()">
+
+        ส่งคำแนะนำให้นักเขียน
+
+      </button>
+
+    </div>
+
+
+    <hr style="
+      border:0;
+      border-top:1px dashed #ddd;
+      margin:15px 0;
+    ">
+
+
+    <!-- GIFT -->
+
+    <strong style="font-size:13px;">
+      🎁 ส่งของขวัญให้นักเขียน
+    </strong>
+
+    <div class="gift-grid">
+
+      <div
+        class="gift-card"
+        id="gift-fighting"
+        onclick="selectGift('fighting',5)">
+
+        <div style="font-size:22px;">
+          💪
+        </div>
+
+        <div style="font-size:11px;font-weight:bold;">
+          ไฟต์ติ้ง
+        </div>
+
+        <div style="font-size:10px;color:#2196f3;">
+          5 เหรียญ
+        </div>
+
+      </div>
+
+
+      <div
+        class="gift-card"
+        id="gift-bread"
+        onclick="selectGift('bread',10)">
+
+        <div style="font-size:22px;">
+          🥖
+        </div>
+
+        <div style="font-size:11px;font-weight:bold;">
+          ขนมปัง
+        </div>
+
+        <div style="font-size:10px;color:#2196f3;">
+          10 เหรียญ
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <button
+      class="buy-btn"
+      onclick="sendGift()">
+
+      ส่งของขวัญ
+
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     TOP UP MODAL
+========================= -->
+
+<div
+  class="modal"
+  id="topup-modal">
+
+  <div class="modal-content">
+
+    <span
+      class="close-modal"
+      onclick="closeTopUp()">
+      &times;
+    </span>
+
+
+    <h2 class="topup-title">
+      🪙 เติมเหรียญ
+    </h2>
+
+    <p style="
+      font-size:12px;
+      color:#777;
+    ">
+      เลือกจำนวนเหรียญที่ต้องการเติม
+    </p>
+
+
+    <!-- AMOUNT -->
+
+    <div class="topup-amounts">
+
+      <div
+        class="topup-amount selected"
+        onclick="selectTopUp(50,50,this)">
+        50 เหรียญ<br>
+        ฿50
+      </div>
+
+      <div
+        class="topup-amount"
+        onclick="selectTopUp(100,100,this)">
+        100 เหรียญ<br>
+        ฿100
+      </div>
+
+      <div
+        class="topup-amount"
+        onclick="selectTopUp(300,300,this)">
+        300 เหรียญ<br>
+        ฿300
+      </div>
+
+      <div
+        class="topup-amount"
+        onclick="selectTopUp(500,500,this)">
+        500 เหรียญ<br>
+        ฿500
+      </div>
+
+      <div
+        class="topup-amount"
+        onclick="selectTopUp(1000,1000,this)">
+        1,000 เหรียญ<br>
+        ฿1,000
+      </div>
+
+      <div
+        class="topup-amount"
+        onclick="selectTopUp(2000,2000,this)">
+        2,000 เหรียญ<br>
+        ฿2,000
+      </div>
+
+    </div>
+
+
+    <p style="
+      font-size:13px;
+      font-weight:bold;
+    ">
+      💳 เลือกช่องทางชำระเงิน
+    </p>
+
+
+    <!-- QR -->
+
+    <div
+      class="topup-method selected"
+      id="method-qr"
+      onclick="selectTopUpMethod('qr')">
+
+      📲
+      <strong>
+        QR Code / PromptPay
+      </strong>
+
+      <br>
+
+      <span style="
+        font-size:10px;
+        color:#777;
+      ">
+        สแกน QR เพื่อชำระเงิน
+      </span>
+
+    </div>
+
+
+    <!-- TRUE MONEY -->
+
+    <div
+      class="topup-method"
+      id="method-truemoney"
+      onclick="selectTopUpMethod('truemoney')">
+
+      🧡
+      <strong>
+        TrueMoney Wallet
+      </strong>
+
+      <br>
+
+      <span style="
+        font-size:10px;
+        color:#777;
+      ">
+        ชำระผ่าน TrueMoney Wallet
+      </span>
+
+    </div>
+
+
+    <!-- QR DISPLAY -->
+
+    <div
+      class="qr-box"
+      id="qr-box">
+
+      <p style="
+        font-size:12px;
+        font-weight:bold;
+      ">
+        📲 สแกน QR Code
+      </p>
+
+      <div class="qr-code"></div>
+
+      <p style="
+        font-size:11px;
+        color:#777;
+      ">
+
+        ยอดชำระ
+        ฿<span id="qr-price">50</span>
+
+      </p>
+
+    </div>
+
+
+    <!-- TRUE MONEY DISPLAY -->
+
+    <div
+      class="truemoney-box"
+      id="truemoney-box">
+
+      <div style="font-size:40px;">
+        🧡
+      </div>
+
+      <strong>
+        TrueMoney Wallet
+      </strong>
+
+      <p style="font-size:11px;">
+        กดยืนยันเพื่อชำระเงินผ่าน
+        TrueMoney Wallet
+      </p>
+
+      <strong>
+        ฿<span id="tm-price">50</span>
+      </strong>
+
+    </div>
+
+
+    <button
+      class="topup-confirm"
+      onclick="confirmTopUp()">
+
+      ยืนยันการเติมเหรียญ
+
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     BOTTOM NAVIGATION
+========================= -->
+
+<div class="bottom-nav">
+
+  <div
+    class="nav-item active"
+    onclick="switchTab('home',this)">
+
+    <span class="icon">
+      🏠
+    </span>
+
+    หน้าหลัก
+
+  </div>
+
+
+  <div
+    class="nav-item"
+    onclick="switchTab('cart',this)">
+
+    <span class="icon">
+      🛒
+    </span>
+
+    ตะกร้า
+
+    <span
+      class="badge"
+      id="cart-badge"
+      style="display:none;">
+      0
+    </span>
+
+  </div>
+
+
+  <div
+    class="nav-item"
+    onclick="switchTab('orders',this)">
+
+    <span class="icon">
+      📦
+    </span>
+
+    คำสั่งซื้อ
+
+  </div>
+
+
+  <div
+    class="nav-item"
+    onclick="switchTab('account',this)">
+
+    <span class="icon">
+      👤
+    </span>
+
+    บัญชี
+
+  </div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   NOVEL DATA
+========================= */
+
+const novels = [
+
+{
+  id:101,
+  title:'จุดเริ่มต้นแห่งโชคตารัก',
+  author:'นักเขียนหน้าใหม่ A',
+  category:'นักเขียนหน้าใหม่',
+  rating:'5.0',
+  price:0,
+  isNewWriter:true,
+  icon:'🌱'
+},
+
+{
+  id:102,
+  title:'เมื่อฉันหลุดไปในต่างโลก',
+  author:'นักเขียนหน้าใหม่ B',
+  category:'นักเขียนหน้าใหม่',
+  rating:'4.9',
+  price:0,
+  isNewWriter:true,
+  icon:'🌿'
+},
+
+{
+  id:1,
+  title:'รักครั้งนี้ขอมีเธอ',
+  author:'นักเขียน A',
+  category:'โรแมนซ์',
+  rating:'4.8',
+  price:199,
+  isNewWriter:false,
+  icon:'📕'
+},
+
+{
+  id:2,
+  title:'จอมเวทแห่งอาณาจักร',
+  author:'นักเขียน B',
+  category:'แฟนตาซี',
+  rating:'4.9',
+  price:249,
+  isNewWriter:false,
+  icon:'📘'
+},
+
+{
+  id:3,
+  title:'คดีลับในคืนฝนตก',
+  author:'นักเขียน C',
+  category:'สืบสวน',
+  rating:'4.7',
+  price:179,
+  isNewWriter:false,
+  icon:'📗'
+},
+
+{
+  id:4,
+  title:'เธอคือความทรงจำ',
+  author:'นักเขียน D',
+  category:'โรแมนซ์',
+  rating:'4.6',
+  price:159,
+  isNewWriter:false,
+  icon:'📙'
+},
+
+{
+  id:5,
+  title:'ย้อนเวลามาพบรัก',
+  author:'นักเขียน E',
+  category:'นิยายวาย',
+  rating:'4.9',
+  price:219,
+  isNewWriter:false,
+  icon:'📓'
+},
+
+{
+  id:6,
+  title:'สวรรค์ประทานพร เล่ม 1',
+  author:'โม่เซียงถงซิ่ว',
+  category:'นิยายวาย',
+  rating:'5.0',
+  price:299,
+  isNewWriter:false,
+  icon:'🌸'
+},
+
+{
+  id:14,
+  title:'สวรรค์ประทานพร (เซ็ต เล่ม 1-8)',
+  author:'โม่เซียงถงซิ่ว',
+  category:'นิยายวาย',
+  rating:'5.0',
+  price:2300,
+  isNewWriter:false,
+  icon:'🎁'
+}
+
+];
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+let cart = [];
+
+let orders = [];
+
+let userCoins = 50;
+
+let selectedPayment = 'qr';
+
+let currentCategory = 'ทั้งหมด';
+
+let currentSelectedNovel = null;
+
+let selectedGift = null;
+
+let topUpAmount = 50;
+
+let topUpCoinsAmount = 50;
+
+let topUpMethod = 'qr';
+
+
+/* =========================
+   INIT
+========================= */
+
+function init(){
+
+  renderNovels(novels);
+
+  updateCoinUI();
+
+  updateCartUI();
+
+  renderOrders();
+
+  updateAccountInfo();
+
+}
+
+
+/* =========================
+   ACCOUNT INFO
+========================= */
+
+function updateAccountInfo(){
+
+  document.getElementById(
+    'account-coins'
+  ).innerText = userCoins;
+
+  document.getElementById(
+    'account-cart-count'
+  ).innerText = cart.length;
+
+  document.getElementById(
+    'account-order-count'
+  ).innerText = orders.length;
+
+}
+
+
+/* =========================
+   COINS
+========================= */
+
+function updateCoinUI(){
+
+  document.getElementById(
+    'user-coins'
+  ).innerText = userCoins;
+
+  document.getElementById(
+    'account-coins'
+  ).innerText = userCoins;
+
+}
+
+
+function topUpCoins(){
+
+  document
+    .getElementById('topup-modal')
+    .classList.add('active');
+
+}
+
+
+function closeTopUp(){
+
+  document
+    .getElementById('topup-modal')
+    .classList.remove('active');
+
+}
+
+
+function selectTopUp(
+  coins,
+  price,
+  element
+){
+
+  topUpCoinsAmount = coins;
+
+  topUpAmount = price;
+
+  document
+    .querySelectorAll('.topup-amount')
+    .forEach(el =>
+      el.classList.remove('selected')
+    );
+
+  element.classList.add('selected');
+
+  document.getElementById(
+    'qr-price'
+  ).innerText = price;
+
+  document.getElementById(
+    'tm-price'
+  ).innerText = price;
+
+}
+
+
+function selectTopUpMethod(method){
+
+  topUpMethod = method;
+
+  document
+    .querySelectorAll('.topup-method')
+    .forEach(el =>
+      el.classList.remove('selected')
+    );
+
+
+  if(method === 'qr'){
+
+    document
+      .getElementById('method-qr')
+      .classList.add('selected');
+
+    document
+      .getElementById('qr-box')
+      .style.display = 'block';
+
+    document
+      .getElementById('truemoney-box')
+      .style.display = 'none';
+
+  }
+
+  else{
+
+    document
+      .getElementById('method-truemoney')
+      .classList.add('selected');
+
+    document
+      .getElementById('qr-box')
+      .style.display = 'none';
+
+    document
+      .getElementById('truemoney-box')
+      .style.display = 'block';
+
+  }
+
+}
+
+
+function confirmTopUp(){
+
+  userCoins += topUpCoinsAmount;
+
+  updateCoinUI();
+
+  updateAccountInfo();
+
+  let methodText =
+    topUpMethod === 'qr'
+    ? 'QR Code / PromptPay'
+    : 'TrueMoney Wallet';
+
+
+  alert(
+    `✅ เติมเหรียญสำเร็จ!\n\n` +
+    `🪙 ได้รับ ${topUpCoinsAmount.toLocaleString()} เหรียญ\n` +
+    `💰 ชำระเงิน ฿${topUpAmount.toLocaleString()}\n` +
+    `💳 ช่องทาง: ${methodText}`
+  );
+
+
+  closeTopUp();
+
+}
+
+
+/* =========================
+   NOVELS
+========================= */
+
+function renderNovels(list){
+
+  const container =
+    document.getElementById(
+      'main-novel-list'
+    );
+
+
+  if(list.length === 0){
+
+    container.innerHTML = `
+
+      <div class="no-data">
+
+        <div class="no-data-icon">
+          🔍
+        </div>
+
+        ไม่พบผลลัพธ์การค้นหา
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  container.innerHTML =
+    list.map(item => `
+
+      <div class="novel">
+
+        ${
+          item.isNewWriter
+          ?
+          `
+          <div class="new-writer-badge">
+            🌱 หน้าใหม่ (อ่านฟรี)
+          </div>
+          `
+          :
+          ''
+        }
+
+
+        <div class="cover">
+          ${item.icon}
+        </div>
+
+
+        <div class="novel-info">
+
+          <div>
+
+            <h3 title="${item.title}">
+              ${item.title}
+            </h3>
+
+            <div class="author">
+              โดย ${item.author}
+            </div>
+
+            <div class="rating">
+              ⭐ ${item.rating}
+            </div>
+
+            <div class="price">
+
+              ${
+                item.isNewWriter
+                ?
+                'อ่านฟรี'
+                :
+                '฿' +
+                item.price.toLocaleString()
+              }
+
+            </div>
+
+          </div>
+
+
+          ${
+            item.isNewWriter
+
+            ?
+
+            `
+            <button
+              class="buy-btn read-btn"
+              onclick="openReaderModal(${item.id})">
+
+              อ่านฟรี & ซัพพอร์ต
+
+            </button>
+            `
+
+            :
+
+            `
+            <button
+              class="buy-btn"
+              onclick="addToCart(${item.id})">
+
+              เพิ่มลงตะกร้า
+
+            </button>
+            `
+          }
+
+        </div>
+
+      </div>
+
+    `).join('');
+
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+function handleSearch(){
+
+  const query =
+    document
+      .getElementById('search-input')
+      .value
+      .toLowerCase()
+      .trim();
+
+
+  const filtered =
+    novels.filter(n =>
+
+      (
+        currentCategory === 'ทั้งหมด' ||
+        n.category === currentCategory ||
+        (
+          currentCategory === 'นักเขียนหน้าใหม่' &&
+          n.isNewWriter
+        )
+      )
+
+      &&
+
+      (
+        n.title.toLowerCase()
+          .includes(query)
+
+        ||
+
+        n.author.toLowerCase()
+          .includes(query)
+      )
+
+    );
+
+
+  renderNovels(filtered);
+
+}
+
+
+/* =========================
+   CATEGORY
+========================= */
+
+function filterCategory(
+  category,
+  element
+){
+
+  document
+    .querySelectorAll('.category')
+    .forEach(el =>
+      el.classList.remove('active')
+    );
+
+  element.classList.add('active');
+
+  currentCategory = category;
+
+  handleSearch();
+
+}
+
+
+/* =========================
+   READER
+========================= */
+
+function openReaderModal(id){
+
+  currentSelectedNovel =
+    novels.find(n => n.id === id);
+
+
+  document.getElementById(
+    'modal-title'
+  ).innerText =
+    currentSelectedNovel.title;
+
+
+  document.getElementById(
+    'modal-author'
+  ).innerText =
+    'โดย ' +
+    currentSelectedNovel.author;
+
+
+  document
+    .getElementById('reader-modal')
+    .classList.add('active');
+
+}
+
+
+function closeModal(){
+
+  document
+    .getElementById('reader-modal')
+    .classList.remove('active');
+
+
+  selectedGift = null;
+
+
+  document
+    .querySelectorAll('.gift-card')
+    .forEach(el =>
+      el.classList.remove('selected')
+    );
+
+
+  document.getElementById(
+    'comment-text'
+  ).value = '';
+
+}
+
+
+function submitComment(){
+
+  const comment =
+    document
+      .getElementById('comment-text')
+      .value
+      .trim();
+
+
+  if(!comment){
+
+    alert(
+      'กรุณาพิมพ์ข้อความหรือคำแนะนำก่อนส่งครับ'
+    );
+
+    return;
+
+  }
+
+
+  alert(
+    '✅ ส่งคำแนะนำให้นักเขียนเรียบร้อยแล้ว!'
+  );
+
+
+  document.getElementById(
+    'comment-text'
+  ).value = '';
+
+}
+
+
+/* =========================
+   GIFT
+========================= */
+
+function selectGift(
+  type,
+  cost
+){
+
+  selectedGift = {
+    type:type,
+    cost:cost
+  };
+
+
+  document
+    .querySelectorAll('.gift-card')
+    .forEach(el =>
+      el.classList.remove('selected')
+    );
+
+
+  document
+    .getElementById(
+      `gift-${type}`
+    )
+    .classList.add('selected');
+
+}
+
+
+function sendGift(){
+
+  if(!selectedGift){
+
+    alert(
+      'กรุณาเลือกของขวัญก่อนครับ'
+    );
+
+    return;
+
+  }
+
+
+  if(userCoins < selectedGift.cost){
+
+    alert(
+      '🪙 เหรียญไม่พอ กรุณาเติมเหรียญก่อนครับ'
+    );
+
+    return;
+
+  }
+
+
+  userCoins -= selectedGift.cost;
+
+  updateCoinUI();
+
+  updateAccountInfo();
+
+
+  const giftName =
+    selectedGift.type === 'fighting'
+    ? 'ไฟต์ติ้ง'
+    : 'ขนมปัง';
+
+
+  alert(
+    `🎁 มอบของขวัญ ${giftName} ` +
+    `ให้นักเขียนสำเร็จแล้ว!`
+  );
+
+
+  closeModal();
+
+}
+
+
+/* =========================
+   ADD TO CART
+========================= */
+
+function addToCart(id){
+
+  const item =
+    novels.find(n => n.id === id);
+
+
+  cart.push(item);
+
+
+  updateCartUI();
+
+  updateAccountInfo();
+
+
+  alert(
+    `🛒 เพิ่ม "${item.title}" ลงตะกร้าแล้ว`
+  );
+
+}
+
+
+/* =========================
+   REMOVE CART
+========================= */
+
+function removeFromCart(index){
+
+  cart.splice(index,1);
+
+  updateCartUI();
+
+  updateAccountInfo();
+
+}
+
+
+/* =========================
+   CART PAGE
+========================= */
+
+function updateCartUI(){
+
+  const badge =
+    document.getElementById(
+      'cart-badge'
+    );
+
+
+  badge.innerText = cart.length;
+
+
+  badge.style.display =
+    cart.length > 0
+    ? 'inline-block'
+    : 'none';
+
+
+  const container =
+    document.getElementById(
+      'cart-items-container'
+    );
+
+
+  if(cart.length === 0){
+
+    container.innerHTML = `
+
+      <div class="no-data">
+
+        <div class="no-data-icon">
+          🛒
+        </div>
+
+        <h3 style="color:#555;">
+          ตะกร้าสินค้าว่าง
+        </h3>
+
+        <p>
+          ยังไม่มีนิยายในตะกร้า
+        </p>
+
+        <button
+          class="buy-btn"
+          style="
+            width:80%;
+            font-size:13px;
+          "
+          onclick="goHome()">
+
+          🏠 ไปเลือกนิยาย
+
+        </button>
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  const total =
+    cart.reduce(
+      (sum,item) =>
+        sum + item.price,
+      0
+    );
+
+
+  const paymentName =
+    selectedPayment === 'qr'
+    ? '📲 QR Code / PromptPay'
+    :
+    selectedPayment === 'truemoney'
+    ? '🧡 TrueMoney Wallet'
+    :
+    '🚚 เก็บเงินปลายทาง';
+
+
+  container.innerHTML = `
+
+    <h2 style="
+      color:#1976d2;
+      margin-bottom:15px;
+    ">
+      🛒 สินค้าในตะกร้า
+    </h2>
+
+
+    ${cart.map((item,index) => `
+
+      <div class="cart-item">
+
+        <div class="cart-item-details">
+
+          <h4>
+            ${item.icon}
+            ${item.title}
+          </h4>
+
+          <p>
+            โดย ${item.author}
+          </p>
+
+          <p style="
+            color:#1976d2;
+            font-weight:bold;
+          ">
+
+            ฿${item.price.toLocaleString()}
+
+          </p>
+
+        </div>
+
+
+        <button
+          class="remove-btn"
+          onclick="removeFromCart(${index})">
+
+          ลบ
+
+        </button>
+
+      </div>
+
+    `).join('')}
+
+
+    <div class="cart-summary">
+
+      <h3 style="margin-top:0;">
+        สรุปการสั่งซื้อ
+      </h3>
+
+
+      <div style="
+        display:flex;
+        justify-content:space-between;
+        font-weight:bold;
+        font-size:16px;
+      ">
+
+        <span>
+          ยอดรวม
+        </span>
+
+        <span style="color:#1976d2;">
+          ฿${total.toLocaleString()}
+        </span>
+
+      </div>
+
+
+      <div class="payment-options">
+
+        <p style="
+          font-size:13px;
+          font-weight:bold;
+        ">
+          💳 เลือกช่องทางชำระเงิน
+        </p>
+
+
+        <div
+          class="payment-option
+          ${selectedPayment === 'qr'
+            ? 'selected'
+            : ''}"
+          onclick="selectPayment('qr')">
+
+          📲 QR Code / PromptPay
+
+        </div>
+
+
+        <div
+          class="payment-option
+          ${selectedPayment === 'truemoney'
+            ? 'selected'
+            : ''}"
+          onclick="selectPayment('truemoney')">
+
+          🧡 TrueMoney Wallet
+
+        </div>
+
+
+        <div
+          class="payment-option
+          ${selectedPayment === 'cod'
+            ? 'selected'
+            : ''}"
+          onclick="selectPayment('cod')">
+
+          🚚 เก็บเงินปลายทาง
+
+        </div>
+
+      </div>
+
+
+      <div style="
+        margin-top:10px;
+        padding:10px;
+        background:#e8f5ff;
+        border-radius:10px;
+        color:#1976d2;
+        font-size:12px;
+      ">
+
+        💳 ช่องทางที่เลือก:
+
+        <strong>
+          ${paymentName}
+        </strong>
+
+      </div>
+
+
+      <button
+        class="checkout-btn"
+        onclick="processCheckout(${total})">
+
+        ${
+          selectedPayment === 'cod'
+          ?
+          'ยืนยันสั่งซื้อ'
+          :
+          'ชำระเงิน ฿' +
+          total.toLocaleString()
+        }
+
+      </button>
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================
+   PAYMENT
+========================= */
+
+function selectPayment(method){
+
+  selectedPayment = method;
+
+  updateCartUI();
+
+}
+
+
+/* =========================
+   CHECKOUT
+========================= */
+
+function processCheckout(total){
+
+  const deliveryDays =
+    Math.floor(Math.random()*2)+2;
+
+
+  let paymentText = '';
+
+
+  if(selectedPayment === 'qr'){
+
+    paymentText =
+      'QR Code / PromptPay';
+
+  }
+
+  else if(
+    selectedPayment === 'truemoney'
+  ){
+
+    paymentText =
+      'TrueMoney Wallet';
+
+  }
+
+  else{
+
+    paymentText =
+      'เก็บเงินปลายทาง (COD)';
+
+  }
+
+
+  const newOrder = {
+
+    id:
+      'ORD-' +
+      Math.floor(
+        1000 +
+        Math.random()*9000
+      ),
+
+    items:[...cart],
+
+    total:total,
+
+    payment:paymentText,
+
+    deliveryDays:deliveryDays,
+
+    date:
+      new Date()
+      .toLocaleDateString('th-TH')
+
+  };
+
+
+  orders.unshift(newOrder);
+
+
+  cart = [];
+
+
+  updateCartUI();
+
+  renderOrders();
+
+  updateAccountInfo();
+
+
+  alert(
+    `✅ สั่งซื้อสำเร็จ!\n\n` +
+    `💳 ${paymentText}\n` +
+    `💰 ยอดรวม ฿${total.toLocaleString()}\n` +
+    `📦 จัดส่งภายใน ${deliveryDays} วัน`
+  );
+
+
+  const orderButton =
+    document.querySelectorAll(
+      '.nav-item'
+    )[2];
+
+
+  switchTab(
+    'orders',
+    orderButton
+  );
+
+}
+
+
+/* =========================
+   ORDERS PAGE
+========================= */
+
+function renderOrders(){
+
+  const container =
+    document.getElementById(
+      'orders-container'
+    );
+
+
+  if(orders.length === 0){
+
+    container.innerHTML = `
+
+      <div class="no-data">
+
+        <div class="no-data-icon">
+          📦
+        </div>
+
+        <h3 style="color:#555;">
+          ยังไม่มีคำสั่งซื้อ
+        </h3>
+
+        <p>
+          เมื่อสั่งซื้อนิยาย
+          รายการจะแสดงที่หน้านี้
+        </p>
+
+        <button
+          class="buy-btn"
+          style="
+            width:80%;
+            font-size:13px;
+          "
+          onclick="goHome()">
+
+          🏠 ไปเลือกนิยาย
+
+        </button>
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  container.innerHTML = `
+
+    <h2 style="
+      color:#1976d2;
+      margin-bottom:15px;
+    ">
+      📦 คำสั่งซื้อของคุณ
+    </h2>
+
+
+    ${orders.map(order => `
+
+      <div class="order-card">
+
+        <div class="order-header">
+
+          <span class="order-id">
+            ${order.id}
+          </span>
+
+          <span class="order-status">
+            กำลังเตรียมจัดส่ง
+          </span>
+
+        </div>
+
+
+        <div style="
+          font-size:12px;
+          font-weight:bold;
+        ">
+          📚 รายการสินค้า
+        </div>
+
+
+        ${order.items.map(item => `
+
+          <div class="order-product">
+
+            ${item.icon}
+            ${item.title}
+
+            <span style="
+              float:right;
+              color:#1976d2;
+              font-weight:bold;
+            ">
+
+              ฿${item.price.toLocaleString()}
+
+            </span>
+
+          </div>
+
+        `).join('')}
+
+
+        <p style="
+          font-size:12px;
+          margin:12px 0 4px;
+        ">
+
+          💳 ชำระผ่าน:
+
+          <strong>
+            ${order.payment}
+          </strong>
+
+        </p>
+
+
+        <p style="
+          font-size:12px;
+          color:#1976d2;
+          font-weight:bold;
+        ">
+
+          🚚 จัดส่งภายใน:
+          ${order.deliveryDays} วัน
+
+        </p>
+
+
+        <div class="order-total">
+
+          ยอดรวม:
+          ฿${order.total.toLocaleString()}
+
+        </div>
+
+
+        <div style="
+          font-size:10px;
+          color:#999;
+          margin-top:6px;
+        ">
+
+          วันที่สั่งซื้อ:
+          ${order.date}
+
+        </div>
+
+      </div>
+
+    `).join('')}
+
+  `;
+
+}
+
+
+/* =========================
+   TAB NAVIGATION
+========================= */
+
+function switchTab(
+  tabName,
+  element
+){
+
+  document
+    .querySelectorAll('.tab-content')
+    .forEach(tab =>
+      tab.classList.remove('active')
+    );
+
+
+  document
+    .querySelectorAll('.nav-item')
+    .forEach(nav =>
+      nav.classList.remove('active')
+    );
+
+
+  const page =
+    document.getElementById(
+      `tab-${tabName}`
+    );
+
+
+  if(page){
+
+    page.classList.add('active');
+
+  }
+
+
+  element.classList.add('active');
+
+
+  /* โหลดข้อมูลเฉพาะหน้านั้น */
+
+  if(tabName === 'cart'){
+
+    updateCartUI();
+
+  }
+
+
+  if(tabName === 'orders'){
+
+    renderOrders();
+
+  }
+
+
+  if(tabName === 'account'){
+
+    updateAccountInfo();
+
+  }
+
+}
+
+
+/* =========================
+   GO HOME
+========================= */
+
+function goHome(){
+
+  const homeButton =
+    document.querySelectorAll(
+      '.nav-item'
+    )[0];
+
+
+  switchTab(
+    'home',
+    homeButton
+  );
+
+}
+
+
+/* =========================
+   START
+========================= */
+
+init();
+
+</script>
+
+</body>
+</html>
