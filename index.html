@@ -1792,7 +1792,8 @@ const novels = [
   rating:'5.0',
   price:0,
   isNewWriter:true,
-  icon:'🌱'
+  icon:'🌱',
+  cover:'https://images.www.jamsai.com/Enter%20Books/9786160628124.webp'
 },
 
 {
@@ -1803,7 +1804,8 @@ const novels = [
   rating:'4.9',
   price:0,
   isNewWriter:true,
-  icon:'🌿'
+  icon:'🌿',
+  cover:'https://down-th.img.susercontent.com/file/sg-11134201-7rdws-m1li4gsztkxp30'
 },
 
 {
@@ -1814,7 +1816,8 @@ const novels = [
   rating:'4.8',
   price:199,
   isNewWriter:false,
-  icon:'📕'
+  icon:'📕',
+  cover:'https://down-th.img.susercontent.com/file/th-11134207-7r98z-ltnq0if63ipr24'
 },
 
 {
@@ -1825,7 +1828,8 @@ const novels = [
   rating:'4.9',
   price:249,
   isNewWriter:false,
-  icon:'📘'
+  icon:'📘',
+  cover:'https://down-th.img.susercontent.com/file/0a6ebb6015cc15c2ddd7d7f9ac166329'
 },
 
 {
@@ -1836,7 +1840,8 @@ const novels = [
   rating:'4.7',
   price:179,
   isNewWriter:false,
-  icon:'📗'
+  icon:'📗',
+  cover:'https://pbs.twimg.com/media/FoU0_9ZXEAEsiCR.jpg'
 },
 
 {
@@ -1847,7 +1852,8 @@ const novels = [
   rating:'4.6',
   price:159,
   isNewWriter:false,
-  icon:'📙'
+  icon:'📙',
+  cover:'https://pbs.twimg.com/media/HFdSLn3bAAAYavp.jpg'
 },
 
 {
@@ -1858,7 +1864,8 @@ const novels = [
   rating:'4.9',
   price:219,
   isNewWriter:false,
-  icon:'📓'
+  icon:'📓',
+  cover:'https://1417094351.rsc.cdn77.org/publicassets/5737333/images/received_702304464236429.jpeg'
 },
 
 {
@@ -1869,7 +1876,8 @@ const novels = [
   rating:'5.0',
   price:299,
   isNewWriter:false,
-  icon:'🌸'
+  icon:'🌸',
+  cover:'https://down-th.img.susercontent.com/file/th-11134207-7rask-m4vdl18htdeyec'
 },
 
 {
@@ -1880,7 +1888,8 @@ const novels = [
   rating:'5.0',
   price:2300,
   isNewWriter:false,
-  icon:'🎁'
+  icon:'🎁',
+  cover:'https://down-th.img.susercontent.com/file/th-11134275-7ra0p-mc4smz5icelj3d'
 }
 
 ];
@@ -2169,7 +2178,7 @@ function renderNovels(list){
         }
 
         <div class="cover">
-          ${item.icon}
+          ${item.cover ? `<img src="${item.cover}" alt="ปก ${item.title}" style="width:100%;height:100%;object-fit:cover;display:block;">` : item.icon}
         </div>
 
         <div class="novel-info">
