@@ -20,10 +20,6 @@ body{
   min-height:100vh;
 }
 
-/* =========================
-   iPHONE
-========================= */
-
 .iphone{
   width:390px;
   height:844px;
@@ -41,10 +37,6 @@ body{
   padding-bottom:85px;
 }
 
-/* =========================
-   STATUS BAR
-========================= */
-
 .status-bar{
   height:45px;
   display:flex;
@@ -58,10 +50,6 @@ body{
   top:0;
   z-index:10;
 }
-
-/* =========================
-   HEADER
-========================= */
 
 .header{
   display:flex;
@@ -109,10 +97,6 @@ body{
   font-size:20px;
 }
 
-/* =========================
-   SEARCH
-========================= */
-
 .search{
   margin:10px 20px;
   background:#eef8ff;
@@ -131,10 +115,6 @@ body{
   font-size:14px;
 }
 
-/* =========================
-   SECTION
-========================= */
-
 .section{
   padding:10px 20px;
 }
@@ -150,10 +130,6 @@ body{
   font-size:18px;
   margin:0;
 }
-
-/* =========================
-   CATEGORY
-========================= */
 
 .categories{
   display:flex;
@@ -178,10 +154,6 @@ body{
   background:#2196f3;
   color:white;
 }
-
-/* =========================
-   NOVEL
-========================= */
 
 .novel-list{
   display:flex;
@@ -276,13 +248,13 @@ body{
   background:#28a745;
 }
 
+.support-btn{
+  background:#9c27b0;
+}
+
 .buy-btn:active{
   opacity:.8;
 }
-
-/* =========================
-   TAB
-========================= */
 
 .tab-content{
   display:none;
@@ -291,10 +263,6 @@ body{
 .tab-content.active{
   display:block;
 }
-
-/* =========================
-   EMPTY
-========================= */
 
 .no-data{
   text-align:center;
@@ -307,10 +275,6 @@ body{
   font-size:45px;
   margin-bottom:10px;
 }
-
-/* =========================
-   CART
-========================= */
 
 .cart-item{
   display:flex;
@@ -390,10 +354,6 @@ body{
   cursor:pointer;
 }
 
-/* =========================
-   ORDER
-========================= */
-
 .order-card{
   background:white;
   border-radius:15px;
@@ -439,10 +399,6 @@ body{
   color:#1976d2;
 }
 
-/* =========================
-   ACCOUNT
-========================= */
-
 .account-card{
   background:#f4faff;
   border-radius:18px;
@@ -477,9 +433,23 @@ body{
   font-weight:bold;
 }
 
-/* =========================
-   MODAL
-========================= */
+.support-history{
+  background:#fff;
+  border-radius:12px;
+  padding:12px;
+  margin-top:12px;
+  text-align:left;
+}
+
+.support-history-item{
+  padding:8px 0;
+  border-bottom:1px solid #eee;
+  font-size:11px;
+}
+
+.support-history-item:last-child{
+  border-bottom:none;
+}
 
 .modal{
   display:none;
@@ -524,20 +494,57 @@ body{
   color:#777;
 }
 
-/* =========================
-   READER
-========================= */
+.chapter-buttons{
+  display:flex;
+  gap:7px;
+  margin:12px 0;
+  overflow-x:auto;
+}
+
+.chapter-btn{
+  flex:1;
+  min-width:80px;
+  border:1px solid #b8ddfa;
+  background:#f4faff;
+  color:#1976d2;
+  border-radius:9px;
+  padding:8px 5px;
+  cursor:pointer;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.chapter-btn.active{
+  background:#2196f3;
+  color:white;
+  border-color:#2196f3;
+}
+
+.chapter-content{
+  display:none;
+}
+
+.chapter-content.active{
+  display:block;
+}
 
 .reader-text{
   font-size:13px;
-  line-height:1.7;
+  line-height:1.8;
   color:#333;
   background:#f4faff;
-  padding:12px;
+  padding:15px;
   border-radius:10px;
-  margin:15px 0;
-  max-height:160px;
+  margin:10px 0 15px;
+  max-height:230px;
   overflow-y:auto;
+}
+
+.chapter-label{
+  color:#1976d2;
+  font-size:15px;
+  font-weight:bold;
+  margin-bottom:8px;
 }
 
 .gift-grid{
@@ -560,9 +567,97 @@ body{
   background:#e8f5ff;
 }
 
-/* =========================
-   TOP UP
-========================= */
+.support-title{
+  font-size:14px;
+  font-weight:bold;
+  color:#9c27b0;
+  margin-top:15px;
+}
+
+.support-options{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:8px;
+  margin-top:10px;
+}
+
+.support-option{
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:12px 8px;
+  text-align:center;
+  cursor:pointer;
+  background:#fff;
+}
+
+.support-option.selected{
+  border-color:#9c27b0;
+  background:#f8eaff;
+  color:#8e24aa;
+}
+
+.support-option .support-icon{
+  font-size:25px;
+  margin-bottom:5px;
+}
+
+.support-option .support-name{
+  font-size:11px;
+  font-weight:bold;
+}
+
+.support-option .support-desc{
+  font-size:9px;
+  color:#777;
+  margin-top:4px;
+}
+
+.coin-support-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:7px;
+  margin:10px 0;
+}
+
+.coin-support{
+  border:1px solid #b8ddfa;
+  background:#f4faff;
+  color:#1976d2;
+  border-radius:9px;
+  padding:9px 3px;
+  text-align:center;
+  cursor:pointer;
+  font-size:10px;
+  font-weight:bold;
+}
+
+.coin-support.selected{
+  background:#9c27b0;
+  color:white;
+  border-color:#9c27b0;
+}
+
+.support-summary{
+  background:#f8eaff;
+  border-radius:12px;
+  padding:12px;
+  margin-top:10px;
+  font-size:11px;
+  color:#6a1b9a;
+}
+
+.confirm-support{
+  width:100%;
+  background:#9c27b0;
+  color:white;
+  border:none;
+  padding:12px;
+  border-radius:10px;
+  font-size:14px;
+  font-weight:bold;
+  margin-top:12px;
+  cursor:pointer;
+}
 
 .topup-title{
   color:#1976d2;
@@ -651,10 +746,6 @@ body{
   cursor:pointer;
 }
 
-/* =========================
-   BOTTOM NAV
-========================= */
-
 .bottom-nav{
   position:absolute;
   bottom:0;
@@ -708,18 +799,13 @@ body{
 
 <div class="screen">
 
-<!-- =========================
-     STATUS BAR
-========================= -->
-
 <div class="status-bar">
   <span>9:41</span>
   <span>📶 🔋</span>
 </div>
 
-
 <!-- =========================
-     HOME PAGE
+     HOME
 ========================= -->
 
 <div id="tab-home" class="tab-content active">
@@ -751,9 +837,6 @@ body{
 
   </div>
 
-
-  <!-- SEARCH -->
-
   <div class="search">
 
     🔍
@@ -765,9 +848,6 @@ body{
       oninput="handleSearch()">
 
   </div>
-
-
-  <!-- CATEGORY -->
 
   <div class="section">
 
@@ -817,9 +897,6 @@ body{
 
   </div>
 
-
-  <!-- NOVELS -->
-
   <div class="section">
 
     <div class="section-title">
@@ -837,15 +914,13 @@ body{
 
 
 <!-- =========================
-     CART PAGE
+     CART
 ========================= -->
 
 <div id="tab-cart" class="tab-content">
 
   <div class="header">
-
     <h1>🛒 ตะกร้าสินค้า</h1>
-
   </div>
 
   <div
@@ -857,15 +932,13 @@ body{
 
 
 <!-- =========================
-     ORDERS PAGE
+     ORDERS
 ========================= -->
 
 <div id="tab-orders" class="tab-content">
 
   <div class="header">
-
     <h1>📦 คำสั่งซื้อ</h1>
-
   </div>
 
   <div
@@ -877,15 +950,13 @@ body{
 
 
 <!-- =========================
-     ACCOUNT PAGE
+     ACCOUNT
 ========================= -->
 
 <div id="tab-account" class="tab-content">
 
   <div class="header">
-
     <h1>👤 บัญชีของฉัน</h1>
-
   </div>
 
   <div class="section">
@@ -904,7 +975,6 @@ body{
         สมาชิกสายนิยายระดับ Gold
       </p>
 
-
       <div class="coin-card">
 
         <div style="
@@ -922,7 +992,6 @@ body{
 
       </div>
 
-
       <button
         class="buy-btn"
         style="font-size:14px;"
@@ -931,7 +1000,6 @@ body{
         🪙 เติมเหรียญ
 
       </button>
-
 
       <div style="
         margin-top:20px;
@@ -957,6 +1025,36 @@ body{
           <span id="account-order-count">0</span>
           รายการ
         </p>
+
+        <p>
+          💜 สนับสนุนนักเขียน:
+          <span id="account-support-count">0</span>
+          ครั้ง
+        </p>
+
+      </div>
+
+      <div class="support-history">
+
+        <strong style="
+          font-size:13px;
+          color:#9c27b0;
+        ">
+          💜 ประวัติการสนับสนุน
+        </strong>
+
+        <div id="support-history-container">
+
+          <div style="
+            text-align:center;
+            color:#999;
+            font-size:11px;
+            padding:15px 0;
+          ">
+            ยังไม่มีประวัติการสนับสนุน
+          </div>
+
+        </div>
 
       </div>
 
@@ -995,24 +1093,182 @@ body{
       style="color:#777;font-size:12px;">
     </p>
 
+    <div class="chapter-buttons">
 
-    <div class="reader-text">
+      <button
+        class="chapter-btn active"
+        id="chapter-button-1"
+        onclick="showChapter(1)">
+        บทที่ 1
+      </button>
 
-      <strong>
-        บทที่ 1: จุดเริ่มต้น
-      </strong>
+      <button
+        class="chapter-btn"
+        id="chapter-button-2"
+        onclick="showChapter(2)">
+        บทที่ 2
+      </button>
 
-      <br><br>
+      <button
+        class="chapter-btn"
+        id="chapter-button-3"
+        onclick="showChapter(3)">
+        บทที่ 3
+      </button>
 
-      ท้องฟ้าคืนนี้เงียบสงบ
-      ลมพัดแผ่วเบาผ่านยอดไม้
-      ชายหนุ่มยืนมองดวงดาว
-      ด้วยความหวังอันริบหรี่...
+    </div>
 
-      <br><br>
+    <div
+      class="chapter-content active"
+      id="chapter-1">
 
-      นี่คือตัวอย่างทดลองอ่าน
-      สำหรับนิยายของนักเขียนหน้าใหม่
+      <div class="chapter-label">
+        📖 บทที่ 1 : จุดเริ่มต้นของเรื่องราว
+      </div>
+
+      <div class="reader-text">
+
+        เช้าวันหนึ่งในวันที่อากาศสดใส
+        ตัวละครของเราตื่นขึ้นมาพร้อมกับความรู้สึกแปลกประหลาด
+        เหมือนกับว่าวันนี้กำลังจะมีบางสิ่งที่สำคัญเกิดขึ้น
+
+        <br><br>
+
+        เมื่อเดินออกจากบ้าน
+        เขาพบกับจดหมายฉบับหนึ่งวางอยู่ตรงหน้าประตู
+        ไม่มีชื่อผู้ส่ง ไม่มีที่อยู่
+        มีเพียงข้อความสั้น ๆ เขียนเอาไว้ว่า
+
+        <br><br>
+
+        <strong>
+        “หากคุณได้รับจดหมายฉบับนี้
+        แสดงว่าคุณพร้อมแล้วสำหรับการเริ่มต้น”
+        </strong>
+
+        <br><br>
+
+        เขาหยิบจดหมายขึ้นมาอ่านซ้ำอีกครั้ง
+        ก่อนจะตัดสินใจเปิดประตูออกไป
+        โดยไม่รู้เลยว่าการตัดสินใจครั้งนี้
+        จะเปลี่ยนชีวิตของเขาไปตลอดกาล
+
+      </div>
+
+    </div>
+
+    <div
+      class="chapter-content"
+      id="chapter-2">
+
+      <div class="chapter-label">
+        📖 บทที่ 2 : ความลับที่ซ่อนอยู่
+      </div>
+
+      <div class="reader-text">
+
+        หลังจากเดินทางออกจากบ้าน
+        เขาเดินตามเส้นทางที่ระบุไว้ในจดหมาย
+        ถนนเส้นนั้นพาเขาเข้าสู่เมืองเล็ก ๆ
+        ที่ไม่เคยปรากฏอยู่บนแผนที่มาก่อน
+
+        <br><br>
+
+        ผู้คนในเมืองต่างมองเขาด้วยสายตาแปลก ๆ
+        ราวกับว่าทุกคนรู้จักเขามานานแล้ว
+        ทั้งที่นี่เป็นครั้งแรกที่เขาเดินทางมายังสถานที่แห่งนี้
+
+        <br><br>
+
+        ชายชราคนหนึ่งเดินเข้ามาหา
+        และพูดด้วยน้ำเสียงเบา ๆ ว่า
+
+        <br><br>
+
+        <strong>
+        “ในที่สุดเจ้าก็มาถึง...
+        พวกเรารอเจ้ามานานแล้ว”
+        </strong>
+
+        <br><br>
+
+        เขาตกใจและรีบถามว่าชายชราคือใคร
+        และเหตุใดจึงรู้จักเขา
+        แต่ชายชรากลับไม่ตอบคำถาม
+
+        <br><br>
+
+        ก่อนจะยื่นกุญแจเก่า ๆ ให้หนึ่งดอก
+        พร้อมบอกว่าคำตอบทั้งหมด
+        อยู่ภายในบ้านหลังหนึ่งที่ปลายเมือง
+
+      </div>
+
+    </div>
+
+    <div
+      class="chapter-content"
+      id="chapter-3">
+
+      <div class="chapter-label">
+        📖 บทที่ 3 : ประตูแห่งโชคชะตา
+      </div>
+
+      <div class="reader-text">
+
+        เมื่อพระอาทิตย์กำลังลับขอบฟ้า
+        เขาเดินทางมาถึงบ้านหลังเก่า
+        บ้านที่ถูกทิ้งร้างมานานหลายปี
+
+        <br><br>
+
+        ประตูไม้ขนาดใหญ่ตั้งอยู่ตรงหน้า
+        มีร่องสำหรับกุญแจที่ได้รับมาจากชายชรา
+
+        <br><br>
+
+        เขาสูดหายใจเข้าลึก ๆ
+        ก่อนนำกุญแจเสียบเข้าไป
+
+        <br><br>
+
+        <strong>
+        แกร๊ก...
+        </strong>
+
+        <br><br>
+
+        ประตูเปิดออกอย่างช้า ๆ
+        ภายในบ้านเต็มไปด้วยหนังสือ
+        ภาพถ่าย และสิ่งของเก่าแก่จำนวนมาก
+
+        <br><br>
+
+        บนโต๊ะกลางห้องมีรูปถ่ายใบหนึ่ง
+        และเมื่อเขาหยิบมันขึ้นมา
+        เขาก็ต้องหยุดนิ่งด้วยความตกใจ
+
+        <br><br>
+
+        เพราะคนที่อยู่ในรูป
+        คือคนที่มีใบหน้าเหมือนกับเขาแทบทุกอย่าง
+
+        <br><br>
+
+        ใต้รูปภาพมีข้อความเพียงประโยคเดียว
+
+        <br><br>
+
+        <strong>
+        “ความจริงของคุณกำลังจะถูกเปิดเผย”
+        </strong>
+
+        <br><br>
+
+        และนั่นคือจุดเริ่มต้น
+        ของเรื่องราวที่เขาไม่สามารถย้อนกลับได้อีกต่อไป...
+
+      </div>
 
     </div>
 
@@ -1037,8 +1293,7 @@ body{
           font-size:12px;
           resize:none;
           margin-top:6px;
-        ">
-      </textarea>
+        "></textarea>
 
       <button
         class="buy-btn"
@@ -1086,7 +1341,6 @@ body{
 
       </div>
 
-
       <div
         class="gift-card"
         id="gift-bread"
@@ -1108,12 +1362,165 @@ body{
 
     </div>
 
-
     <button
       class="buy-btn"
       onclick="sendGift()">
 
       ส่งของขวัญ
+
+    </button>
+
+
+    <!-- =========================
+         SUPPORT PRINT / EBOOK
+    ========================= -->
+
+    <hr style="
+      border:0;
+      border-top:1px dashed #ddd;
+      margin:18px 0;
+    ">
+
+    <div class="support-title">
+      💜 สนับสนุนผลงานนักเขียน
+    </div>
+
+    <p style="
+      font-size:11px;
+      color:#777;
+      line-height:1.6;
+      margin:6px 0;
+    ">
+      คุณสามารถใช้เหรียญเพื่อช่วยสนับสนุน
+      นักเขียนในการจัดทำผลงานในรูปแบบ
+      <strong>รูปเล่ม</strong> หรือ
+      <strong>E-Book</strong>
+    </p>
+
+
+    <!-- SUPPORT TYPE -->
+
+    <div class="support-options">
+
+      <div
+        class="support-option selected"
+        id="support-print"
+        onclick="selectSupportType('print')">
+
+        <div class="support-icon">
+          📚
+        </div>
+
+        <div class="support-name">
+          สนับสนุนรูปเล่ม
+        </div>
+
+        <div class="support-desc">
+          ช่วยสมทบทุนจัดพิมพ์หนังสือ
+        </div>
+
+      </div>
+
+
+      <div
+        class="support-option"
+        id="support-ebook"
+        onclick="selectSupportType('ebook')">
+
+        <div class="support-icon">
+          📱
+        </div>
+
+        <div class="support-name">
+          สนับสนุน E-Book
+        </div>
+
+        <div class="support-desc">
+          ช่วยจัดทำหนังสืออิเล็กทรอนิกส์
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- COIN AMOUNT -->
+
+    <p style="
+      font-size:12px;
+      font-weight:bold;
+      margin:14px 0 5px;
+    ">
+      🪙 เลือกจำนวนเหรียญ
+    </p>
+
+    <div class="coin-support-grid">
+
+      <div
+        class="coin-support"
+        onclick="selectSupportCoin(10,this)">
+        10<br>เหรียญ
+      </div>
+
+      <div
+        class="coin-support selected"
+        onclick="selectSupportCoin(20,this)">
+        20<br>เหรียญ
+      </div>
+
+      <div
+        class="coin-support"
+        onclick="selectSupportCoin(50,this)">
+        50<br>เหรียญ
+      </div>
+
+      <div
+        class="coin-support"
+        onclick="selectSupportCoin(100,this)">
+        100<br>เหรียญ
+      </div>
+
+    </div>
+
+
+    <div class="support-summary">
+
+      💜 คุณกำลังสนับสนุน:
+
+      <strong id="support-type-text">
+        รูปเล่ม
+      </strong>
+
+      <br><br>
+
+      🪙 จำนวน:
+
+      <strong>
+        <span id="support-coin-text">
+          20
+        </span>
+        เหรียญ
+      </strong>
+
+      <br><br>
+
+      🪙 เหรียญคงเหลือหลังสนับสนุน:
+
+      <strong>
+        <span id="support-balance-text">
+          30
+        </span>
+        เหรียญ
+      </strong>
+
+    </div>
+
+
+    <button
+      class="confirm-support"
+      onclick="confirmSupport()">
+
+      💜 ยืนยันการสนับสนุน
 
     </button>
 
@@ -1138,7 +1545,6 @@ body{
       &times;
     </span>
 
-
     <h2 class="topup-title">
       🪙 เติมเหรียญ
     </h2>
@@ -1149,9 +1555,6 @@ body{
     ">
       เลือกจำนวนเหรียญที่ต้องการเติม
     </p>
-
-
-    <!-- AMOUNT -->
 
     <div class="topup-amounts">
 
@@ -1199,16 +1602,12 @@ body{
 
     </div>
 
-
     <p style="
       font-size:13px;
       font-weight:bold;
     ">
       💳 เลือกช่องทางชำระเงิน
     </p>
-
-
-    <!-- QR -->
 
     <div
       class="topup-method selected"
@@ -1231,9 +1630,6 @@ body{
 
     </div>
 
-
-    <!-- TRUE MONEY -->
-
     <div
       class="topup-method"
       id="method-truemoney"
@@ -1254,9 +1650,6 @@ body{
       </span>
 
     </div>
-
-
-    <!-- QR DISPLAY -->
 
     <div
       class="qr-box"
@@ -1283,9 +1676,6 @@ body{
 
     </div>
 
-
-    <!-- TRUE MONEY DISPLAY -->
-
     <div
       class="truemoney-box"
       id="truemoney-box">
@@ -1308,7 +1698,6 @@ body{
       </strong>
 
     </div>
-
 
     <button
       class="topup-confirm"
@@ -1341,7 +1730,6 @@ body{
 
   </div>
 
-
   <div
     class="nav-item"
     onclick="switchTab('cart',this)">
@@ -1361,7 +1749,6 @@ body{
 
   </div>
 
-
   <div
     class="nav-item"
     onclick="switchTab('orders',this)">
@@ -1373,7 +1760,6 @@ body{
     คำสั่งซื้อ
 
   </div>
-
 
   <div
     class="nav-item"
@@ -1400,7 +1786,7 @@ const novels = [
 
 {
   id:101,
-  title:'จุดเริ่มต้นแห่งโชคตารัก',
+  title:'จุดเริ่มต้นแห่งโชคชะตา',
   author:'นักเขียนหน้าใหม่ A',
   category:'นักเขียนหน้าใหม่',
   rating:'5.0',
@@ -1518,6 +1904,22 @@ let currentSelectedNovel = null;
 
 let selectedGift = null;
 
+
+/* =========================
+   SUPPORT VARIABLES
+========================= */
+
+let selectedSupportType = 'print';
+
+let selectedSupportCoins = 20;
+
+let supportHistory = [];
+
+
+/* =========================
+   TOP UP VARIABLES
+========================= */
+
 let topUpAmount = 50;
 
 let topUpCoinsAmount = 50;
@@ -1541,6 +1943,8 @@ function init(){
 
   updateAccountInfo();
 
+  updateSupportSummary();
+
 }
 
 
@@ -1562,6 +1966,12 @@ function updateAccountInfo(){
     'account-order-count'
   ).innerText = orders.length;
 
+  document.getElementById(
+    'account-support-count'
+  ).innerText = supportHistory.length;
+
+  renderSupportHistory();
+
 }
 
 
@@ -1579,8 +1989,14 @@ function updateCoinUI(){
     'account-coins'
   ).innerText = userCoins;
 
+  updateSupportSummary();
+
 }
 
+
+/* =========================
+   TOP UP
+========================= */
 
 function topUpCoins(){
 
@@ -1752,11 +2168,9 @@ function renderNovels(list){
           ''
         }
 
-
         <div class="cover">
           ${item.icon}
         </div>
-
 
         <div class="novel-info">
 
@@ -1789,12 +2203,9 @@ function renderNovels(list){
 
           </div>
 
-
           ${
             item.isNewWriter
-
             ?
-
             `
             <button
               class="buy-btn read-btn"
@@ -1804,9 +2215,7 @@ function renderNovels(list){
 
             </button>
             `
-
             :
-
             `
             <button
               class="buy-btn"
@@ -1920,9 +2329,84 @@ function openReaderModal(id){
     currentSelectedNovel.author;
 
 
+  showChapter(1);
+
+  selectedSupportType = 'print';
+
+  selectedSupportCoins = 20;
+
+  document
+    .getElementById('support-print')
+    .classList.add('selected');
+
+  document
+    .getElementById('support-ebook')
+    .classList.remove('selected');
+
+  document
+    .querySelectorAll('.coin-support')
+    .forEach(el =>
+      el.classList.remove('selected')
+    );
+
+  document
+    .querySelectorAll('.coin-support')[1]
+    .classList.add('selected');
+
+  updateSupportSummary();
+
+
   document
     .getElementById('reader-modal')
     .classList.add('active');
+
+}
+
+
+/* =========================
+   SHOW CHAPTER
+========================= */
+
+function showChapter(chapterNumber){
+
+  document
+    .querySelectorAll('.chapter-content')
+    .forEach(el =>
+      el.classList.remove('active')
+    );
+
+
+  document
+    .querySelectorAll('.chapter-btn')
+    .forEach(el =>
+      el.classList.remove('active')
+    );
+
+
+  const chapter =
+    document.getElementById(
+      `chapter-${chapterNumber}`
+    );
+
+
+  const button =
+    document.getElementById(
+      `chapter-button-${chapterNumber}`
+    );
+
+
+  if(chapter){
+
+    chapter.classList.add('active');
+
+  }
+
+
+  if(button){
+
+    button.classList.add('active');
+
+  }
 
 }
 
@@ -1950,6 +2434,10 @@ function closeModal(){
 
 }
 
+
+/* =========================
+   COMMENT
+========================= */
 
 function submitComment(){
 
@@ -2058,6 +2546,280 @@ function sendGift(){
 
 
   closeModal();
+
+}
+
+
+/* =========================
+   SUPPORT TYPE
+========================= */
+
+function selectSupportType(type){
+
+  selectedSupportType = type;
+
+
+  document
+    .getElementById('support-print')
+    .classList.remove('selected');
+
+  document
+    .getElementById('support-ebook')
+    .classList.remove('selected');
+
+
+  if(type === 'print'){
+
+    document
+      .getElementById('support-print')
+      .classList.add('selected');
+
+  }
+
+  else{
+
+    document
+      .getElementById('support-ebook')
+      .classList.add('selected');
+
+  }
+
+
+  updateSupportSummary();
+
+}
+
+
+/* =========================
+   SUPPORT COINS
+========================= */
+
+function selectSupportCoin(
+  coins,
+  element
+){
+
+  selectedSupportCoins = coins;
+
+
+  document
+    .querySelectorAll('.coin-support')
+    .forEach(el =>
+      el.classList.remove('selected')
+    );
+
+
+  element.classList.add('selected');
+
+
+  updateSupportSummary();
+
+}
+
+
+/* =========================
+   SUPPORT SUMMARY
+========================= */
+
+function updateSupportSummary(){
+
+  const typeText =
+    selectedSupportType === 'print'
+    ? 'รูปเล่ม'
+    : 'E-Book';
+
+
+  document.getElementById(
+    'support-type-text'
+  ).innerText = typeText;
+
+
+  document.getElementById(
+    'support-coin-text'
+  ).innerText = selectedSupportCoins;
+
+
+  const remaining =
+    userCoins - selectedSupportCoins;
+
+
+  document.getElementById(
+    'support-balance-text'
+  ).innerText =
+    remaining >= 0
+    ? remaining
+    : 'เหรียญไม่พอ';
+
+}
+
+
+/* =========================
+   CONFIRM SUPPORT
+========================= */
+
+function confirmSupport(){
+
+  if(!currentSelectedNovel){
+
+    alert(
+      'ไม่พบข้อมูลนิยาย'
+    );
+
+    return;
+
+  }
+
+
+  if(userCoins < selectedSupportCoins){
+
+    alert(
+      '🪙 เหรียญของคุณไม่เพียงพอ\n\n' +
+      `ต้องใช้ ${selectedSupportCoins} เหรียญ\n` +
+      `แต่คุณมี ${userCoins} เหรียญ\n\n` +
+      'กรุณาเติมเหรียญก่อนสนับสนุน'
+    );
+
+    return;
+
+  }
+
+
+  const supportName =
+    selectedSupportType === 'print'
+    ? 'รูปเล่ม'
+    : 'E-Book';
+
+
+  userCoins -= selectedSupportCoins;
+
+
+  supportHistory.unshift({
+
+    novel:
+      currentSelectedNovel.title,
+
+    author:
+      currentSelectedNovel.author,
+
+    type:
+      supportName,
+
+    coins:
+      selectedSupportCoins,
+
+    date:
+      new Date()
+        .toLocaleDateString('th-TH')
+
+  });
+
+
+  updateCoinUI();
+
+  updateAccountInfo();
+
+
+  alert(
+    `💜 สนับสนุนผลงานสำเร็จ!\n\n` +
+
+    `📚 นิยาย: ${currentSelectedNovel.title}\n` +
+
+    `✍️ นักเขียน: ${currentSelectedNovel.author}\n` +
+
+    `📖 รูปแบบ: ${supportName}\n` +
+
+    `🪙 จำนวน: ${selectedSupportCoins} เหรียญ\n\n` +
+
+    `ขอบคุณที่สนับสนุนนักเขียนครับ ❤️`
+  );
+
+
+  closeModal();
+
+}
+
+
+/* =========================
+   SUPPORT HISTORY
+========================= */
+
+function renderSupportHistory(){
+
+  const container =
+    document.getElementById(
+      'support-history-container'
+    );
+
+
+  if(!container){
+
+    return;
+
+  }
+
+
+  if(supportHistory.length === 0){
+
+    container.innerHTML = `
+
+      <div style="
+        text-align:center;
+        color:#999;
+        font-size:11px;
+        padding:15px 0;
+      ">
+        ยังไม่มีประวัติการสนับสนุน
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  container.innerHTML =
+    supportHistory
+      .map(item => `
+
+        <div class="support-history-item">
+
+          <strong>
+            ${
+              item.type === 'รูปเล่ม'
+              ? '📚'
+              : '📱'
+            }
+
+            ${item.type}
+          </strong>
+
+          <br>
+
+          <span>
+            ${item.novel}
+          </span>
+
+          <br>
+
+          <span style="
+            color:#9c27b0;
+            font-weight:bold;
+          ">
+            🪙 ${item.coins} เหรียญ
+          </span>
+
+          <span style="
+            float:right;
+            color:#999;
+          ">
+            ${item.date}
+          </span>
+
+        </div>
+
+      `)
+      .join('');
 
 }
 
@@ -2659,8 +3421,6 @@ function switchTab(
 
   element.classList.add('active');
 
-
-  /* โหลดข้อมูลเฉพาะหน้านั้น */
 
   if(tabName === 'cart'){
 
