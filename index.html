@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Novel Shop - Blue App</title>
-
+<title>ReadAShop - ร้านนิยายออนไลน์</title>
 <style>
 *{box-sizing:border-box}
-
 body{
   margin:0;
   font-family:Arial,"Noto Sans Thai",sans-serif;
@@ -17,7 +15,6 @@ body{
   align-items:center;
   min-height:100vh;
 }
-
 .iphone{
   width:390px;
   height:844px;
@@ -28,13 +25,11 @@ body{
   position:relative;
   border:8px solid #111;
 }
-
 .screen{
   height:100%;
   overflow-y:auto;
   padding-bottom:85px;
 }
-
 .status-bar{
   height:45px;
   display:flex;
@@ -48,31 +43,26 @@ body{
   top:0;
   z-index:10;
 }
-
 .header{
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:10px 20px;
 }
-
 .header h1{
   margin:0;
   font-size:22px;
 }
-
 .header p{
   margin:4px 0 0;
   font-size:13px;
   color:#777;
 }
-
 .profile-container{
   display:flex;
   align-items:center;
   gap:7px;
 }
-
 .coin-balance{
   background:#e8f5ff;
   border:1px solid #2196f3;
@@ -83,7 +73,6 @@ body{
   color:#1976d2;
   cursor:pointer;
 }
-
 .profile{
   width:42px;
   height:42px;
@@ -94,7 +83,6 @@ body{
   align-items:center;
   font-size:20px;
 }
-
 .search{
   margin:10px 20px;
   background:#eef8ff;
@@ -104,7 +92,6 @@ body{
   gap:10px;
   color:#777;
 }
-
 .search input{
   border:none;
   outline:none;
@@ -112,30 +99,25 @@ body{
   width:100%;
   font-size:14px;
 }
-
 .section{
   padding:10px 20px;
 }
-
 .section-title{
   display:flex;
   justify-content:space-between;
   align-items:center;
   margin-bottom:12px;
 }
-
 .section-title h2{
   font-size:18px;
   margin:0;
 }
-
 .categories{
   display:flex;
   gap:10px;
   overflow-x:auto;
   padding-bottom:5px;
 }
-
 .category{
   min-width:75px;
   padding:10px 8px;
@@ -147,12 +129,10 @@ body{
   white-space:nowrap;
   color:#1976d2;
 }
-
 .category.active{
   background:#2196f3;
   color:white;
 }
-
 .novel-list{
   display:flex;
   gap:14px;
@@ -160,7 +140,6 @@ body{
   min-height:100px;
   padding-bottom:10px;
 }
-
 .novel{
   min-width:155px;
   width:155px;
@@ -173,7 +152,6 @@ body{
   flex-shrink:0;
   position:relative;
 }
-
 .new-writer-badge{
   position:absolute;
   top:6px;
@@ -186,7 +164,6 @@ body{
   font-weight:bold;
   z-index:2;
 }
-
 .cover{
   height:150px;
   background:#d5edff;
@@ -196,14 +173,12 @@ body{
   font-size:45px;
   overflow:hidden;
 }
-
 .cover img{
   width:100%;
   height:100%;
   object-fit:cover;
   display:block;
 }
-
 .novel-info{
   padding:10px;
   display:flex;
@@ -211,7 +186,6 @@ body{
   flex-grow:1;
   justify-content:space-between;
 }
-
 .novel-info h3{
   margin:0;
   font-size:13px;
@@ -219,25 +193,21 @@ body{
   overflow:hidden;
   text-overflow:ellipsis;
 }
-
 .author{
   font-size:11px;
   color:#777;
   margin:3px 0;
 }
-
 .rating{
   font-size:11px;
   color:#d48a00;
 }
-
 .price{
   font-size:13px;
   font-weight:bold;
   margin-top:4px;
   color:#1976d2;
 }
-
 .buy-btn{
   width:100%;
   margin-top:8px;
@@ -249,27 +219,21 @@ body{
   cursor:pointer;
   font-size:11px;
 }
-
 .read-btn{background:#28a745}
 .support-btn{background:#9c27b0}
-
 .buy-btn:active{opacity:.8}
-
 .tab-content{display:none}
 .tab-content.active{display:block}
-
 .no-data{
   text-align:center;
   color:#888;
   padding:35px 10px;
   width:100%;
 }
-
 .no-data-icon{
   font-size:45px;
   margin-bottom:10px;
 }
-
 .cart-item{
   display:flex;
   align-items:center;
@@ -280,23 +244,19 @@ body{
   margin-bottom:10px;
   box-shadow:0 2px 6px rgba(0,0,0,.06);
 }
-
 .cart-item-details{
   flex:1;
   padding-right:8px;
 }
-
 .cart-item-details h4{
   margin:0;
   font-size:13px;
 }
-
 .cart-item-details p{
   margin:4px 0 0;
   font-size:11px;
   color:#777;
 }
-
 .remove-btn{
   background:#ff4d4d;
   color:white;
@@ -306,16 +266,13 @@ body{
   cursor:pointer;
   font-size:11px;
 }
-
 .cart-summary{
   background:#f4faff;
   padding:15px;
   border-radius:15px;
   margin-top:15px;
 }
-
 .payment-options{margin-top:15px}
-
 .payment-option{
   display:flex;
   align-items:center;
@@ -326,13 +283,11 @@ body{
   cursor:pointer;
   font-size:12px;
 }
-
 .payment-option.selected{
   border-color:#2196f3;
   background:#e8f5ff;
   color:#1976d2;
 }
-
 .checkout-btn{
   width:100%;
   background:#28a745;
@@ -345,7 +300,6 @@ body{
   margin-top:15px;
   cursor:pointer;
 }
-
 .order-card{
   background:white;
   border-radius:15px;
@@ -353,7 +307,6 @@ body{
   margin-bottom:12px;
   box-shadow:0 2px 7px rgba(0,0,0,.08);
 }
-
 .order-header{
   display:flex;
   justify-content:space-between;
@@ -361,18 +314,15 @@ body{
   padding-bottom:9px;
   margin-bottom:10px;
 }
-
 .order-id{
   font-size:13px;
   font-weight:bold;
 }
-
 .order-status{
   font-size:11px;
   color:#28a745;
   font-weight:bold;
 }
-
 .order-product{
   background:#f4faff;
   padding:9px;
@@ -380,7 +330,6 @@ body{
   font-size:11px;
   margin-top:6px;
 }
-
 .order-total{
   border-top:1px solid #eee;
   padding-top:10px;
@@ -390,7 +339,6 @@ body{
   font-size:15px;
   color:#1976d2;
 }
-
 .account-card{
   background:#f4faff;
   border-radius:18px;
@@ -398,7 +346,6 @@ body{
   text-align:center;
   margin-top:10px;
 }
-
 .account-avatar{
   width:85px;
   height:85px;
@@ -410,7 +357,6 @@ body{
   font-size:42px;
   margin:0 auto 12px;
 }
-
 .coin-card{
   background:#fff;
   border:1px solid #b8ddfa;
@@ -418,13 +364,11 @@ body{
   padding:15px;
   margin:15px 0;
 }
-
 .coin-number{
   font-size:28px;
   color:#1976d2;
   font-weight:bold;
 }
-
 .support-history{
   background:#fff;
   border-radius:12px;
@@ -432,15 +376,12 @@ body{
   margin-top:12px;
   text-align:left;
 }
-
 .support-history-item{
   padding:8px 0;
   border-bottom:1px solid #eee;
   font-size:11px;
 }
-
 .support-history-item:last-child{border-bottom:none}
-
 .modal{
   display:none;
   position:absolute;
@@ -450,9 +391,7 @@ body{
   justify-content:center;
   align-items:flex-end;
 }
-
 .modal.active{display:flex}
-
 .modal-content{
   background:#fff;
   width:100%;
@@ -463,12 +402,10 @@ body{
   position:relative;
   animation:slideUp .3s ease-out;
 }
-
 @keyframes slideUp{
   from{transform:translateY(100%)}
   to{transform:translateY(0)}
 }
-
 .close-modal{
   position:absolute;
   top:12px;
@@ -477,14 +414,12 @@ body{
   cursor:pointer;
   color:#777;
 }
-
 .chapter-buttons{
   display:flex;
   gap:7px;
   margin:12px 0;
   overflow-x:auto;
 }
-
 .chapter-btn{
   flex:1;
   min-width:80px;
@@ -497,16 +432,13 @@ body{
   font-size:11px;
   font-weight:bold;
 }
-
 .chapter-btn.active{
   background:#2196f3;
   color:white;
   border-color:#2196f3;
 }
-
 .chapter-content{display:none}
 .chapter-content.active{display:block}
-
 .reader-text{
   font-size:13px;
   line-height:1.8;
@@ -518,20 +450,17 @@ body{
   max-height:230px;
   overflow-y:auto;
 }
-
 .chapter-label{
   color:#1976d2;
   font-size:15px;
   font-weight:bold;
   margin-bottom:8px;
 }
-
 .gift-grid{
   display:flex;
   gap:10px;
   margin:10px 0;
 }
-
 .gift-card{
   flex:1;
   border:1px solid #ddd;
@@ -540,26 +469,22 @@ body{
   text-align:center;
   cursor:pointer;
 }
-
 .gift-card.selected{
   border-color:#2196f3;
   background:#e8f5ff;
 }
-
 .support-title{
   font-size:14px;
   font-weight:bold;
   color:#9c27b0;
   margin-top:15px;
 }
-
 .support-options{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:8px;
   margin-top:10px;
 }
-
 .support-option{
   border:1px solid #ddd;
   border-radius:12px;
@@ -568,36 +493,30 @@ body{
   cursor:pointer;
   background:#fff;
 }
-
 .support-option.selected{
   border-color:#9c27b0;
   background:#f8eaff;
   color:#8e24aa;
 }
-
 .support-option .support-icon{
   font-size:25px;
   margin-bottom:5px;
 }
-
 .support-option .support-name{
   font-size:11px;
   font-weight:bold;
 }
-
 .support-option .support-desc{
   font-size:9px;
   color:#777;
   margin-top:4px;
 }
-
 .coin-support-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:7px;
   margin:10px 0;
 }
-
 .coin-support{
   border:1px solid #b8ddfa;
   background:#f4faff;
@@ -609,13 +528,11 @@ body{
   font-size:10px;
   font-weight:bold;
 }
-
 .coin-support.selected{
   background:#9c27b0;
   color:white;
   border-color:#9c27b0;
 }
-
 .support-summary{
   background:#f8eaff;
   border-radius:12px;
@@ -624,7 +541,6 @@ body{
   font-size:11px;
   color:#6a1b9a;
 }
-
 .confirm-support{
   width:100%;
   background:#9c27b0;
@@ -637,20 +553,17 @@ body{
   margin-top:12px;
   cursor:pointer;
 }
-
 .topup-title{
   color:#1976d2;
   font-size:19px;
   margin:0 0 15px;
 }
-
 .topup-amounts{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:8px;
   margin-bottom:18px;
 }
-
 .topup-amount{
   border:1px solid #b8ddfa;
   background:#f4faff;
@@ -660,13 +573,11 @@ body{
   cursor:pointer;
   font-size:11px;
 }
-
 .topup-amount.selected{
   background:#2196f3;
   color:white;
   border-color:#2196f3;
 }
-
 .topup-method{
   border:1px solid #ddd;
   border-radius:12px;
@@ -675,13 +586,11 @@ body{
   cursor:pointer;
   font-size:12px;
 }
-
 .topup-method.selected{
   border-color:#2196f3;
   background:#e8f5ff;
   color:#1976d2;
 }
-
 .qr-box{
   display:none;
   text-align:center;
@@ -690,7 +599,6 @@ body{
   border-radius:12px;
   margin:10px 0;
 }
-
 .qr-code{
   width:150px;
   height:150px;
@@ -700,7 +608,6 @@ body{
     linear-gradient(#000 10px,transparent 10px) 0 0/30px 30px,#fff;
   border:10px solid white;
 }
-
 .truemoney-box{
   display:none;
   text-align:center;
@@ -711,7 +618,6 @@ body{
   margin:10px 0;
   color:#e53935;
 }
-
 .topup-confirm{
   width:100%;
   border:none;
@@ -723,7 +629,6 @@ body{
   font-weight:bold;
   cursor:pointer;
 }
-
 .bottom-nav{
   position:absolute;
   bottom:0;
@@ -737,7 +642,6 @@ body{
   align-items:center;
   z-index:20;
 }
-
 .nav-item{
   text-align:center;
   font-size:11px;
@@ -746,18 +650,15 @@ body{
   position:relative;
   width:25%;
 }
-
 .nav-item .icon{
   font-size:21px;
   display:block;
   margin-bottom:3px;
 }
-
 .nav-item.active{
   color:#2196f3;
   font-weight:bold;
 }
-
 .badge{
   position:absolute;
   top:-4px;
@@ -768,11 +669,9 @@ body{
   padding:2px 6px;
   font-size:9px;
 }
-
 /* =========================================================
    TRANSPORT
 ========================================================= */
-
 .transport-launch{
   width:100%;
   margin-top:12px;
@@ -785,53 +684,30 @@ body{
   cursor:pointer;
   font-size:13px;
 }
-
-.transport-modal{
-  display:none;
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.62);
-  z-index:150;
-  align-items:flex-end;
-}
-
-.transport-modal.active{display:flex}
-
-.transport-panel{
-  width:100%;
-  max-height:94%;
-  overflow:auto;
-  background:#f7fbff;
-  border-radius:25px 25px 0 0;
-  padding:18px;
-}
-
+.transport-modal{display:none;position:absolute;inset:0;background:#f7fbff;z-index:150;align-items:stretch;width:100%;height:100%;overflow:hidden}.transport-modal.active{display:flex}.transport-panel{width:100%;height:100%;max-height:100%;overflow-y:auto;overflow-x:hidden;background:#f7fbff;border-radius:0;padding:0 0 18px}
+.shipping-summary{margin-top:12px;padding:12px;background:#f8fbff;border:1px solid #dbeafe;border-radius:12px}.shipping-summary>div{display:flex;justify-content:space-between;gap:12px;padding:5px 0;font-size:12px}.shipping-summary .shipping-total{margin-top:5px;padding-top:10px;border-top:1px solid #cfe3f5;font-size:14px;color:#1565c0}.shipping-summary small{display:block;margin-top:7px;color:#64748b;font-size:10px}.shipping-rate-box{margin-top:10px;padding:10px;background:#eff8ff;border-radius:10px;color:#155e75;font-size:10px;line-height:1.7}.order-shipping-detail{margin-top:6px;padding:7px;background:#eff8ff;border-radius:8px;color:#1565c0;font-size:10px}@media(max-width:600px){.transport-panel{padding:14px}.transport-head h2{font-size:18px}.transport-cards{grid-template-columns:repeat(2,1fr)}}.transport-modal .transport-head{position:sticky;top:0;z-index:20;background:#fff;padding:15px 16px;border-bottom:1px solid #dbeafe;box-shadow:0 2px 8px rgba(0,0,0,.05)}.transport-modal .transport-head h2{font-size:18px}.transport-modal .transport-close{font-size:28px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#eef7ff;color:#1565c0}.transport-modal .transport-app{padding:10px 12px 28px}.transport-modal .transport-userbar{position:sticky;top:67px;z-index:15;margin:0 0 10px;border-radius:12px}.transport-modal .transport-menu{position:sticky;top:124px;z-index:14;background:#f7fbff;padding:5px 0 8px;margin:0 0 8px}.transport-modal .transport-section{min-height:calc(100vh - 190px)}.transport-modal .transport-table{font-size:9px}.transport-modal .transport-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.transport-modal .transport-form,.transport-modal .transport-stat{box-shadow:0 2px 8px rgba(0,0,0,.06)}@media(max-width:600px){.transport-panel{padding:0 0 12px}.transport-modal .transport-head{padding:12px 14px}.transport-modal .transport-app{padding:8px 10px 24px}.transport-modal .transport-menu{top:62px}.transport-modal .transport-userbar{top:62px}.transport-modal .transport-section{min-height:calc(100% - 150px)}}
 .transport-head{
   display:flex;
   justify-content:space-between;
   align-items:center;
   margin-bottom:12px;
 }
-
 .transport-head h2{
   margin:0;
   color:#1565c0;
   font-size:19px;
 }
-
 .transport-close{
   font-size:25px;
   color:#777;
   cursor:pointer;
 }
-
 .transport-login{
   background:#fff;
   border-radius:16px;
   padding:16px;
   box-shadow:0 2px 8px rgba(0,0,0,.07);
 }
-
 .transport-login input,
 .transport-form input,
 .transport-form select,
@@ -844,12 +720,10 @@ body{
   font-size:12px;
   font-family:inherit;
 }
-
 .transport-form textarea{
   min-height:70px;
   resize:vertical;
 }
-
 .transport-btn{
   border:0;
   border-radius:9px;
@@ -861,19 +735,16 @@ body{
   font-size:11px;
   margin:2px;
 }
-
 .transport-btn.secondary{background:#607d8b}
 .transport-btn.success{background:#2e9d55}
 .transport-btn.danger{background:#e53935}
 .transport-btn.warning{background:#f39c12}
-
 .transport-role-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:7px;
   margin:10px 0;
 }
-
 .transport-role{
   border:1px solid #c8e2f7;
   background:#f5fbff;
@@ -883,16 +754,13 @@ body{
   cursor:pointer;
   font-size:11px;
 }
-
 .transport-role.active{
   background:#2196f3;
   color:#fff;
   border-color:#2196f3;
 }
-
 .transport-app{display:none}
 .transport-app.active{display:block}
-
 .transport-userbar{
   background:#e3f2fd;
   border-radius:12px;
@@ -903,14 +771,12 @@ body{
   justify-content:space-between;
   align-items:center;
 }
-
 .transport-menu{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:7px;
   margin-bottom:10px;
 }
-
 .transport-menu button{
   border:1px solid #d8e7f3;
   background:#fff;
@@ -919,30 +785,25 @@ body{
   font-size:10px;
   cursor:pointer;
 }
-
 .transport-section{display:none}
 .transport-section.active{display:block}
-
 .transport-cards{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:8px;
 }
-
 .transport-stat{
   background:#fff;
   border-radius:13px;
   padding:12px;
   box-shadow:0 2px 7px rgba(0,0,0,.06);
 }
-
 .transport-stat b{
   display:block;
   font-size:19px;
   color:#1976d2;
   margin-top:4px;
 }
-
 .transport-table{
   width:100%;
   border-collapse:collapse;
@@ -951,7 +812,6 @@ body{
   overflow:hidden;
   font-size:9px;
 }
-
 .transport-table th,
 .transport-table td{
   padding:7px 5px;
@@ -959,12 +819,10 @@ body{
   text-align:left;
   vertical-align:top;
 }
-
 .transport-table th{
   background:#eaf6ff;
   color:#1565c0;
 }
-
 .transport-status{
   display:inline-block;
   border-radius:10px;
@@ -972,32 +830,27 @@ body{
   font-size:8px;
   font-weight:bold;
 }
-
 .ts-wait{background:#fff3cd;color:#856404}
 .ts-pick{background:#dbeafe;color:#1d4ed8}
 .ts-done{background:#dcfce7;color:#166534}
 .ts-fail{background:#fee2e2;color:#991b1b}
-
 .transport-form{
   background:#fff;
   border-radius:14px;
   padding:12px;
   margin-bottom:10px;
 }
-
 .transport-form h3{
   margin:0 0 8px;
   font-size:14px;
   color:#1565c0;
 }
-
 .transport-actions{
   display:flex;
   gap:5px;
   flex-wrap:wrap;
   margin-top:5px;
 }
-
 .transport-alert{
   background:#fff8e1;
   border-left:4px solid #ffb300;
@@ -1006,14 +859,12 @@ body{
   margin:6px 0;
   font-size:10px;
 }
-
 .transport-chart{
   background:#fff;
   border-radius:14px;
   padding:12px;
   margin-top:10px;
 }
-
 .transport-bars{
   height:120px;
   display:flex;
@@ -1022,7 +873,6 @@ body{
   border-bottom:1px solid #ccc;
   padding:5px;
 }
-
 .transport-bar{
   flex:1;
   background:#64b5f6;
@@ -1030,7 +880,6 @@ body{
   min-height:8px;
   position:relative;
 }
-
 .transport-bar span{
   position:absolute;
   bottom:-18px;
@@ -1038,7 +887,6 @@ body{
   text-align:center;
   font-size:8px;
 }
-
 .transport-bar em{
   position:absolute;
   top:-14px;
@@ -1047,23 +895,19 @@ body{
   font-size:8px;
   font-style:normal;
 }
-
 .transport-note{
   font-size:9px;
   color:#777;
   margin-top:8px;
-}
-
+}.transport-id-badge{display:inline-flex;align-items:center;padding:4px 8px;border-radius:999px;background:#eef6ff;color:#1d4f91;font-weight:800;font-size:11px;border:1px solid #cfe3ff}
 .transport-login-msg{
   font-size:10px;
   color:#e53935;
   min-height:15px;
 }
-
 /* =========================================================
    CUSTOMER PROFILE
 ========================================================= */
-
 .customer-profile-box{
   background:#fff;
   border:1px solid #dceaf5;
@@ -1071,28 +915,23 @@ body{
   padding:10px;
   margin-top:10px;
 }
-
 .customer-profile-box h4{
   margin:0 0 6px;
   color:#1565c0;
   font-size:13px;
 }
-
 .profile-required{
   color:#e53935;
   font-size:10px;
   margin-bottom:5px;
 }
-
 .profile-ok{
   color:#2e9d55;
   font-size:10px;
 }
-
 /* =========================================================
    DELIVERY FAILURE MODAL
 ========================================================= */
-
 .failure-modal{
   display:none;
   position:absolute;
@@ -1101,21 +940,17 @@ body{
   z-index:300;
   align-items:flex-end;
 }
-
 .failure-modal.active{display:flex}
-
 .failure-panel{
   width:100%;
   background:#fff;
   border-radius:25px 25px 0 0;
   padding:20px;
 }
-
 .failure-panel h3{
   margin-top:0;
   color:#e53935;
 }
-
 .failure-option{
   border:1px solid #ddd;
   border-radius:10px;
@@ -1124,25 +959,20 @@ body{
   cursor:pointer;
   font-size:12px;
 }
-
 .failure-option.selected{
   border-color:#e53935;
   background:#fff1f1;
   color:#c62828;
 }
-
 .failure-other{
   display:none;
 }
-
 .failure-other.active{
   display:block;
 }
-
 /* =========================================================
    FULL SCREEN LOGIN
 ========================================================= */
-
 .system-login{
   position:absolute;
   inset:0;
@@ -1153,11 +983,9 @@ body{
   justify-content:center;
   padding:25px;
 }
-
 .system-login.hidden{
   display:none;
 }
-
 .system-login-card{
   width:100%;
   background:#fff;
@@ -1166,7 +994,6 @@ body{
   box-shadow:0 8px 25px rgba(0,0,0,.12);
   text-align:center;
 }
-
 .system-login-logo{
   width:75px;
   height:75px;
@@ -1179,25 +1006,21 @@ body{
   font-size:38px;
   margin:0 auto 12px;
 }
-
 .system-login-card h1{
   font-size:22px;
   color:#1565c0;
   margin:5px 0;
 }
-
 .system-login-card p{
   font-size:11px;
   color:#777;
 }
-
 .login-role{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:6px;
   margin:15px 0;
 }
-
 .login-role button{
   border:1px solid #c8e2f7;
   background:#f5fbff;
@@ -1206,13 +1029,11 @@ body{
   cursor:pointer;
   font-size:10px;
 }
-
 .login-role button.active{
   background:#2196f3;
   color:#fff;
   border-color:#2196f3;
 }
-
 .system-login-card input{
   width:100%;
   padding:12px;
@@ -1221,7 +1042,6 @@ body{
   margin:5px 0;
   font-size:13px;
 }
-
 .system-login-btn{
   width:100%;
   border:none;
@@ -1233,14 +1053,12 @@ body{
   font-weight:bold;
   cursor:pointer;
 }
-
 .system-login-error{
   color:#e53935;
   font-size:10px;
   min-height:16px;
   margin-top:6px;
 }
-
 .system-demo{
   background:#f4faff;
   border-radius:10px;
@@ -1249,42 +1067,29 @@ body{
   color:#777;
   margin-top:12px;
 }
-</style>
+/* MOBILE APP POLISH */html{background:#dcefff;-webkit-text-size-adjust:100%;text-size-adjust:100%}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overscroll-behavior:none}.iphone{isolation:isolate;backface-visibility:hidden}.screen,.transport-panel{-webkit-overflow-scrolling:touch;overscroll-behavior-y:contain;scrollbar-width:none}.screen::-webkit-scrollbar,.transport-panel::-webkit-scrollbar{display:none}button,input,select,textarea{font:inherit;-webkit-tap-highlight-color:transparent}button{touch-action:manipulation}.novel,.cart-item,.order-card,.account-card,.coin-card,.transport-stat,.transport-form,.transport-chart{transition:transform .16s ease,box-shadow .16s ease}.novel:active,.cart-item:active,.order-card:active,.transport-btn:active,.buy-btn:active,.checkout-btn:active{transform:scale(.985)}.bottom-nav{height:78px;padding-bottom:env(safe-area-inset-bottom);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(255,255,255,.94);box-shadow:0 -4px 18px rgba(15,23,42,.08)}.nav-item{padding-top:4px;min-height:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px}.nav-item .icon{font-size:20px;margin-bottom:0}.header{padding-top:12px}.search{box-shadow:inset 0 0 0 1px rgba(33,150,243,.08)}.checkout-btn,.transport-btn,.buy-btn{min-height:42px;box-shadow:0 5px 12px rgba(25,118,210,.14)}.transport-modal{border-radius:0}.transport-modal .transport-head{padding-top:calc(12px + env(safe-area-inset-top));min-height:64px}.transport-modal .transport-app{padding-bottom:calc(28px + env(safe-area-inset-bottom))}@media(max-width:600px){body{background:#fff;min-height:100dvh}.iphone{width:min(390px,100vw);height:min(844px,100dvh);max-width:390px;max-height:844px;border-radius:0;border:0;box-shadow:none}.system-login{padding:20px 16px}.system-login-card{border-radius:24px;padding:24px 18px}.transport-modal .transport-section{min-height:0}}@media(min-width:601px){.iphone{width:390px;height:844px}}.brand-mark{display:inline-flex;width:25px;height:25px;align-items:center;justify-content:center;border-radius:8px;background:linear-gradient(135deg,#1976d2,#64b5f6);color:#fff;font-size:15px;vertical-align:2px;box-shadow:0 4px 10px rgba(25,118,210,.22)}.header h1{letter-spacing:-.4px}.header p{margin-top:5px;color:#64748b;font-size:11px}.coin-balance{border:1px solid #d9eafb!important;background:#f7fbff!important;box-shadow:0 3px 10px rgba(30,90,140,.06)}.profile{box-shadow:0 5px 12px rgba(25,118,210,.16)}.section-title h2{letter-spacing:-.2px}.novel{border:1px solid #edf2f7!important;box-shadow:0 5px 16px rgba(15,23,42,.07)!important;background:#fff!important}.novel .cover{border-radius:12px!important;overflow:hidden}.buy-btn{border-radius:12px!important;font-weight:700}.bottom-nav{border-top:1px solid rgba(148,163,184,.16)}.nav-item.active{font-weight:700}.system-login{background:radial-gradient(circle at 50% 15%,#eef8ff 0,#f8fbff 38%,#f3f7fb 100%)}.system-login-card{border:1px solid #e5eef7;box-shadow:0 18px 45px rgba(15,23,42,.12),0 3px 10px rgba(25,118,210,.05);padding:28px 20px 22px}.system-login-logo{background:linear-gradient(145deg,#1565c0,#42a5f5);box-shadow:0 12px 24px rgba(21,101,192,.24);border:4px solid #fff}.system-login-card h1{font-size:24px;letter-spacing:-.5px}.login-welcome{margin:5px 0 8px!important;font-size:11px!important;color:#64748b!important}.login-secure{font-size:9px;color:#64748b;background:#f7fbff;border:1px solid #e2eef9;border-radius:10px;padding:8px;margin:8px 0 13px}.login-role{gap:8px}.login-role button{min-height:76px;border-radius:14px!important;background:#f8fbff!important;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;box-shadow:0 2px 7px rgba(15,23,42,.04);color:#334155}.login-role button.active{background:linear-gradient(145deg,#1976d2,#42a5f5)!important;color:#fff!important;box-shadow:0 7px 16px rgba(25,118,210,.22)}.login-role button strong{font-size:10px}.login-role button small{font-size:8px;opacity:.8}.system-login-card input{height:45px;border-color:#dbe7f1;background:#fbfdff}.system-login-card input:focus{outline:0;border-color:#42a5f5;box-shadow:0 0 0 3px rgba(66,165,245,.12)}.system-login-btn{height:46px!important;border-radius:13px!important;background:linear-gradient(135deg,#1565c0,#42a5f5)!important;box-shadow:0 9px 18px rgba(25,118,210,.2)}.system-demo{border:1px solid #e5eef7;background:#f8fbfe!important;text-align:left}.system-demo b{color:#334155;font-size:9px}.transport-modal{background:#f5f8fc!important}.transport-app{background:#f5f8fc!important}.transport-head{background:rgba(255,255,255,.97)!important;border-bottom:1px solid #e5eaf0!important;box-shadow:0 2px 10px rgba(15,23,42,.05)!important}.transport-section{padding-left:14px!important;padding-right:14px!important}.transport-stat{border:1px solid #e8eef5!important;box-shadow:0 5px 14px rgba(15,23,42,.05)!important}.transport-card,.transport-form,.transport-chart{border:1px solid #e8eef5!important;box-shadow:0 5px 14px rgba(15,23,42,.05)!important;border-radius:16px!important}.transport-btn{border-radius:12px!important;font-weight:700}.ts-wait,.ts-pick,.ts-done,.ts-fail{border-radius:999px!important}.failure-panel{box-shadow:0 -8px 25px rgba(15,23,42,.15)}@media(max-width:600px){.header{padding-left:16px!important;padding-right:16px!important}.section{padding-left:16px!important;padding-right:16px!important}.system-login{padding:18px 14px}.system-login-card{max-height:calc(100dvh - 36px);overflow:auto}}</style>
 </head>
-
 <body>
-
 <div class="iphone">
-
 <div class="screen">
-
 <div class="status-bar">
   <span>9:41</span>
   <span>📶 🔋</span>
 </div>
-
 <!-- HOME -->
 <div id="tab-home" class="tab-content active">
-
   <div class="header">
-
     <div>
-      <h1>Novel Shop 📚</h1>
+      <h1>ReadAShop <span class="brand-mark">R</span></h1>
       <p>สวัสดี 👋 เลือกนิยายที่คุณชอบ</p>
     </div>
-
     <div class="profile-container">
-
       <div class="coin-balance" onclick="topUpCoins()">
         🪙 <span id="user-coins">50</span> เหรียญ
       </div>
-
       <div class="profile">👤</div>
-
     </div>
-
   </div>
-
   <div class="search">
     🔍
     <input
@@ -1293,164 +1098,100 @@ body{
       placeholder="ค้นหาชื่อนิยายหรือผู้แต่ง"
       oninput="handleSearch()">
   </div>
-
   <div class="section">
-
     <div class="section-title">
       <h2>หมวดหมู่</h2>
     </div>
-
     <div class="categories">
-
       <div class="category active"
         onclick="filterCategory('ทั้งหมด',this)">
         ทั้งหมด
       </div>
-
       <div class="category"
         onclick="filterCategory('นักเขียนหน้าใหม่',this)">
         🌱 หน้าใหม่
       </div>
-
       <div class="category"
         onclick="filterCategory('โรแมนซ์',this)">
         💗 โรแมนซ์
       </div>
-
       <div class="category"
         onclick="filterCategory('แฟนตาซี',this)">
         🧙 แฟนตาซี
       </div>
-
       <div class="category"
         onclick="filterCategory('สืบสวน',this)">
         🔎 สืบสวน
       </div>
-
       <div class="category"
         onclick="filterCategory('นิยายวาย',this)">
         💜 นิยายวาย
       </div>
-
     </div>
-
   </div>
-
   <div class="section">
-
     <div class="section-title">
       <h2>นิยายทั้งหมด</h2>
     </div>
-
     <div class="novel-list" id="main-novel-list"></div>
-
   </div>
-
 </div>
-
-
 <!-- CART -->
 <div id="tab-cart" class="tab-content">
-
   <div class="header">
     <h1>🛒 ตะกร้าสินค้า</h1>
   </div>
-
   <div class="section" id="cart-items-container"></div>
-
 </div>
-
-
 <!-- ORDERS -->
 <div id="tab-orders" class="tab-content">
-
   <div class="header">
     <h1>📦 คำสั่งซื้อ</h1>
   </div>
-
   <div class="section" id="orders-container"></div>
-
 </div>
-
-
 <!-- ACCOUNT -->
 <div id="tab-account" class="tab-content">
-
   <div class="header">
     <h1>👤 บัญชีของฉัน</h1>
   </div>
-
   <div class="section">
-
     <div class="account-card">
-
       <div class="account-avatar">👤</div>
-
       <h2 style="margin:5px 0;">
         นักอ่านตัวยง
       </h2>
-
       <p style="color:#777;font-size:12px;">
         สมาชิกสายนิยายระดับ Gold
       </p>
-
       <div class="coin-card">
-
         <div style="font-size:12px;color:#777;margin-bottom:5px;">
           🪙 เหรียญคงเหลือ
         </div>
-
         <div class="coin-number">
           <span id="account-coins">50</span> เหรียญ
         </div>
-
       </div>
-
       <button
         class="buy-btn"
         style="font-size:14px;"
         onclick="topUpCoins()">
         🪙 เติมเหรียญ
       </button>
-
       <!-- CUSTOMER INFORMATION -->
-      <div class="customer-profile-box">
-
+      <div class="customer-profile-box" id="customer-profile-box">
         <h4>📍 ข้อมูลสำหรับจัดส่ง</h4>
-
-        <div class="profile-required">
-          * ต้องกรอกข้อมูลก่อนสั่งซื้อ
+        <div class="profile-editor">
+          <div class="profile-required">* กรอกครั้งเดียวเพื่อใช้กับคำสั่งซื้อ</div>
+          <input id="customer-name" placeholder="ชื่อ-นามสกุล" style="width:100%;padding:9px;border:1px solid #ddd;border-radius:8px;margin:3px 0;">
+          <input id="customer-phone" placeholder="เบอร์โทรศัพท์" type="tel" style="width:100%;padding:9px;border:1px solid #ddd;border-radius:8px;margin:3px 0;">
+          <textarea id="customer-address" placeholder="ที่อยู่สำหรับจัดส่ง" style="width:100%;min-height:70px;padding:9px;border:1px solid #ddd;border-radius:8px;margin:3px 0;font-family:inherit;"></textarea>
+          <button class="transport-btn success" style="width:100%;margin-top:6px;" onclick="saveCustomerProfile()">💾 บันทึกข้อมูลจัดส่ง</button>
+          <div id="customer-profile-status" class="profile-required">กรุณากรอกข้อมูล</div>
         </div>
-
-        <input
-          id="customer-name"
-          placeholder="ชื่อ-นามสกุล"
-          style="width:100%;padding:9px;border:1px solid #ddd;border-radius:8px;margin:3px 0;">
-
-        <input
-          id="customer-phone"
-          placeholder="เบอร์โทรศัพท์"
-          type="tel"
-          style="width:100%;padding:9px;border:1px solid #ddd;border-radius:8px;margin:3px 0;">
-
-        <textarea
-          id="customer-address"
-          placeholder="ที่อยู่สำหรับจัดส่ง"
-          style="width:100%;min-height:70px;padding:9px;border:1px solid #ddd;border-radius:8px;margin:3px 0;font-family:inherit;"></textarea>
-
-        <button
-          class="transport-btn success"
-          style="width:100%;margin-top:6px;"
-          onclick="saveCustomerProfile()">
-          💾 บันทึกข้อมูลจัดส่ง
-        </button>
-
-        <div id="customer-profile-status" class="profile-required">
-          กรุณากรอกข้อมูล
-        </div>
-
+        <div class="profile-saved">✅ ข้อมูลจัดส่งได้รับการบันทึกแล้ว ระบบจะใช้ข้อมูลนี้เฉพาะตอนสร้างคำสั่งซื้อ</div>
+        <button class="transport-btn secondary profile-edit-btn" onclick="editCustomerProfile()">✏️ แก้ไขข้อมูลจัดส่ง</button>
       </div>
-
       <div style="
         margin-top:20px;
         padding:12px;
@@ -1459,227 +1200,147 @@ body{
         text-align:left;
         font-size:12px;
       ">
-
         <p>👤 ชื่อสมาชิก: นักอ่านตัวยง</p>
-
         <p>⭐ ระดับสมาชิก: Gold</p>
-
         <p>
           🛒 สินค้าในตะกร้า:
           <span id="account-cart-count">0</span>
           รายการ
         </p>
-
         <p>
           📦 คำสั่งซื้อ:
           <span id="account-order-count">0</span>
           รายการ
         </p>
-
         <p>
           💜 สนับสนุนนักเขียน:
           <span id="account-support-count">0</span>
           ครั้ง
         </p>
-
       </div>
-
       <div class="support-history">
-
         <strong style="font-size:13px;color:#9c27b0;">
           💜 ประวัติการสนับสนุน
         </strong>
-
         <div id="support-history-container"></div>
-
       </div>
-
-      <button
-        class="transport-launch"
-        onclick="openTransport()">
-        🚚 เปิดระบบจัดการขนส่ง
-      </button>
-
+      <button class="customer-logout-btn" onclick="systemLogout()">🚪 ออกจากระบบ</button>
     </div>
-
   </div>
-
 </div>
-
 </div>
-
-
 <!-- =========================================================
      READER MODAL
 ========================================================= -->
-
 <div class="modal" id="reader-modal">
-
   <div class="modal-content">
-
     <span class="close-modal" onclick="closeModal()">&times;</span>
-
     <h2 id="modal-title" style="margin-top:0;font-size:17px;"></h2>
-
     <p id="modal-author" style="color:#777;font-size:12px;"></p>
-
     <div class="chapter-buttons">
-
       <button class="chapter-btn active"
         id="chapter-button-1"
         onclick="showChapter(1)">
         บทที่ 1
       </button>
-
       <button class="chapter-btn"
         id="chapter-button-2"
         onclick="showChapter(2)">
         บทที่ 2
       </button>
-
       <button class="chapter-btn"
         id="chapter-button-3"
         onclick="showChapter(3)">
         บทที่ 3
       </button>
-
     </div>
-
     <div class="chapter-content active" id="chapter-1">
-
       <div class="chapter-label">
         📖 บทที่ 1 : จุดเริ่มต้นของเรื่องราว
       </div>
-
       <div class="reader-text">
-
         เช้าวันหนึ่งในวันที่อากาศสดใส
         ตัวละครของเราตื่นขึ้นมาพร้อมกับความรู้สึกแปลกประหลาด
         เหมือนกับว่าวันนี้กำลังจะมีบางสิ่งที่สำคัญเกิดขึ้น
-
         <br><br>
-
         เมื่อเดินออกจากบ้าน
         เขาพบกับจดหมายฉบับหนึ่งวางอยู่ตรงหน้าประตู
         ไม่มีชื่อผู้ส่ง ไม่มีที่อยู่
         มีเพียงข้อความสั้น ๆ เขียนเอาไว้ว่า
-
         <br><br>
-
         <strong>
         “หากคุณได้รับจดหมายฉบับนี้
         แสดงว่าคุณพร้อมแล้วสำหรับการเริ่มต้น”
         </strong>
-
         <br><br>
-
         เขาหยิบจดหมายขึ้นมาอ่านซ้ำอีกครั้ง
         ก่อนจะตัดสินใจเปิดประตูออกไป
         โดยไม่รู้เลยว่าการตัดสินใจครั้งนี้
         จะเปลี่ยนชีวิตของเขาไปตลอดกาล
-
       </div>
-
     </div>
-
     <div class="chapter-content" id="chapter-2">
-
       <div class="chapter-label">
         📖 บทที่ 2 : ความลับที่ซ่อนอยู่
       </div>
-
       <div class="reader-text">
-
         หลังจากเดินทางออกจากบ้าน
         เขาเดินตามเส้นทางที่ระบุไว้ในจดหมาย
         ถนนเส้นนั้นพาเขาเข้าสู่เมืองเล็ก ๆ
         ที่ไม่เคยปรากฏอยู่บนแผนที่มาก่อน
-
         <br><br>
-
         ผู้คนในเมืองต่างมองเขาด้วยสายตาแปลก ๆ
         ราวกับว่าทุกคนรู้จักเขามานานแล้ว
-
         <br><br>
-
         ชายชราคนหนึ่งเดินเข้ามาหา
         และพูดด้วยน้ำเสียงเบา ๆ ว่า
-
         <br><br>
-
         <strong>
         “ในที่สุดเจ้าก็มาถึง...
         พวกเรารอเจ้ามานานแล้ว”
         </strong>
-
         <br><br>
-
         ก่อนจะยื่นกุญแจเก่า ๆ ให้หนึ่งดอก
         พร้อมบอกว่าคำตอบทั้งหมด
         อยู่ภายในบ้านหลังหนึ่งที่ปลายเมือง
-
       </div>
-
     </div>
-
     <div class="chapter-content" id="chapter-3">
-
       <div class="chapter-label">
         📖 บทที่ 3 : ประตูแห่งโชคชะตา
       </div>
-
       <div class="reader-text">
-
         เมื่อพระอาทิตย์กำลังลับขอบฟ้า
         เขาเดินทางมาถึงบ้านหลังเก่า
-
         <br><br>
-
         ประตูไม้ขนาดใหญ่ตั้งอยู่ตรงหน้า
         มีร่องสำหรับกุญแจที่ได้รับมาจากชายชรา
-
         <br><br>
-
         เขาสูดหายใจเข้าลึก ๆ
         ก่อนนำกุญแจเสียบเข้าไป
-
         <br><br>
-
         <strong>แกร๊ก...</strong>
-
         <br><br>
-
         ประตูเปิดออกอย่างช้า ๆ
         ภายในบ้านเต็มไปด้วยหนังสือ
         ภาพถ่าย และสิ่งของเก่าแก่จำนวนมาก
-
         <br><br>
-
         บนโต๊ะกลางห้องมีรูปถ่ายใบหนึ่ง
         และเมื่อเขาหยิบมันขึ้นมา
         เขาก็ต้องหยุดนิ่งด้วยความตกใจ
-
         <br><br>
-
         เพราะคนที่อยู่ในรูป
         คือคนที่มีใบหน้าเหมือนกับเขาแทบทุกอย่าง
-
         <br><br>
-
         <strong>
         “ความจริงของคุณกำลังจะถูกเปิดเผย”
         </strong>
-
       </div>
-
     </div>
-
     <div>
-
       <strong style="font-size:13px;">
         💬 คำติชม / แจ้งคำผิด
       </strong>
-
       <textarea
         id="comment-text"
         placeholder="พิมพ์คำแนะนำ..."
@@ -1692,24 +1353,18 @@ body{
         font-size:12px;
         resize:none;
         margin-top:6px;"></textarea>
-
       <button
         class="buy-btn"
         style="background:#6c757d;"
         onclick="submitComment()">
         ส่งคำแนะนำให้นักเขียน
       </button>
-
     </div>
-
     <hr style="border:0;border-top:1px dashed #ddd;margin:15px 0;">
-
     <strong style="font-size:13px;">
       🎁 ส่งของขวัญให้นักเขียน
     </strong>
-
     <div class="gift-grid">
-
       <div
         class="gift-card"
         id="gift-fighting"
@@ -1718,7 +1373,6 @@ body{
         <div style="font-size:11px;font-weight:bold;">ไฟต์ติ้ง</div>
         <div style="font-size:10px;color:#2196f3;">5 เหรียญ</div>
       </div>
-
       <div
         class="gift-card"
         id="gift-bread"
@@ -1727,581 +1381,421 @@ body{
         <div style="font-size:11px;font-weight:bold;">ขนมปัง</div>
         <div style="font-size:10px;color:#2196f3;">10 เหรียญ</div>
       </div>
-
     </div>
-
     <button class="buy-btn" onclick="sendGift()">
       ส่งของขวัญ
     </button>
-
     <hr style="border:0;border-top:1px dashed #ddd;margin:18px 0;">
-
     <div class="support-title">
       💜 สนับสนุนผลงานนักเขียน
     </div>
-
     <p style="font-size:11px;color:#777;line-height:1.6;margin:6px 0;">
       คุณสามารถใช้เหรียญเพื่อช่วยสนับสนุน
       นักเขียนในการจัดทำผลงานในรูปแบบ
       <strong>รูปเล่ม</strong> หรือ
       <strong>E-Book</strong>
     </p>
-
     <div class="support-options">
-
       <div
         class="support-option selected"
         id="support-print"
         onclick="selectSupportType('print')">
-
         <div class="support-icon">📚</div>
-
         <div class="support-name">
           สนับสนุนรูปเล่ม
         </div>
-
         <div class="support-desc">
           ช่วยสมทบทุนจัดพิมพ์หนังสือ
         </div>
-
       </div>
-
       <div
         class="support-option"
         id="support-ebook"
         onclick="selectSupportType('ebook')">
-
         <div class="support-icon">📱</div>
-
         <div class="support-name">
           สนับสนุน E-Book
         </div>
-
         <div class="support-desc">
           ช่วยจัดทำหนังสืออิเล็กทรอนิกส์
         </div>
-
       </div>
-
     </div>
-
     <p style="font-size:12px;font-weight:bold;margin:14px 0 5px;">
       🪙 เลือกจำนวนเหรียญ
     </p>
-
     <div class="coin-support-grid">
-
       <div class="coin-support"
         onclick="selectSupportCoin(10,this)">
         10<br>เหรียญ
       </div>
-
       <div class="coin-support selected"
         onclick="selectSupportCoin(20,this)">
         20<br>เหรียญ
       </div>
-
       <div class="coin-support"
         onclick="selectSupportCoin(50,this)">
         50<br>เหรียญ
       </div>
-
       <div class="coin-support"
         onclick="selectSupportCoin(100,this)">
         100<br>เหรียญ
       </div>
-
     </div>
-
     <div class="support-summary">
-
       💜 คุณกำลังสนับสนุน:
       <strong id="support-type-text">รูปเล่ม</strong>
-
       <br><br>
-
       🪙 จำนวน:
       <strong>
         <span id="support-coin-text">20</span>
         เหรียญ
       </strong>
-
       <br><br>
-
       🪙 เหรียญคงเหลือหลังสนับสนุน:
       <strong>
         <span id="support-balance-text">30</span>
         เหรียญ
       </strong>
-
     </div>
-
     <button class="confirm-support" onclick="confirmSupport()">
       💜 ยืนยันการสนับสนุน
     </button>
-
   </div>
-
 </div>
-
-
 <!-- TOP UP MODAL -->
 <div class="modal" id="topup-modal">
-
   <div class="modal-content">
-
     <span class="close-modal" onclick="closeTopUp()">
       &times;
     </span>
-
     <h2 class="topup-title">
       🪙 เติมเหรียญ
     </h2>
-
     <p style="font-size:12px;color:#777;">
       เลือกจำนวนเหรียญที่ต้องการเติม
     </p>
-
     <div class="topup-amounts">
-
       <div class="topup-amount selected"
         onclick="selectTopUp(50,50,this)">
         50 เหรียญ<br>฿50
       </div>
-
       <div class="topup-amount"
         onclick="selectTopUp(100,100,this)">
         100 เหรียญ<br>฿100
       </div>
-
       <div class="topup-amount"
         onclick="selectTopUp(300,300,this)">
         300 เหรียญ<br>฿300
       </div>
-
       <div class="topup-amount"
         onclick="selectTopUp(500,500,this)">
         500 เหรียญ<br>฿500
       </div>
-
       <div class="topup-amount"
         onclick="selectTopUp(1000,1000,this)">
         1,000 เหรียญ<br>฿1,000
       </div>
-
       <div class="topup-amount"
         onclick="selectTopUp(2000,2000,this)">
         2,000 เหรียญ<br>฿2,000
       </div>
-
     </div>
-
     <p style="font-size:13px;font-weight:bold;">
       💳 เลือกช่องทางชำระเงิน
     </p>
-
     <div
       class="topup-method selected"
       id="method-qr"
       onclick="selectTopUpMethod('qr')">
-
       📲 <strong>QR Code / PromptPay</strong>
       <br>
       <span style="font-size:10px;color:#777;">
         สแกน QR เพื่อชำระเงิน
       </span>
-
     </div>
-
     <div
       class="topup-method"
       id="method-truemoney"
       onclick="selectTopUpMethod('truemoney')">
-
       🧡 <strong>TrueMoney Wallet</strong>
       <br>
       <span style="font-size:10px;color:#777;">
         ชำระผ่าน TrueMoney Wallet
       </span>
-
     </div>
-
     <div class="qr-box" id="qr-box">
-
       <p style="font-size:12px;font-weight:bold;">
         📲 สแกน QR Code
       </p>
-
       <div class="qr-code"></div>
-
       <p style="font-size:11px;color:#777;">
         ยอดชำระ ฿<span id="qr-price">50</span>
       </p>
-
     </div>
-
     <div class="truemoney-box" id="truemoney-box">
-
       <div style="font-size:40px;">🧡</div>
-
       <strong>TrueMoney Wallet</strong>
-
       <p style="font-size:11px;">
         กดยืนยันเพื่อชำระเงินผ่าน TrueMoney Wallet
       </p>
-
       <strong>฿<span id="tm-price">50</span></strong>
-
     </div>
-
     <button
       class="topup-confirm"
       onclick="confirmTopUp()">
       ยืนยันการเติมเหรียญ
     </button>
-
   </div>
-
 </div>
-
-
 <!-- BOTTOM NAVIGATION -->
 <div class="bottom-nav">
-
   <div class="nav-item active"
     onclick="switchTab('home',this)">
     <span class="icon">🏠</span>
     หน้าหลัก
   </div>
-
   <div class="nav-item"
     onclick="switchTab('cart',this)">
     <span class="icon">🛒</span>
     ตะกร้า
-
     <span
       class="badge"
       id="cart-badge"
       style="display:none;">
       0
     </span>
-
   </div>
-
   <div class="nav-item"
     onclick="switchTab('orders',this)">
     <span class="icon">📦</span>
     คำสั่งซื้อ
   </div>
-
   <div class="nav-item"
     onclick="switchTab('account',this)">
     <span class="icon">👤</span>
     บัญชี
   </div>
-
 </div>
-
-
 <!-- =========================================================
      TRANSPORT SYSTEM
 ========================================================= -->
-
 <div class="transport-modal" id="transport-modal">
-
   <div class="transport-panel">
-
     <div class="transport-head">
-
-      <h2>🚚 ระบบจัดการขนส่ง</h2>
-
+      <h2 id="transport-title">🚚 ระบบจัดการขนส่ง</h2>
       <span
         class="transport-close"
-        onclick="closeTransport()">
+        onclick="systemLogout()">
         ×
       </span>
-
     </div>
-
     <!-- LOGIN -->
     <div id="transport-login" class="transport-login">
-
       <h3 style="margin:0;color:#1565c0">
         🔐 เข้าสู่ระบบ
       </h3>
-
       <p style="font-size:10px;color:#777">
         กรุณาเลือกบทบาทและเข้าสู่ระบบ
       </p>
-
       <div class="transport-role-grid">
-
         <div
           class="transport-role active"
           data-role="customer"
           onclick="selectTransportRole('customer',this)">
           👤 ลูกค้า
         </div>
-
         <div
           class="transport-role"
           data-role="admin"
           onclick="selectTransportRole('admin',this)">
           🛠️ แอดมิน
         </div>
-
         <div
           class="transport-role"
           data-role="driver"
           onclick="selectTransportRole('driver',this)">
           🚚 คนขับ
         </div>
-
       </div>
-
       <input
         id="transport-username"
         placeholder="ชื่อผู้ใช้">
-
       <input
         id="transport-password"
         type="password"
         placeholder="รหัสผ่าน">
-
       <button
         class="transport-btn"
         style="width:100%"
         onclick="transportLogin()">
         เข้าสู่ระบบ
       </button>
-
       <div
         id="transport-login-msg"
         class="transport-login-msg">
       </div>
-
       <div class="transport-note">
         บัญชีทดลอง:<br>
         customer / 1234<br>
         admin / 1234<br>
         driver / 1234
       </div>
-
     </div>
-
-
     <!-- APP -->
     <div id="transport-app" class="transport-app">
-
       <div class="transport-userbar">
-
         <span id="transport-current-user"></span>
-
         <button
           class="transport-btn secondary"
           onclick="transportLogout()">
           ออกจากระบบ
         </button>
-
       </div>
-
       <!-- เมนูจะสร้างตามสิทธิ์ -->
       <div
         class="transport-menu"
         id="transport-menu">
       </div>
-
       <div
         id="transport-dashboard"
         class="transport-section active">
       </div>
-
       <div
         id="transport-orders"
         class="transport-section">
       </div>
-
       <div
         id="transport-data"
         class="transport-section">
       </div>
-
       <div
         id="transport-notify"
         class="transport-section">
       </div>
-
       <div
         id="transport-reports"
         class="transport-section">
       </div>
-
     </div>
-
   </div>
-
 </div>
-
-
 <!-- DELIVERY FAILURE MODAL -->
-
 <div class="failure-modal" id="failure-modal">
-
   <div class="failure-panel">
-
     <h3>❌ แจ้งจัดส่งไม่สำเร็จ</h3>
-
     <p style="font-size:11px;color:#777;">
       กรุณาเลือกเหตุผลที่จัดส่งไม่สำเร็จ
     </p>
-
     <div
       class="failure-option"
       data-reason="ลูกค้าไม่อยู่"
       onclick="selectFailureReason(this)">
       1. ลูกค้าไม่อยู่
     </div>
-
     <div
       class="failure-option"
       data-reason="ติดต่อไม่ได้"
       onclick="selectFailureReason(this)">
       2. ติดต่อไม่ได้
     </div>
-
     <div
       class="failure-option"
       data-reason="ที่อยู่ไม่ถูกต้อง"
       onclick="selectFailureReason(this)">
       3. ที่อยู่ไม่ถูกต้อง
     </div>
-
     <div
       class="failure-option"
       data-reason="ลูกค้าปฏิเสธรับสินค้า"
       onclick="selectFailureReason(this)">
       4. ลูกค้าปฏิเสธรับสินค้า
     </div>
-
     <div
       class="failure-option"
       data-reason="อื่น ๆ"
       onclick="selectFailureReason(this)">
       5. อื่น ๆ
     </div>
-
     <div
       id="failure-other"
       class="failure-other">
-
       <textarea
         id="failure-other-text"
         placeholder="ระบุเหตุผลเพิ่มเติม">
       </textarea>
-
     </div>
-
     <button
       class="transport-btn danger"
       style="width:100%;margin-top:10px;"
       onclick="confirmDriverFailure()">
       ❌ ยืนยันจัดส่งไม่สำเร็จ
     </button>
-
     <button
       class="transport-btn secondary"
       style="width:100%;"
       onclick="closeFailureModal()">
       ยกเลิก
     </button>
-
   </div>
-
 </div>
-
-
 <!-- =========================================================
      SYSTEM LOGIN
      ต้อง Login ก่อนเข้าสู่ระบบ
 ========================================================= -->
-
 <div class="system-login" id="system-login">
-
   <div class="system-login-card">
-
     <div class="system-login-logo">
       📚
     </div>
-
-    <h1>Novel Shop</h1>
-
-    <p>
-      กรุณาเข้าสู่ระบบก่อนใช้งาน
-    </p>
-
+    <h1>ReadAShop</h1>
+    <p class="login-welcome">อ่านง่าย ซื้อสะดวก ติดตามคำสั่งซื้อได้ทุกขั้นตอน</p><div class="login-secure">🔒 ระบบแยกสิทธิ์และข้อมูลตามบัญชีผู้ใช้</div>
     <div class="login-role">
-
       <button
         id="login-role-customer"
         class="active"
         onclick="selectSystemRole('customer')">
-        👤<br>ลูกค้า
+        👤<strong>ลูกค้า</strong><small>สั่งซื้อและติดตาม</small>
       </button>
-
       <button
         id="login-role-admin"
         onclick="selectSystemRole('admin')">
-        🛠️<br>แอดมิน
+        🛠️<strong>แอดมิน</strong><small>จัดการออเดอร์</small>
       </button>
-
       <button
         id="login-role-driver"
         onclick="selectSystemRole('driver')">
-        🚚<br>คนขับ
+        🚚<strong>คนขับ</strong><small>รับงานจัดส่ง</small>
       </button>
-
     </div>
-
     <input
       id="system-username"
       placeholder="ชื่อผู้ใช้">
-
     <input
       id="system-password"
       type="password"
       placeholder="รหัสผ่าน">
-
     <button
       class="system-login-btn"
       onclick="systemLogin()">
       🔐 เข้าสู่ระบบ
     </button>
-
     <div
       id="system-login-error"
       class="system-login-error">
     </div>
-
-    <div class="system-demo">
-      บัญชีทดลอง<br>
+    <div class="system-demo"><b>บัญชีทดลองสำหรับทดสอบระบบ</b><br>
       👤 customer / 1234<br>
       🛠️ admin / 1234<br>
       🚚 driver / 1234
     </div>
-
   </div>
-
 </div>
-
-
 <script>
-
 /* =========================================================
    NOVEL DATA
 ========================================================= */
-
 const novels=[
-
 {
  id:101,
  title:'จุดเริ่มต้นแห่งโชคชะตา',
@@ -2313,7 +1807,6 @@ const novels=[
  icon:'🌱',
  cover:'https://th.bing.com/th/id/OIP.d_RE6Bs5xfCxywN4mpjo6gHaKg?w=151&h=215&c=7&r=0&o=7&pid=1.7&rm=3'
 },
-
 {
  id:102,
  title:'เมื่อฉันหลุดไปในต่างโลก',
@@ -2325,7 +1818,6 @@ const novels=[
  icon:'🌿',
  cover:'https://th.bing.com/th/id/OIP.OjyPd2yXjJKr0zkEnZgaaAHaHa?w=183&h=181&c=7&r=0&o=7&pid=1.7&rm=3'
 },
-
 {
  id:1,
  title:'รักครั้งนี้ขอมีเธอ',
@@ -2337,7 +1829,6 @@ const novels=[
  icon:'📕',
  cover:'https://th.bing.com/th/id/OIP.0-SOtJLaZq5Y8cxrG8O5bQHaKh?w=120&h=180&c=7&r=0&o=7&pid=1.7&rm=3'
 },
-
 {
  id:2,
  title:'จอมเวทแห่งอาณาจักร',
@@ -2349,7 +1840,6 @@ const novels=[
  icon:'📘',
  cover:'https://down-th.img.susercontent.com/file/0a6ebb6015cc15c2ddd7d7f9ac166329'
 },
-
 {
  id:3,
  title:'คดีลับในคืนฝนตก',
@@ -2361,7 +1851,6 @@ const novels=[
  icon:'📗',
  cover:'https://www.bing.com/th/id/OIP.NYt7qi1E3obQyTHlEYHjPAAAAA?w=110&h=128&c=8&rs=1&qlt=90&o=6&pid=ImgAns&rm=2'
 },
-
 {
  id:4,
  title:'เธอคือความทรงจำ',
@@ -2373,7 +1862,6 @@ const novels=[
  icon:'📙',
  cover:'https://th.bing.com/th/id/OIP.J0iLZYugQMRFjI607wz8zwHaHa?w=184&h=184&c=7&r=0&o=7&pid=1.7&rm=3'
 },
-
 {
  id:5,
  title:'ย้อนเวลามาพบรัก',
@@ -2385,7 +1873,6 @@ const novels=[
  icon:'📓',
  cover:'https://th.bing.com/th/id/OIP.xShklesXcVzWaXT7qvRq9QAAAA?w=140&h=199&c=7&r=0&o=7&pid=1.7&rm=3'
 },
-
 {
  id:6,
  title:'สวรรค์ประทานพร เล่ม 1',
@@ -2397,7 +1884,6 @@ const novels=[
  icon:'🌸',
  cover:'https://th.bing.com/th/id/OIP.tIFIqRi3uGaPwhfUffrxeQHaHa?w=200&h=200&c=7&r=0&o=7&pid=1.7&rm=3'
 },
-
 {
  id:14,
  title:'สวรรค์ประทานพร (เซ็ต เล่ม 1-8)',
@@ -2409,14 +1895,10 @@ const novels=[
  icon:'🎁',
  cover:'https://th.bing.com/th/id/OIP.FZoZILigw2L3xFmhAYbIAAHaHa?w=177&h=180&c=7&r=0&o=7&pid=1.7&rm=3'
 }
-
 ];
-
-
 /* =========================================================
    NOVEL VARIABLES
 ========================================================= */
-
 let cart=[];
 let orders=[];
 let userCoins=50;
@@ -2424,54 +1906,29 @@ let selectedPayment='qr';
 let currentCategory='ทั้งหมด';
 let currentSelectedNovel=null;
 let selectedGift=null;
-
 let selectedSupportType='print';
 let selectedSupportCoins=20;
 let supportHistory=[];
-
 let topUpAmount=50;
 let topUpCoinsAmount=50;
 let topUpMethod='qr';
-
-
 /* =========================================================
    TRANSPORT USERS
 ========================================================= */
-
 const transportUsers={
-  customer:{
-    username:'customer',
-    password:'1234',
-    label:'ลูกค้า'
-  },
-  admin:{
-    username:'admin',
-    password:'1234',
-    label:'แอดมิน'
-  },
-  driver:{
-    username:'driver',
-    password:'1234',
-    label:'คนขับ'
-  }
+  customer:{id:'CUS001',username:'customer',password:'1234',label:'ลูกค้า'},
+  admin:{id:'ADM001',username:'admin',password:'1234',label:'แอดมิน'},
+  driver:{id:'DRV001',username:'driver',password:'1234',label:'พนักงานขับรถ'}
 };
-
 let transportRole='customer';
 let transportCurrentUser=null;
-
 let systemRole='customer';
-
 const TRANSPORT_STORAGE_KEY='novelShopTransportV3';
-
-
 /* =========================================================
    TRANSPORT DATA
 ========================================================= */
-
 function defaultTransportData(){
-
   return{
-
     customers:[
       {
         id:'CUS001',
@@ -2481,7 +1938,6 @@ function defaultTransportData(){
         address:''
       }
     ],
-
     drivers:[
       {
         id:'DRV001',
@@ -2491,7 +1947,6 @@ function defaultTransportData(){
         vehicle:'กข-1234'
       }
     ],
-
     vehicles:[
       {
         id:'CAR001',
@@ -2500,71 +1955,48 @@ function defaultTransportData(){
         driver:'คนขับ A'
       }
     ],
-
     orders:[],
     history:[],
     notifications:[]
   };
 }
-
 function loadTransportData(){
-
   try{
-
     const raw=localStorage.getItem(
       TRANSPORT_STORAGE_KEY
     );
-
     if(raw){
-
       const parsed=JSON.parse(raw);
-
       if(parsed && Array.isArray(parsed.orders)){
-
         if(!Array.isArray(parsed.customers))
           parsed.customers=[];
-
         if(!Array.isArray(parsed.drivers))
           parsed.drivers=[];
-
         if(!Array.isArray(parsed.vehicles))
           parsed.vehicles=[];
-
         if(!Array.isArray(parsed.history))
           parsed.history=[];
-
         if(!Array.isArray(parsed.notifications))
           parsed.notifications=[];
-
         return parsed;
       }
     }
-
   }catch(e){}
-
   return defaultTransportData();
 }
-
 let transportData=loadTransportData();
-
-
 /* =========================================================
    COMMON FUNCTIONS
 ========================================================= */
-
 function saveTransportData(){
-
   try{
     localStorage.setItem(
       TRANSPORT_STORAGE_KEY,
       JSON.stringify(transportData)
     );
   }catch(e){}
-
 }
-
 function money(n){
-
   return Number(n||0).toLocaleString(
     'th-TH',
     {
@@ -2572,11 +2004,8 @@ function money(n){
       maximumFractionDigits:2
     }
   );
-
 }
-
 function esc(v){
-
   return String(v??'').replace(
     /[&<>"']/g,
     m=>({
@@ -2587,121 +2016,83 @@ function esc(v){
       "'":'&#39;'
     }[m])
   );
-
 }
-
 function transportToday(){
-
   return new Date().toLocaleDateString(
     'th-TH'
   );
-
 }
-
 function canAdmin(){
   return transportCurrentUser &&
     transportCurrentUser.role==='admin';
 }
-
 function canDriver(){
   return transportCurrentUser &&
     transportCurrentUser.role==='driver';
 }
-
 function canCustomer(){
   return transportCurrentUser &&
     transportCurrentUser.role==='customer';
 }
-
-
 /* =========================================================
    SYSTEM LOGIN
 ========================================================= */
-
 function selectSystemRole(role){
-
   systemRole=role;
-
   document
     .querySelectorAll('.login-role button')
     .forEach(x=>x.classList.remove('active'));
-
   const btn=document.getElementById(
     'login-role-'+role
   );
-
   if(btn)btn.classList.add('active');
-
   document.getElementById(
     'system-login-error'
   ).innerText='';
-
 }
-
 function systemLogin(){
-
-  const username=document
-    .getElementById('system-username')
-    .value
-    .trim();
-
-  const password=document
-    .getElementById('system-password')
-    .value;
-
+  const username=document.getElementById('system-username').value.trim();
+  const password=document.getElementById('system-password').value;
   const account=transportUsers[systemRole];
-
-  if(
-    username===account.username &&
-    password===account.password
-  ){
-
-    transportCurrentUser={
-      role:systemRole,
-      username:username,
-      label:account.label
-    };
-
-    document
-      .getElementById('system-login')
-      .classList.add('hidden');
-
+  const error=document.getElementById('system-login-error');
+  if(!username||!password){error.innerText='⚠️ กรุณากรอกชื่อผู้ใช้และรหัสผ่าน';return;}
+  if(username===account.username&&password===account.password){
+    transportCurrentUser={role:systemRole,username,label:account.label,loginAt:new Date().toISOString()};
+    try{sessionStorage.setItem('novelShopLogin',JSON.stringify(transportCurrentUser));}catch(e){}
+    document.getElementById('system-login').classList.add('hidden');
     updateCustomerProfileUI();
-
-    if(systemRole==='customer'){
-
-      goHome();
-
-    }else{
-
-      openTransport();
-
-    }
-
-  }else{
-
-    document.getElementById(
-      'system-login-error'
-    ).innerText=
-      '❌ ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง';
-
-  }
-
+    if(systemRole==='customer')goHome();else openTransport();
+  }else error.innerText='❌ ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง';
 }
-
-
-/* =========================================================
+function systemLogout(){
+  transportCurrentUser=null;
+  try{sessionStorage.removeItem('novelShopLogin');}catch(e){}
+  closeTransport();
+  const login=document.getElementById('system-login');
+  if(login)login.classList.remove('hidden');
+  const u=document.getElementById('system-username'),p=document.getElementById('system-password');
+  if(u)u.value='';if(p)p.value='';
+  const e=document.getElementById('system-login-error');if(e)e.innerText='';
+  selectSystemRole('customer');
+}
+function restoreSystemLogin(){
+  let saved=null;
+  try{saved=JSON.parse(sessionStorage.getItem('novelShopLogin')||'null');}catch(e){}
+  if(saved&&transportUsers[saved.role]&&saved.username===transportUsers[saved.role].username){
+    transportCurrentUser=saved;
+    document.getElementById('system-login').classList.add('hidden');
+    updateCustomerProfileUI();
+    if(saved.role==='customer')goHome();else openTransport();
+  }else systemLogout();
+}
+/* ========================================================
    CUSTOMER PROFILE
 ========================================================= */
-
 function getCustomer(){
-
   let c=transportData.customers.find(
     x=>x.username==='customer'
   );
-
   if(!c){
-
     c={
       id:'CUS001',
       username:'customer',
@@ -2709,329 +2100,170 @@ function getCustomer(){
       phone:'',
       address:''
     };
-
     transportData.customers.push(c);
   }
-
   return c;
 }
-
 function saveCustomerProfile(){
-
-  const name=document
-    .getElementById('customer-name')
-    .value.trim();
-
-  const phone=document
-    .getElementById('customer-phone')
-    .value.trim();
-
-  const address=document
-    .getElementById('customer-address')
-    .value.trim();
-
-  if(!name || !phone || !address){
-
-    alert(
-      'กรุณากรอกชื่อ เบอร์โทร และที่อยู่ให้ครบถ้วน'
-    );
-
-    return;
-  }
-
-  const c=getCustomer();
-
-  c.name=name;
-  c.phone=phone;
-  c.address=address;
-
-  saveTransportData();
-
-  updateCustomerProfileUI();
-
-  if(transportCurrentUser){
-
-    renderTransportAll();
-
-  }
-
-  alert(
-    '✅ บันทึกข้อมูลสำหรับจัดส่งเรียบร้อยแล้ว'
-  );
-
+  const name=document.getElementById('customer-name').value.trim(),phone=document.getElementById('customer-phone').value.trim(),address=document.getElementById('customer-address').value.trim();
+  if(!name||!phone||!address){alert('กรุณากรอกชื่อ เบอร์โทร และที่อยู่ให้ครบถ้วน');return;}
+  const c=getCustomer();c.name=name;c.phone=phone;c.address=address;saveTransportData();updateCustomerProfileUI();alert('✅ บันทึกข้อมูลสำหรับจัดส่งเรียบร้อยแล้ว');
 }
-
+function editCustomerProfile(){
+  const box=document.getElementById('customer-profile-box');
+  if(box)box.classList.remove('saved');
+}
 function updateCustomerProfileUI(){
-
-  const c=getCustomer();
-
-  const name=document.getElementById(
-    'customer-name'
-  );
-
-  const phone=document.getElementById(
-    'customer-phone'
-  );
-
-  const address=document.getElementById(
-    'customer-address'
-  );
-
-  if(name)name.value=c.name||'';
-  if(phone)phone.value=c.phone||'';
-  if(address)address.value=c.address||'';
-
-  const status=document.getElementById(
-    'customer-profile-status'
-  );
-
-  if(status){
-
-    if(c.name && c.phone && c.address){
-
-      status.className='profile-ok';
-
-      status.innerText=
-        '✅ ข้อมูลพร้อมสำหรับการจัดส่ง';
-
-    }else{
-
-      status.className='profile-required';
-
-      status.innerText=
-        '⚠️ กรุณากรอกข้อมูลให้ครบก่อนสั่งซื้อ';
-
-    }
-
-  }
-
+  const c=getCustomer(),name=document.getElementById('customer-name'),phone=document.getElementById('customer-phone'),address=document.getElementById('customer-address'),box=document.getElementById('customer-profile-box'),status=document.getElementById('customer-profile-status');
+  if(name)name.value=c.name||'';if(phone)phone.value=c.phone||'';if(address)address.value=c.address||'';
+  if(status){status.className=c.name&&c.phone&&c.address?'profile-ok':'profile-required';status.innerText=c.name&&c.phone&&c.address?'✅ ข้อมูลพร้อมสำหรับการจัดส่ง':'⚠️ กรุณากรอกข้อมูลให้ครบก่อนสั่งซื้อ';}
+  if(box)box.classList.toggle('saved',!!(c.name&&c.phone&&c.address));
 }
-
 function customerProfileComplete(){
-
   const c=getCustomer();
-
   return !!(
     c.name &&
     c.phone &&
     c.address
   );
-
 }
-
-
 /* =========================================================
    NOVEL INIT
 ========================================================= */
-
 function init(){
-
-  renderNovels(novels);
-  updateCoinUI();
-  updateCartUI();
-  renderOrders();
-  updateAccountInfo();
-  updateSupportSummary();
-  updateCustomerProfileUI();
-
+  renderNovels(novels);updateCoinUI();updateCartUI();renderOrders();updateAccountInfo();updateSupportSummary();updateCustomerProfileUI();restoreSystemLogin();
 }
-
-
 /* =========================================================
    ACCOUNT
 ========================================================= */
-
 function updateAccountInfo(){
-
   const a=document.getElementById(
     'account-coins'
   );
-
   if(a)a.innerText=userCoins;
-
   const cartCount=document.getElementById(
     'account-cart-count'
   );
-
   if(cartCount)
     cartCount.innerText=cart.length;
-
   const orderCount=document.getElementById(
     'account-order-count'
   );
-
   if(orderCount)
     orderCount.innerText=orders.length;
-
   const supportCount=document.getElementById(
     'account-support-count'
   );
-
   if(supportCount)
     supportCount.innerText=supportHistory.length;
-
   renderSupportHistory();
-
 }
-
-
 /* =========================================================
    COINS
 ========================================================= */
-
 function updateCoinUI(){
-
   const u=document.getElementById(
     'user-coins'
   );
-
   const a=document.getElementById(
     'account-coins'
   );
-
   if(u)u.innerText=userCoins;
   if(a)a.innerText=userCoins;
-
   updateSupportSummary();
-
 }
-
-
 /* =========================================================
    TOP UP
 ========================================================= */
-
 function topUpCoins(){
-
   document
     .getElementById('topup-modal')
     .classList.add('active');
-
 }
-
 function closeTopUp(){
-
   document
     .getElementById('topup-modal')
     .classList.remove('active');
-
 }
-
 function selectTopUp(
   coins,
   price,
   element
 ){
-
   topUpCoinsAmount=coins;
   topUpAmount=price;
-
   document
     .querySelectorAll('.topup-amount')
     .forEach(el=>el.classList.remove('selected'));
-
   element.classList.add('selected');
-
   document.getElementById(
     'qr-price'
   ).innerText=price;
-
   document.getElementById(
     'tm-price'
   ).innerText=price;
-
 }
-
 function selectTopUpMethod(method){
-
   topUpMethod=method;
-
   document
     .querySelectorAll('.topup-method')
     .forEach(el=>el.classList.remove('selected'));
-
   if(method==='qr'){
-
     document
       .getElementById('method-qr')
       .classList.add('selected');
-
     document
       .getElementById('qr-box')
       .style.display='block';
-
     document
       .getElementById('truemoney-box')
       .style.display='none';
-
   }else{
-
     document
       .getElementById('method-truemoney')
       .classList.add('selected');
-
     document
       .getElementById('qr-box')
       .style.display='none';
-
     document
       .getElementById('truemoney-box')
       .style.display='block';
-
   }
-
 }
-
 function confirmTopUp(){
-
   userCoins+=topUpCoinsAmount;
-
   updateCoinUI();
   updateAccountInfo();
-
   const methodText=
     topUpMethod==='qr'
     ?'QR Code / PromptPay'
     :'TrueMoney Wallet';
-
   alert(
     `✅ เติมเหรียญสำเร็จ!\n\n`+
     `🪙 ได้รับ ${topUpCoinsAmount.toLocaleString()} เหรียญ\n`+
     `💰 ชำระเงิน ฿${topUpAmount.toLocaleString()}\n`+
     `💳 ช่องทาง: ${methodText}`
   );
-
   closeTopUp();
-
 }
-
-
 /* =========================================================
    NOVELS
 ========================================================= */
-
 function renderNovels(list){
-
   const container=document.getElementById(
     'main-novel-list'
   );
-
   if(!list.length){
-
     container.innerHTML=`
       <div class="no-data">
         <div class="no-data-icon">🔍</div>
         ไม่พบผลลัพธ์การค้นหา
       </div>
     `;
-
     return;
   }
-
   container.innerHTML=list.map(item=>`
-
     <div class="novel">
-
       ${
         item.isNewWriter
         ?`
@@ -3040,9 +2272,7 @@ function renderNovels(list){
         </div>`
         :''
       }
-
       <div class="cover">
-
         ${
           item.cover
           ?`
@@ -3053,37 +2283,26 @@ function renderNovels(list){
           `
           :item.icon
         }
-
       </div>
-
       <div class="novel-info">
-
         <div>
-
           <h3 title="${esc(item.title)}">
             ${esc(item.title)}
           </h3>
-
           <div class="author">
             โดย ${esc(item.author)}
           </div>
-
           <div class="rating">
             ⭐ ${item.rating}
           </div>
-
           <div class="price">
-
             ${
               item.isNewWriter
               ?'อ่านฟรี'
               :'฿'+item.price.toLocaleString()
             }
-
           </div>
-
         </div>
-
         ${
           item.isNewWriter
           ?`
@@ -3101,30 +2320,20 @@ function renderNovels(list){
           </button>
           `
         }
-
       </div>
-
     </div>
-
   `).join('');
-
 }
-
-
 /* =========================================================
    SEARCH
 ========================================================= */
-
 function handleSearch(){
-
   const query=document
     .getElementById('search-input')
     .value
     .toLowerCase()
     .trim();
-
   const filtered=novels.filter(n=>
-
     (
       currentCategory==='ทั้งหมด' ||
       n.category===currentCategory ||
@@ -3133,235 +2342,157 @@ function handleSearch(){
         n.isNewWriter
       )
     )
-
     &&
-
     (
       n.title.toLowerCase().includes(query) ||
       n.author.toLowerCase().includes(query)
     )
-
   );
-
   renderNovels(filtered);
-
 }
-
-
 /* =========================================================
    CATEGORY
 ========================================================= */
-
 function filterCategory(category,element){
-
   document
     .querySelectorAll('.category')
     .forEach(el=>el.classList.remove('active'));
-
   element.classList.add('active');
-
   currentCategory=category;
-
   handleSearch();
-
 }
-
-
 /* =========================================================
    READER
 ========================================================= */
-
 function openReaderModal(id){
-
   currentSelectedNovel=
     novels.find(n=>n.id===id);
-
   document.getElementById(
     'modal-title'
   ).innerText=
     currentSelectedNovel.title;
-
   document.getElementById(
     'modal-author'
   ).innerText=
     'โดย '+currentSelectedNovel.author;
-
   showChapter(1);
-
   selectedSupportType='print';
   selectedSupportCoins=20;
-
   document
     .getElementById('support-print')
     .classList.add('selected');
-
   document
     .getElementById('support-ebook')
     .classList.remove('selected');
-
   document
     .querySelectorAll('.coin-support')
     .forEach(el=>el.classList.remove('selected'));
-
   document
     .querySelectorAll('.coin-support')[1]
     .classList.add('selected');
-
   updateSupportSummary();
-
   document
     .getElementById('reader-modal')
     .classList.add('active');
-
 }
-
 function showChapter(chapterNumber){
-
   document
     .querySelectorAll('.chapter-content')
     .forEach(el=>el.classList.remove('active'));
-
   document
     .querySelectorAll('.chapter-btn')
     .forEach(el=>el.classList.remove('active'));
-
   const chapter=document.getElementById(
     `chapter-${chapterNumber}`
   );
-
   const button=document.getElementById(
     `chapter-button-${chapterNumber}`
   );
-
   if(chapter)chapter.classList.add('active');
   if(button)button.classList.add('active');
-
 }
-
 function closeModal(){
-
   document
     .getElementById('reader-modal')
     .classList.remove('active');
-
   selectedGift=null;
-
   document
     .querySelectorAll('.gift-card')
     .forEach(el=>el.classList.remove('selected'));
-
   document.getElementById(
     'comment-text'
   ).value='';
-
 }
-
-
 /* =========================================================
    COMMENT
 ========================================================= */
-
 function submitComment(){
-
   const comment=document
     .getElementById('comment-text')
     .value
     .trim();
-
   if(!comment){
-
     alert(
       'กรุณาพิมพ์ข้อความหรือคำแนะนำก่อนส่งครับ'
     );
-
     return;
   }
-
   alert(
     '✅ ส่งคำแนะนำให้นักเขียนเรียบร้อยแล้ว!'
   );
-
   document.getElementById(
     'comment-text'
   ).value='';
-
 }
-
-
 /* =========================================================
    GIFT
 ========================================================= */
-
 function selectGift(type,cost){
-
   selectedGift={
     type:type,
     cost:cost
   };
-
   document
     .querySelectorAll('.gift-card')
     .forEach(el=>el.classList.remove('selected'));
-
   document
     .getElementById(`gift-${type}`)
     .classList.add('selected');
-
 }
-
 function sendGift(){
-
   if(!selectedGift){
-
     alert('กรุณาเลือกของขวัญก่อนครับ');
     return;
-
   }
-
   if(userCoins<selectedGift.cost){
-
     alert(
       '🪙 เหรียญไม่พอ กรุณาเติมเหรียญก่อนครับ'
     );
-
     return;
   }
-
   userCoins-=selectedGift.cost;
-
   updateCoinUI();
   updateAccountInfo();
-
   const giftName=
     selectedGift.type==='fighting'
     ?'ไฟต์ติ้ง'
     :'ขนมปัง';
-
   alert(
     `🎁 มอบของขวัญ ${giftName} ให้นักเขียนสำเร็จแล้ว!`
   );
-
   closeModal();
-
 }
-
-
 /* =========================================================
    SUPPORT
 ========================================================= */
-
 function selectSupportType(type){
-
   selectedSupportType=type;
-
   document
     .getElementById('support-print')
     .classList.remove('selected');
-
   document
     .getElementById('support-ebook')
     .classList.remove('selected');
-
   document
     .getElementById(
       type==='print'
@@ -3369,101 +2500,68 @@ function selectSupportType(type){
       :'support-ebook'
     )
     .classList.add('selected');
-
   updateSupportSummary();
-
 }
-
 function selectSupportCoin(coins,element){
-
   selectedSupportCoins=coins;
-
   document
     .querySelectorAll('.coin-support')
     .forEach(el=>el.classList.remove('selected'));
-
   element.classList.add('selected');
-
   updateSupportSummary();
-
 }
-
 function updateSupportSummary(){
-
   const typeText=
     selectedSupportType==='print'
     ?'รูปเล่ม'
     :'E-Book';
-
   const type=document.getElementById(
     'support-type-text'
   );
-
   const coin=document.getElementById(
     'support-coin-text'
   );
-
   const balance=document.getElementById(
     'support-balance-text'
   );
-
   if(type)type.innerText=typeText;
   if(coin)coin.innerText=selectedSupportCoins;
-
   const remaining=
     userCoins-selectedSupportCoins;
-
   if(balance){
-
     balance.innerText=
       remaining>=0
       ?remaining
       :'เหรียญไม่พอ';
-
   }
-
 }
-
 function confirmSupport(){
-
   if(!currentSelectedNovel){
-
     alert('ไม่พบข้อมูลนิยาย');
     return;
-
   }
-
   if(userCoins<selectedSupportCoins){
-
     alert(
       '🪙 เหรียญของคุณไม่เพียงพอ\n\n'+
       `ต้องใช้ ${selectedSupportCoins} เหรียญ\n`+
       `แต่คุณมี ${userCoins} เหรียญ`
     );
-
     return;
   }
-
   const supportName=
     selectedSupportType==='print'
     ?'รูปเล่ม'
     :'E-Book';
-
   userCoins-=selectedSupportCoins;
-
   supportHistory.unshift({
-
     novel:currentSelectedNovel.title,
     author:currentSelectedNovel.author,
     type:supportName,
     coins:selectedSupportCoins,
     date:new Date().toLocaleDateString('th-TH')
-
   });
-
   updateCoinUI();
   updateAccountInfo();
-
   alert(
     `💜 สนับสนุนผลงานสำเร็จ!\n\n`+
     `📚 นิยาย: ${currentSelectedNovel.title}\n`+
@@ -3471,21 +2569,14 @@ function confirmSupport(){
     `📖 รูปแบบ: ${supportName}\n`+
     `🪙 จำนวน: ${selectedSupportCoins} เหรียญ`
   );
-
   closeModal();
-
 }
-
 function renderSupportHistory(){
-
   const container=document.getElementById(
     'support-history-container'
   );
-
   if(!container)return;
-
   if(!supportHistory.length){
-
     container.innerHTML=`
       <div style="
         text-align:center;
@@ -3495,480 +2586,162 @@ function renderSupportHistory(){
         ยังไม่มีประวัติการสนับสนุน
       </div>
     `;
-
     return;
-
   }
-
   container.innerHTML=
     supportHistory.map(item=>`
-
       <div class="support-history-item">
-
         <strong>
           ${item.type==='รูปเล่ม'?'📚':'📱'}
           ${item.type}
         </strong>
-
         <br>
-
         <span>${esc(item.novel)}</span>
-
         <br>
-
         <span style="
           color:#9c27b0;
           font-weight:bold;">
           🪙 ${item.coins} เหรียญ
         </span>
-
         <span style="
           float:right;
           color:#999;">
           ${item.date}
         </span>
-
       </div>
-
     `).join('');
-
 }
-
-
+/* =========================================================
+   SHIPPING CALCULATION
+========================================================= */
+const NOVEL_SET_WEIGHT_KG=2.5;
+const NOVEL_SET_SIZE=8;
+const SHIPPING_RATES=[{max:1,fee:30},{max:2,fee:40},{max:3,fee:50},{max:5,fee:70}];
+function getCartWeight(list=cart){if(!list.length)return 0;return Number((Math.ceil(list.length/NOVEL_SET_SIZE)*NOVEL_SET_WEIGHT_KG).toFixed(2));}
+function calculateShipping(weight){if(weight<=0)return 0;const tier=SHIPPING_RATES.find(x=>weight<=x.max);return tier?tier.fee:Math.ceil(weight)*15;}
+function shippingText(weight){return weight<=0?'ไม่มีค่าส่ง':`น้ำหนัก ${weight.toFixed(2)} กก. · ค่าส่ง ฿${money(calculateShipping(weight))}`;}
 /* =========================================================
    CART
 ========================================================= */
-
 function addToCart(id){
-
   const item=novels.find(n=>n.id===id);
-
   cart.push(item);
-
   updateCartUI();
   updateAccountInfo();
-
   alert(
     `🛒 เพิ่ม "${item.title}" ลงตะกร้าแล้ว`
   );
-
 }
-
 function removeFromCart(index){
-
   cart.splice(index,1);
-
   updateCartUI();
   updateAccountInfo();
-
 }
-
 function updateCartUI(){
-
-  const badge=document.getElementById(
-    'cart-badge'
-  );
-
+  const badge=document.getElementById('cart-badge');
   badge.innerText=cart.length;
-
-  badge.style.display=
-    cart.length>0
-    ?'inline-block'
-    :'none';
-
-  const container=document.getElementById(
-    'cart-items-container'
-  );
-
-  if(cart.length===0){
-
-    container.innerHTML=`
-      <div class="no-data">
-
-        <div class="no-data-icon">🛒</div>
-
-        <h3 style="color:#555;">
-          ตะกร้าสินค้าว่าง
-        </h3>
-
-        <p>ยังไม่มีนิยายในตะกร้า</p>
-
-        <button
-          class="buy-btn"
-          style="width:80%;font-size:13px"
-          onclick="goHome()">
-          🏠 ไปเลือกนิยาย
-        </button>
-
-      </div>
-    `;
-
-    return;
-  }
-
-  const total=cart.reduce(
-    (sum,item)=>sum+item.price,
-    0
-  );
-
-  const paymentName=
-    selectedPayment==='qr'
-    ?'📲 QR Code / PromptPay'
-    :selectedPayment==='truemoney'
-    ?'🧡 TrueMoney Wallet'
-    :'🚚 เก็บเงินปลายทาง';
-
-  container.innerHTML=`
-
-    <h2 style="
-      color:#1976d2;
-      margin-bottom:15px;">
-      🛒 สินค้าในตะกร้า
-    </h2>
-
-    ${cart.map((item,index)=>`
-
-      <div class="cart-item">
-
-        <div class="cart-item-details">
-
-          <h4>
-            ${item.icon}
-            ${esc(item.title)}
-          </h4>
-
-          <p>
-            โดย ${esc(item.author)}
-          </p>
-
-          <p style="
-            color:#1976d2;
-            font-weight:bold;">
-            ฿${item.price.toLocaleString()}
-          </p>
-
-        </div>
-
-        <button
-          class="remove-btn"
-          onclick="removeFromCart(${index})">
-          ลบ
-        </button>
-
-      </div>
-
-    `).join('')}
-
-    <div class="cart-summary">
-
-      <h3 style="margin-top:0;">
-        สรุปการสั่งซื้อ
-      </h3>
-
-      <div style="
-        display:flex;
-        justify-content:space-between;
-        font-weight:bold;
-        font-size:16px;">
-
-        <span>ยอดรวม</span>
-
-        <span style="color:#1976d2;">
-          ฿${total.toLocaleString()}
-        </span>
-
-      </div>
-
-      <div class="payment-options">
-
-        <p style="
-          font-size:13px;
-          font-weight:bold;">
-          💳 เลือกช่องทางชำระเงิน
-        </p>
-
-        <div
-          class="payment-option ${selectedPayment==='qr'?'selected':''}"
-          onclick="selectPayment('qr')">
-          📲 QR Code / PromptPay
-        </div>
-
-        <div
-          class="payment-option ${selectedPayment==='truemoney'?'selected':''}"
-          onclick="selectPayment('truemoney')">
-          🧡 TrueMoney Wallet
-        </div>
-
-        <div
-          class="payment-option ${selectedPayment==='cod'?'selected':''}"
-          onclick="selectPayment('cod')">
-          🚚 เก็บเงินปลายทาง
-        </div>
-
-      </div>
-
-      <div style="
-        margin-top:10px;
-        padding:10px;
-        background:#e8f5ff;
-        border-radius:10px;
-        color:#1976d2;
-        font-size:12px;">
-
-        💳 ช่องทางที่เลือก:
-        <strong>${paymentName}</strong>
-
-      </div>
-
-      ${
-        customerProfileComplete()
-        ?`
-        <div style="
-          margin-top:10px;
-          padding:10px;
-          background:#ecfdf3;
-          border-radius:10px;
-          color:#166534;
-          font-size:10px;">
-          ✅ ข้อมูลชื่อ เบอร์โทร และที่อยู่พร้อมจัดส่ง
-        </div>
-        `
-        :`
-        <div style="
-          margin-top:10px;
-          padding:10px;
-          background:#fff1f2;
-          border-radius:10px;
-          color:#be123c;
-          font-size:10px;">
-          ⚠️ กรุณาไปที่เมนูบัญชีเพื่อกรอกชื่อ เบอร์โทร และที่อยู่ก่อนสั่งซื้อ
-        </div>
-        `
-      }
-
-      <button
-        class="checkout-btn"
-        onclick="processCheckout(${total})">
-
-        ${
-          selectedPayment==='cod'
-          ?'ยืนยันสั่งซื้อ'
-          :'ชำระเงิน ฿'+total.toLocaleString()
-        }
-
-      </button>
-
-    </div>
-
-  `;
-
+  badge.style.display=cart.length>0?'inline-block':'none';
+  const container=document.getElementById('cart-items-container');
+  if(cart.length===0){container.innerHTML=`<div class="no-data"><div class="no-data-icon">🛒</div><h3 style="color:#555;">ตะกร้าสินค้าว่าง</h3><p>ยังไม่มีนิยายในตะกร้า</p><button class="buy-btn" style="width:80%;font-size:13px" onclick="goHome()">🏠 ไปเลือกนิยาย</button></div>`;return;}
+  const subtotal=cart.reduce((sum,item)=>sum+Number(item.price||0),0);
+  const weight=getCartWeight(cart);
+  const shippingFee=calculateShipping(weight);
+  const total=subtotal+shippingFee;
+  const paymentName=selectedPayment==='qr'?'📲 QR Code / PromptPay':selectedPayment==='truemoney'?'🧡 TrueMoney Wallet':'🚚 เก็บเงินปลายทาง';
+  container.innerHTML=`<h2 style="color:#1976d2;margin-bottom:15px;">🛒 สินค้าในตะกร้า</h2>${cart.map((item,index)=>`<div class="cart-item"><div class="cart-item-details"><h4>${item.icon} ${esc(item.title)}</h4><p>โดย ${esc(item.author)}</p><p style="color:#1976d2;font-weight:bold;">฿${Number(item.price).toLocaleString()}</p></div><button class="remove-btn" onclick="removeFromCart(${index})">ลบ</button></div>`).join('')}<div class="cart-summary"><h3 style="margin-top:0;">สรุปการสั่งซื้อ</h3><div class="shipping-summary"><div><span>📚 ค่าหนังสือ</span><b>฿${subtotal.toLocaleString()}</b></div><div><span>⚖️ น้ำหนักรวม</span><b>${weight.toFixed(2)} กก.</b></div><div><span>🚚 ค่าส่ง</span><b>฿${shippingFee.toLocaleString()}</b></div><div class="shipping-total"><span>💰 ราคาที่ลูกค้าต้องชำระ</span><b>฿${total.toLocaleString()}</b></div><small>คิดจากน้ำหนัก ${weight.toFixed(2)} กก. · ${shippingFee===0?'ไม่มีค่าส่ง':`ค่าส่งตามช่วงน้ำหนัก ฿${shippingFee.toLocaleString()}`}</small></div><div class="shipping-rate-box"><b>📦 อัตราค่าส่ง</b><div>ไม่เกิน 1 กก. = ฿30 · ไม่เกิน 2 กก. = ฿40 · ไม่เกิน 3 กก. = ฿50 · ไม่เกิน 5 กก. = ฿70 · 1–8 เล่ม = 2.50 กก.</div><div>นิยาย 1–8 เล่มคิดน้ำหนักรวม ${NOVEL_SET_WEIGHT_KG.toFixed(2)} กก.</div></div><div class="payment-options"><p style="font-size:13px;font-weight:bold;">💳 เลือกช่องทางชำระเงิน</p><div class="payment-option ${selectedPayment==='qr'?'selected':''}" onclick="selectPayment('qr')">📲 QR Code / PromptPay</div><div class="payment-option ${selectedPayment==='truemoney'?'selected':''}" onclick="selectPayment('truemoney')">🧡 TrueMoney Wallet</div><div class="payment-option ${selectedPayment==='cod'?'selected':''}" onclick="selectPayment('cod')">🚚 เก็บเงินปลายทาง</div></div><div style="margin-top:10px;padding:10px;background:#e8f5ff;border-radius:10px;color:#1976d2;font-size:12px;">💳 ช่องทางที่เลือก: <strong>${paymentName}</strong></div>${customerProfileComplete()?`<div style="margin-top:10px;padding:10px;background:#ecfdf3;border-radius:10px;color:#166534;font-size:10px;">✅ ข้อมูลชื่อ เบอร์โทร และที่อยู่พร้อมจัดส่ง</div>`:`<div style="margin-top:10px;padding:10px;background:#fff1f2;border-radius:10px;color:#be123c;font-size:10px;">⚠️ กรุณาไปที่เมนูบัญชีเพื่อกรอกชื่อ เบอร์โทร และที่อยู่ก่อนสั่งซื้อ</div>`}<button class="checkout-btn" onclick="processCheckout(${subtotal},${shippingFee},${weight})">${selectedPayment==='cod'?'ยืนยันสั่งซื้อ':'ชำระเงิน ฿'+total.toLocaleString()}</button></div>`;
 }
-
 function selectPayment(method){
-
   selectedPayment=method;
-
   updateCartUI();
-
 }
-
-
 /* =========================================================
    CHECKOUT
 ========================================================= */
-
-function processCheckout(total){
-
-  if(!customerProfileComplete()){
-
-    alert(
-      '⚠️ กรุณากรอกข้อมูลลูกค้าให้ครบก่อนสั่งซื้อ\n\n'+
-      'ต้องมี:\n'+
-      '👤 ชื่อ-นามสกุล\n'+
-      '📞 เบอร์โทรศัพท์\n'+
-      '📍 ที่อยู่สำหรับจัดส่ง'
-    );
-
-    const accountButton=
-      document.querySelectorAll('.nav-item')[3];
-
-    switchTab('account',accountButton);
-
-    return;
-  }
-
+function processCheckout(subtotal,shippingFee,weight){
+  if(!customerProfileComplete()){alert('⚠️ กรุณากรอกข้อมูลลูกค้าให้ครบก่อนสั่งซื้อ\n\nต้องมี:\n👤 ชื่อ-นามสกุล\n📞 เบอร์โทรศัพท์\n📍 ที่อยู่สำหรับจัดส่ง');const accountButton=document.querySelectorAll('.nav-item')[3];switchTab('account',accountButton);return;}
   const c=getCustomer();
-
-  const deliveryDays=
-    Math.floor(Math.random()*2)+2;
-
-  let paymentText='';
-
-  if(selectedPayment==='qr')
-    paymentText='QR Code / PromptPay';
-  else if(selectedPayment==='truemoney')
-    paymentText='TrueMoney Wallet';
-  else
-    paymentText='เก็บเงินปลายทาง (COD)';
-
-  const newOrder={
-
-    id:'ORD-'+
-      Math.floor(1000+Math.random()*9000),
-
-    items:[...cart],
-
-    total:Number(total||0),
-
-    payment:paymentText,
-
-    deliveryDays,
-
-    date:new Date().toLocaleDateString('th-TH'),
-
-    transportStatus:'รอแอดมินรับออเดอร์',
-
-    driver:'',
-    vehicle:'',
-
-    customerName:c.name,
-    customerPhone:c.phone,
-    customerAddress:c.address
-
-  };
-
+  const deliveryDays=Math.floor(Math.random()*2)+2;
+  const total=Number(subtotal||0)+Number(shippingFee||0);
+  let paymentText=selectedPayment==='qr'?'QR Code / PromptPay':selectedPayment==='truemoney'?'TrueMoney Wallet':'เก็บเงินปลายทาง (COD)';
+  const newOrder={id:'ORD-'+Math.floor(1000+Math.random()*9000),items:[...cart],subtotal:Number(subtotal||0),weight:Number(weight||0),shippingFee:Number(shippingFee||0),total:Number(total||0),payment:paymentText,deliveryDays,date:new Date().toLocaleDateString('th-TH'),transportStatus:'รอแอดมินรับออเดอร์',driver:'',vehicle:'',customerName:c.name,customerPhone:c.phone,customerAddress:c.address};
   orders.unshift(newOrder);
-
   createTransportFromNovelOrder(newOrder);
-
-  cart=[];
-
-  updateCartUI();
-  renderOrders();
-  updateAccountInfo();
-
-  alert(
-    `✅ สั่งซื้อสำเร็จ!\n\n`+
-    `🧾 ${newOrder.id}\n`+
-    `👤 ${c.name}\n`+
-    `📞 ${c.phone}\n`+
-    `📍 ${c.address}\n`+
-    `💰 ยอดรวม ฿${Number(total).toLocaleString()}\n`+
-    `🚚 สถานะ: รอแอดมินรับออเดอร์`
-  );
-
-  const orderButton=
-    document.querySelectorAll('.nav-item')[2];
-
-  switchTab('orders',orderButton);
-
+  cart=[];updateCartUI();renderOrders();updateAccountInfo();
+  alert(`✅ สั่งซื้อสำเร็จ!\n\n🧾 ${newOrder.id}\n👤 ${c.name}\n📞 ${c.phone}\n📍 ${c.address}\n⚖️ น้ำหนัก ${weight.toFixed(2)} กก.\n🚚 ค่าส่ง ฿${shippingFee.toLocaleString()}\n📚 ค่าหนังสือ ฿${Number(subtotal).toLocaleString()}\n💰 ราคาสุทธิ ฿${Number(total).toLocaleString()}\n🚚 สถานะ: รอแอดมินรับออเดอร์`);
+  switchTab('orders',document.querySelectorAll('.nav-item')[2]);
 }
-
-
 /* =========================================================
    ORDERS PAGE
 ========================================================= */
-
 function renderOrders(){
-
   const container=document.getElementById(
     'orders-container'
   );
-
   if(!container)return;
-
   syncAllNovelOrders();
-
   if(orders.length===0){
-
     container.innerHTML=`
       <div class="no-data">
-
         <div class="no-data-icon">📦</div>
-
         <h3 style="color:#555;">
           ยังไม่มีคำสั่งซื้อ
         </h3>
-
         <p>
           เมื่อสั่งซื้อนิยาย
           รายการจะแสดงที่หน้านี้
         </p>
-
         <button
           class="buy-btn"
           style="width:80%;font-size:13px"
           onclick="goHome()">
           🏠 ไปเลือกนิยาย
         </button>
-
       </div>
     `;
-
     return;
   }
-
   container.innerHTML=`
-
     <h2 style="color:#1976d2;margin-bottom:15px;">
       📦 คำสั่งซื้อของคุณ
     </h2>
-
     ${orders.map(order=>{
-
       const t=getTransportOrder(order.id);
-
       const status=
         t?.status ||
         order.transportStatus ||
         'รอแอดมินรับออเดอร์';
-
       return`
-
         <div class="order-card">
-
           <div class="order-header">
-
             <span class="order-id">
               ${esc(order.id)}
             </span>
-
             <span class="order-status">
               ${orderStatusIcon(status)}
               ${esc(status)}
             </span>
-
           </div>
-
           <div style="
             font-size:12px;
             font-weight:bold;">
             📚 รายการสินค้า
           </div>
-
           ${order.items.map(item=>`
-
             <div class="order-product">
-
               ${item.icon||'📖'}
               ${esc(item.title)}
-
               <span style="
                 float:right;
                 color:#1976d2;
                 font-weight:bold;">
                 ฿${Number(item.price||0).toLocaleString()}
               </span>
-
             </div>
-
           `).join('')}
-
           <p style="font-size:12px;margin:12px 0 4px;">
             💳 ชำระผ่าน:
             <strong>${esc(order.payment)}</strong>
           </p>
-
           <p style="
             font-size:12px;
             color:#1976d2;
@@ -3980,7 +2753,6 @@ function renderOrders(){
               :'รอแอดมินมอบหมายคนขับ'
             }
           </p>
-
           ${
             t?.failureReason
             ?`
@@ -4003,12 +2775,8 @@ function renderOrders(){
             `
             :''
           }
-
-          <div class="order-total">
-            ยอดรวม:
-            ฿${Number(order.total).toLocaleString()}
-          </div>
-
+          <div style="font-size:10px;color:#1565c0;background:#eff8ff;border-radius:8px;padding:8px;margin-top:7px;">⚖️ น้ำหนัก ${Number(order.weight||0).toFixed(2)} กก. · 🚚 ค่าส่ง ฿${Number(order.shippingFee||0).toLocaleString()} · 📚 ค่าหนังสือ ฿${Number(order.subtotal||order.total||0).toLocaleString()}</div>
+          <div class="order-total">ยอดรวม: ฿${Number(order.total).toLocaleString()}</div>
           <div style="
             font-size:10px;
             color:#999;
@@ -4016,484 +2784,284 @@ function renderOrders(){
             วันที่สั่งซื้อ:
             ${esc(order.date)}
           </div>
-
         </div>
-
       `;
-
     }).join('')}
-
   `;
-
 }
-
-
 /* =========================================================
    TAB
 ========================================================= */
-
 function switchTab(tabName,element){
-
   document
     .querySelectorAll('.tab-content')
     .forEach(tab=>tab.classList.remove('active'));
-
   document
     .querySelectorAll('.nav-item')
     .forEach(nav=>nav.classList.remove('active'));
-
   const page=document.getElementById(
     `tab-${tabName}`
   );
-
   if(page)page.classList.add('active');
-
   if(element)element.classList.add('active');
-
   if(tabName==='cart')
     updateCartUI();
-
   if(tabName==='orders')
     renderOrders();
-
   if(tabName==='account')
     updateAccountInfo();
-
 }
-
 function goHome(){
-
   const homeButton=
     document.querySelectorAll('.nav-item')[0];
-
   switchTab('home',homeButton);
-
 }
-
-
 /* =========================================================
    TRANSPORT STATUS
 ========================================================= */
-
 function orderStatusClass(s){
-
   if(s==='รอแอดมินรับออเดอร์')
     return 'ts-wait';
-
   if(
     s==='แอดมินรับออเดอร์แล้ว' ||
     s==='รอจัดส่ง' ||
     s==='กำลังจัดส่ง'
   )
     return 'ts-pick';
-
   if(s==='ส่งสำเร็จ')
     return 'ts-done';
-
   return 'ts-fail';
-
 }
-
 function orderStatusIcon(s){
-
   if(s==='ส่งสำเร็จ')return'✅';
   if(s==='กำลังจัดส่ง')return'🚚';
   if(s==='รอจัดส่ง')return'📦';
   if(s==='แอดมินรับออเดอร์แล้ว')return'🛠️';
   if(s==='ส่งไม่สำเร็จ')return'❌';
-
   return'⏳';
-
 }
-
 function getTransportOrder(id){
-
   return transportData.orders.find(
     x=>x.id===id
   );
-
 }
-
 function syncNovelOrderStatus(order){
-
   const linked=getTransportOrder(order.id);
-
   if(linked){
-
     order.transportStatus=linked.status;
     order.driver=linked.driver||'';
     order.vehicle=linked.vehicle||'';
-
   }
-
 }
-
 function syncAllNovelOrders(){
-
   if(Array.isArray(orders))
     orders.forEach(syncNovelOrderStatus);
-
 }
-
-
 /* =========================================================
    TRANSPORT NOTIFICATION
 ========================================================= */
-
 function addTransportNotification(
   icon,
   text
 ){
-
   transportData.notifications.unshift({
-
     icon,
     text,
     time:new Date().toLocaleString('th-TH')
-
   });
-
   transportData.notifications=
     transportData.notifications.slice(0,80);
-
   saveTransportData();
-
 }
-
-
 /* =========================================================
    CREATE TRANSPORT ORDER
 ========================================================= */
-
 function createTransportFromNovelOrder(order){
-
   if(getTransportOrder(order.id))
     return;
-
   const c=getCustomer();
-
   transportData.orders.unshift({
-
     id:order.id,
-
     customerId:c.id,
-
     customerUsername:'customer',
-
     customerName:c.name,
-
     phone:c.phone,
-
     address:c.address,
-
-    items:(order.items||[]).map(x=>({
-
-      id:x.id,
-      title:x.title,
-      price:Number(x.price||0),
-      qty:1,
-      icon:x.icon
-
-    })),
-
+    items:(order.items||[]).map(x=>({id:x.id,title:x.title,price:Number(x.price||0),qty:1,icon:x.icon})),
+    subtotal:Number(order.subtotal||order.total||0),
+    weight:Number(order.weight||0),
+    shippingFee:Number(order.shippingFee||0),
     total:Number(order.total||0),
-
     payment:order.payment||'-',
-
     date:order.date||transportToday(),
-
     status:'รอแอดมินรับออเดอร์',
-
     driver:'',
     driverUsername:'',
     driverId:'',
     vehicle:'',
-
     acceptedAt:'',
     assignedAt:'',
     pickedAt:'',
     deliveredAt:'',
     failedAt:'',
-
     failureReason:'',
     failureOther:'',
-
     source:'novel'
-
   });
-
   addTransportNotification(
     '🆕',
     `มีออเดอร์ใหม่ ${order.id} ยอด ฿${money(order.total)} รอแอดมินรับ`
   );
-
   saveTransportData();
-
 }
-
-
 /* =========================================================
    OPEN TRANSPORT
 ========================================================= */
-
 function openTransport(){
-
-  document
-    .getElementById('transport-modal')
-    .classList.add('active');
-
-  if(transportCurrentUser){
-
-    document
-      .getElementById('transport-login')
-      .style.display='none';
-
-    document
-      .getElementById('transport-app')
-      .classList.add('active');
-
-    renderTransportAll();
-
-  }else{
-
-    document
-      .getElementById('transport-login')
-      .style.display='block';
-
-    document
-      .getElementById('transport-app')
-      .classList.remove('active');
-
-  }
-
+  if(!transportCurrentUser||(transportCurrentUser.role!=='admin'&&transportCurrentUser.role!=='driver')){alert('🔒 ระบบจัดการขนส่งสำหรับแอดมินและพนักงานขับรถเท่านั้น');return;}
+  document.getElementById('transport-modal').classList.add('active');
+  document.getElementById('transport-login').style.display='none';
+  document.getElementById('transport-app').classList.add('active');
+  renderTransportAll();
 }
-
 function closeTransport(){
-
   document
     .getElementById('transport-modal')
     .classList.remove('active');
-
 }
-
 function selectTransportRole(role,el){
-
   transportRole=role;
-
   document
     .querySelectorAll('.transport-role')
     .forEach(x=>x.classList.remove('active'));
-
   if(el)el.classList.add('active');
-
   const m=document.getElementById(
     'transport-login-msg'
   );
-
   if(m)m.innerText='';
-
 }
-
 function transportLogin(){
-
   const u=document
     .getElementById('transport-username')
     .value
     .trim();
-
   const p=document
     .getElementById('transport-password')
     .value;
-
   const acc=transportUsers[transportRole];
-
   if(
     u===acc.username &&
     p===acc.password
   ){
-
     transportCurrentUser={
       role:transportRole,
       username:u,
       label:acc.label
     };
-
     document
       .getElementById('transport-login')
       .style.display='none';
-
     document
       .getElementById('transport-app')
       .classList.add('active');
-
     renderTransportAll();
-
   }else{
-
     document.getElementById(
       'transport-login-msg'
     ).innerText=
       '❌ ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง';
-
   }
-
 }
-
-function transportLogout(){
-
-  transportCurrentUser=null;
-
-  closeTransport();
-
-  document
-    .getElementById('system-login')
-    .classList.remove('hidden');
-
-  document.getElementById(
-    'system-username'
-  ).value='';
-
-  document.getElementById(
-    'system-password'
-  ).value='';
-
-}
-
-
+function transportLogout(){systemLogout();}
 /* =========================================================
    TRANSPORT MENU
    ไม่มีเมนูคำนวณแล้ว
 ========================================================= */
-
 function roleMenu(){
-
   if(canAdmin()){
-
     return`
-
       <button onclick="showTransportSection('dashboard')">
         📊 ภาพรวม
       </button>
-
       <button onclick="showTransportSection('orders')">
         📦 ออเดอร์
       </button>
-
       <button onclick="showTransportSection('data')">
         👥 ลูกค้า/คนขับ
       </button>
-
       <button onclick="showTransportSection('reports')">
         💰 รายได้
       </button>
-
       <button onclick="showTransportSection('notify')">
         🔔 แจ้งเตือน
       </button>
-
     `;
-
   }
-
   if(canDriver()){
-
     return`
-
       <button onclick="showTransportSection('dashboard')">
         🚚 งานของฉัน
       </button>
-
       <button onclick="showTransportSection('orders')">
         📦 งานจัดส่ง
       </button>
-
       <button onclick="showTransportSection('data')">
         👤 ข้อมูลของฉัน
       </button>
-
       <button onclick="showTransportSection('notify')">
         🔔 แจ้งเตือน
       </button>
-
     `;
-
   }
-
   return`
-
     <button onclick="showTransportSection('dashboard')">
       👤 บัญชีของฉัน
     </button>
-
     <button onclick="showTransportSection('orders')">
       📦 คำสั่งซื้อ
     </button>
-
     <button onclick="showTransportSection('data')">
       👤 ข้อมูลลูกค้า
     </button>
-
     <button onclick="showTransportSection('notify')">
       🔔 แจ้งเตือน
     </button>
-
   `;
-
 }
-
-
 /* =========================================================
    SHOW SECTION
 ========================================================= */
-
 function showTransportSection(name){
-
   document
     .querySelectorAll('.transport-section')
     .forEach(x=>x.classList.remove('active'));
-
   const target=document.getElementById(
     'transport-'+name
   );
-
   if(target)
     target.classList.add('active');
-
   renderTransportSection(name);
-
 }
-
-
 /* =========================================================
    RENDER ALL
 ========================================================= */
-
 function renderTransportAll(){
-
   if(!transportCurrentUser)
     return;
-
   syncAllNovelOrders();
-
   const user=document.getElementById(
     'transport-current-user'
   );
-
+  const title=document.getElementById('transport-title');
   if(user){
-
-    user.innerHTML=
-      `👤 ${esc(transportCurrentUser.label)}
-       | ${esc(transportCurrentUser.username)}`;
-
+    user.innerHTML=`👤 ${esc(transportCurrentUser.label)} · ID: ${esc(transportCurrentUser.id||'-')}`;
   }
-
+  if(title)title.innerText=transportCurrentUser.role==='admin'?'🛠️ ระบบจัดการขนส่ง — แอดมิน':'🚚 ระบบงานขนส่ง — พนักงานขับรถ';
   const menu=document.getElementById(
     'transport-menu'
   );
-
   if(menu)
     menu.innerHTML=roleMenu();
-
   [
     'dashboard',
     'orders',
@@ -4501,27 +3069,18 @@ function renderTransportAll(){
     'notify',
     'reports'
   ].forEach(renderTransportSection);
-
   showTransportSection('dashboard');
-
 }
-
-
 /* =========================================================
    RENDER TRANSPORT SECTION
 ========================================================= */
-
 function renderTransportSection(name){
-
   const el=document.getElementById(
     'transport-'+name
   );
-
   if(!el || !transportCurrentUser)
     return;
-
   const all=transportData.orders;
-
   const myOrders=
     canCustomer()
     ?all.filter(
@@ -4532,27 +3091,19 @@ function renderTransportSection(name){
       x=>x.driverUsername==='driver'
     )
     :all;
-
-
   /* ================= ADMIN DASHBOARD ================= */
-
   if(name==='dashboard'){
-
     if(canAdmin()){
-
       const revenue=all.reduce(
         (a,x)=>a+Number(x.total||0),
         0
       );
-
       const done=all.filter(
         x=>x.status==='ส่งสำเร็จ'
       ).length;
-
       const pending=all.filter(
         x=>x.status==='รอแอดมินรับออเดอร์'
       ).length;
-
       const shipping=all.filter(
         x=>[
           'แอดมินรับออเดอร์แล้ว',
@@ -4560,47 +3111,35 @@ function renderTransportSection(name){
           'กำลังจัดส่ง'
         ].includes(x.status)
       ).length;
-
       el.innerHTML=`
-
         <div class="transport-cards">
-
           <div class="transport-stat">
             🧾 ออเดอร์ทั้งหมด
             <b>${all.length}</b>
           </div>
-
           <div class="transport-stat">
             ⏳ รอรับออเดอร์
             <b>${pending}</b>
           </div>
-
           <div class="transport-stat">
             🚚 กำลังดำเนินการ
             <b>${shipping}</b>
           </div>
-
           <div class="transport-stat">
             ✅ ส่งสำเร็จ
             <b>${done}</b>
           </div>
-
           <div class="transport-stat">
             💰 รายได้รวม
             <b>฿${money(revenue)}</b>
           </div>
-
           <div class="transport-stat">
             👥 ลูกค้า
             <b>${transportData.customers.length}</b>
           </div>
-
         </div>
-
         <div class="transport-chart">
-
           <b>📊 สถานะออเดอร์</b>
-
           ${[
             'รอแอดมินรับออเดอร์',
             'แอดมินรับออเดอร์แล้ว',
@@ -4609,25 +3148,20 @@ function renderTransportSection(name){
             'ส่งสำเร็จ',
             'ส่งไม่สำเร็จ'
           ].map(st=>{
-
             const c=all.filter(
               x=>x.status===st
             ).length;
-
             return`
-
               <div style="
                 margin-top:7px;
                 font-size:9px;">
                 ${st}: ${c} ออเดอร์
               </div>
-
               <div style="
                 height:8px;
                 background:#eee;
                 border-radius:5px;
                 overflow:hidden;">
-
                 <div style="
                   width:${all.length
                     ?c/all.length*100
@@ -4635,91 +3169,58 @@ function renderTransportSection(name){
                   height:100%;
                   background:#64b5f6;">
                 </div>
-
               </div>
-
             `;
-
           }).join('')}
-
         </div>
-
         <div class="transport-alert">
           💰 รายได้และกราฟรายได้แสดงเฉพาะบัญชีแอดมิน
         </div>
-
       `;
-
     }
-
     /* ================= DRIVER DASHBOARD ================= */
-
     else if(canDriver()){
-
       const pending=myOrders.filter(
         x=>x.status==='รอจัดส่ง'
       ).length;
-
       const shipping=myOrders.filter(
         x=>x.status==='กำลังจัดส่ง'
       ).length;
-
       const done=myOrders.filter(
         x=>x.status==='ส่งสำเร็จ'
       ).length;
-
       el.innerHTML=`
-
         <div class="transport-cards">
-
           <div class="transport-stat">
             📦 งานที่ได้รับ
             <b>${myOrders.length}</b>
           </div>
-
           <div class="transport-stat">
             ⏳ รอรับงาน
             <b>${pending}</b>
           </div>
-
           <div class="transport-stat">
             🚚 กำลังส่ง
             <b>${shipping}</b>
           </div>
-
           <div class="transport-stat">
             ✅ ส่งสำเร็จ
             <b>${done}</b>
           </div>
-
         </div>
-
-        <div class="transport-alert">
-          🚫 บัญชีคนขับไม่มีข้อมูลรายได้
-          ไม่มีกราฟยอดขาย และไม่มีส่วนคำนวณ
-        </div>
-
       `;
-
     }
-
     /* ================= CUSTOMER DASHBOARD ================= */
-
     else{
-
       const done=myOrders.filter(
         x=>x.status==='ส่งสำเร็จ'
       ).length;
-
       el.innerHTML=`
-
         <div class="transport-cards">
-
           <div class="transport-stat">
             📦 คำสั่งซื้อ
             <b>${myOrders.length}</b>
           </div>
-
           <div class="transport-stat">
             🚚 กำลังจัดส่ง
             <b>
@@ -4728,250 +3229,162 @@ function renderTransportSection(name){
               ).length}
             </b>
           </div>
-
           <div class="transport-stat">
             ✅ ส่งสำเร็จ
             <b>${done}</b>
           </div>
-
           <div class="transport-stat">
             📍 ข้อมูลจัดส่ง
             <b>
               ${customerProfileComplete()?'พร้อม':'ไม่ครบ'}
             </b>
           </div>
-
         </div>
-
         <div class="transport-form">
-
           <h3>👤 ข้อมูลลูกค้า</h3>
-
           <p>
             ชื่อ:
             <b>${esc(getCustomer().name||'-')}</b>
           </p>
-
           <p>
             โทร:
             ${esc(getCustomer().phone||'-')}
           </p>
-
           <p>
             ที่อยู่:
             ${esc(getCustomer().address||'-')}
           </p>
-
         </div>
-
       `;
-
     }
-
   }
-
-
   /* ================= ORDERS ================= */
-
   if(name==='orders'){
-
     if(canAdmin()){
-
       el.innerHTML=`
-
         <div class="transport-form">
-
           <h3>
             🛠️ จัดการออเดอร์ทั้งหมด
           </h3>
-
           ${renderAdminOrders(all)}
-
         </div>
-
       `;
-
     }
-
     else if(canDriver()){
-
       el.innerHTML=`
-
         <div class="transport-form">
-
           <h3>
             🚚 งานที่แอดมินมอบหมายให้ฉัน
           </h3>
-
           ${renderDriverOrders(myOrders)}
-
         </div>
-
       `;
-
     }
-
     else{
-
       el.innerHTML=`
-
         <div class="transport-form">
-
           <h3>
             📦 คำสั่งซื้อของฉัน
           </h3>
-
           ${renderCustomerOrders(myOrders)}
-
         </div>
-
       `;
-
     }
-
   }
-
-
   /* ================= DATA ================= */
-
   if(name==='data'){
-
     if(canAdmin()){
-
       el.innerHTML=`
-
         <div class="transport-form">
-
           <h3>
             👥 จัดการข้อมูลผู้เกี่ยวข้อง
           </h3>
-
           <p class="transport-note">
             ข้อมูลลูกค้าและคนขับที่เชื่อมกับออเดอร์
           </p>
-
           ${renderCustomerTable()}
           ${renderDriverTable()}
           ${renderVehicleTable()}
-
         </div>
-
       `;
-
     }
-
     else if(canDriver()){
-
       const d=transportData.drivers.find(
         x=>x.username==='driver'
       );
-
       el.innerHTML=`
-
         <div class="transport-form">
-
           <h3>
             👤 ข้อมูลผู้ขับรถ
           </h3>
-
           <p>
             ชื่อ:
             <b>${esc(d?.name||'คนขับ A')}</b>
           </p>
-
           <p>
             เบอร์โทร:
             ${esc(d?.phone||'-')}
           </p>
-
           <p>
             รถ:
             ${esc(d?.vehicle||'-')}
           </p>
-
         </div>
-
       `;
-
     }
-
     else{
-
       const c=getCustomer();
-
       el.innerHTML=`
-
         <div class="transport-form">
-
           <h3>
             👤 ข้อมูลลูกค้า
           </h3>
-
           <p>
             ชื่อ:
             <b>${esc(c.name||'-')}</b>
           </p>
-
           <p>
             เบอร์โทร:
             ${esc(c.phone||'-')}
           </p>
-
           <p>
             ที่อยู่:
             ${esc(c.address||'-')}
           </p>
-
           <button
             class="transport-btn success"
             onclick="closeTransport();switchTab('account',document.querySelectorAll('.nav-item')[3])">
             ✏️ แก้ไขข้อมูล
           </button>
-
         </div>
-
       `;
-
     }
-
   }
-
-
   /* ================= NOTIFY ================= */
-
   if(name==='notify'){
-
     el.innerHTML=`
-
       <div class="transport-form">
-
         <h3>
           🔔 แจ้งเตือน
         </h3>
-
         ${
           transportData.notifications.length
           ?
           transportData.notifications
             .slice(0,30)
             .map(n=>`
-
               <div style="
                 padding:9px;
                 border-bottom:1px solid #eee;
                 font-size:11px;">
-
                 ${n.icon}
                 ${esc(n.text)}
-
                 <div style="
                   font-size:9px;
                   color:#999;">
                   ${esc(n.time)}
                 </div>
-
               </div>
-
             `).join('')
           :
           `
@@ -4980,166 +3393,115 @@ function renderTransportSection(name){
           </div>
           `
         }
-
       </div>
-
     `;
-
   }
-
-
   /* ================= REPORTS ADMIN ONLY ================= */
-
   if(name==='reports'){
-
     if(!canAdmin()){
-
       el.innerHTML=`
         <div class="transport-alert">
           🔒 รายงานรายได้เป็นข้อมูลของแอดมินเท่านั้น
         </div>
       `;
-
       return;
     }
-
     const revenue=all.reduce(
       (a,x)=>a+Number(x.total||0),
       0
     );
-
     const delivered=all
       .filter(x=>x.status==='ส่งสำเร็จ')
       .reduce(
         (a,x)=>a+Number(x.total||0),
         0
       );
-
     const failed=all.filter(
       x=>x.status==='ส่งไม่สำเร็จ'
     ).length;
-
     el.innerHTML=`
-
       <div class="transport-cards">
-
         <div class="transport-stat">
           💰 รายได้รวม
           <b>฿${money(revenue)}</b>
         </div>
-
         <div class="transport-stat">
           ✅ ยอดส่งสำเร็จ
           <b>฿${money(delivered)}</b>
         </div>
-
         <div class="transport-stat">
           📦 จำนวนออเดอร์
           <b>${all.length}</b>
         </div>
-
         <div class="transport-stat">
           ❌ ส่งไม่สำเร็จ
           <b>${failed}</b>
         </div>
-
       </div>
-
       <div class="transport-chart">
-
         <b>📈 กราฟรายได้ตามออเดอร์</b>
-
         <div class="transport-bars">
-
           ${
             all.slice(0,12).reverse().map(o=>{
-
               const max=Math.max(
                 ...all.map(
                   x=>Number(x.total||0)
                 ),
                 1
               );
-
               const h=Math.max(
                 8,
                 Number(o.total||0)/max*100
               );
-
               return`
-
                 <div
                   class="transport-bar"
                   style="height:${h}%">
-
                   <em>
                     ฿${money(o.total)}
                   </em>
-
                   <span>
                     ${esc(o.id.slice(-4))}
                   </span>
-
                 </div>
-
               `;
-
             }).join('')
           }
-
         </div>
-
-        <div class="transport-note">
-          กราฟนี้แสดงเฉพาะแอดมิน
-        </div>
-
       </div>
-
       <div class="transport-alert">
         💡 ตัวอย่าง: หากลูกค้าซื้อนิยายราคา
         ฿390 ระบบจะบันทึกยอดออเดอร์ของแอดมินเป็น
         ฿390
       </div>
-
     `;
-
   }
-
 }
-
-
 /* =========================================================
    ADMIN ORDERS
 ========================================================= */
-
 function renderAdminOrders(list){
-
   if(!list.length)
     return`
       <div class="transport-note">
         ยังไม่มีออเดอร์จากลูกค้า
       </div>
     `;
-
   return`
-
     <div style="overflow:auto">
-
       <table class="transport-table">
-
         <tr>
           <th>ออเดอร์</th>
           <th>ลูกค้า</th>
+          <th>รหัสลูกค้า</th>
+          <th>คนขับ</th>
+          <th>รหัสคนขับ</th>
           <th>ยอด</th>
           <th>สถานะ</th>
-          <th>คนขับ</th>
           <th>จัดการ</th>
         </tr>
-
         ${list.map(o=>`
-
           <tr>
-
             <td>
               <b>${esc(o.id)}</b>
               <br>
@@ -5147,15 +3509,14 @@ function renderAdminOrders(list){
                 ${esc(o.date)}
               </span>
             </td>
-
             <td>
-              ${esc(o.customerName)}
-              <br>
-              📞 ${esc(o.phone)}
-              <br>
-              📍 ${esc(o.address)}
+              ${esc(o.customerName||'ลูกค้า')}
+              <br>📞 ${esc(o.phone||'-')}
+              <br>📍 ${esc(o.address||'-')}
             </td>
-
+            <td><span class="transport-id-badge">${esc(o.customerId||'CUS001')}</span></td>
+            <td>${esc(o.driver||'ยังไม่มอบหมาย')}</td>
+            <td><span class="transport-id-badge">${esc(o.driverId||'-')}</span></td>
             <td>
               <b>฿${money(o.total)}</b>
               <br>
@@ -5163,19 +3524,14 @@ function renderAdminOrders(list){
                 ${esc(o.payment)}
               </span>
             </td>
-
             <td>
-
               <span class="
                 transport-status
                 ${orderStatusClass(o.status)}
               ">
-
                 ${orderStatusIcon(o.status)}
                 ${esc(o.status)}
-
               </span>
-
               ${
                 o.failureReason
                 ?`
@@ -5189,15 +3545,8 @@ function renderAdminOrders(list){
                 `
                 :''
               }
-
             </td>
-
             <td>
-              ${esc(o.driver||'ยังไม่มอบหมาย')}
-            </td>
-
-            <td>
-
               ${
                 o.status==='รอแอดมินรับออเดอร์'
                 ?`
@@ -5209,7 +3558,6 @@ function renderAdminOrders(list){
                 `
                 :''
               }
-
               ${
                 [
                   'แอดมินรับออเดอร์แล้ว',
@@ -5229,62 +3577,39 @@ function renderAdminOrders(list){
                 `
                 :''
               }
-
             </td>
-
           </tr>
-
         `).join('')}
-
       </table>
-
     </div>
-
   `;
-
 }
-
-
 /* =========================================================
    DRIVER ORDERS
 ========================================================= */
-
 function renderDriverOrders(list){
-
   if(!list.length){
-
     return`
       <div class="transport-note">
         ยังไม่มีงานที่แอดมินมอบหมาย
       </div>
     `;
-
   }
-
   return`
-
     <div style="overflow:auto">
-
       <table class="transport-table">
-
         <tr>
-
           <th>ออเดอร์</th>
           <th>ลูกค้า/ที่อยู่</th>
           <th>ยอด</th>
           <th>สถานะ</th>
           <th>การทำงาน</th>
-
         </tr>
-
         ${list.map(o=>`
-
           <tr>
-
             <td>
               <b>${esc(o.id)}</b>
             </td>
-
             <td>
               ${esc(o.customerName)}
               <br>
@@ -5292,23 +3617,17 @@ function renderDriverOrders(list){
               <br>
               📍 ${esc(o.address)}
             </td>
-
             <td>
               ฿${money(o.total)}
             </td>
-
             <td>
-
               <span class="
                 transport-status
                 ${orderStatusClass(o.status)}
               ">
-
                 ${orderStatusIcon(o.status)}
                 ${esc(o.status)}
-
               </span>
-
               ${
                 o.failureReason
                 ?`
@@ -5321,11 +3640,8 @@ function renderDriverOrders(list){
                 `
                 :''
               }
-
             </td>
-
             <td>
-
               ${
                 o.status==='รอจัดส่ง'
                 ?`
@@ -5337,115 +3653,77 @@ function renderDriverOrders(list){
                 `
                 :''
               }
-
               ${
                 o.status==='กำลังจัดส่ง'
                 ?`
-
                 <button
                   class="transport-btn success"
                   onclick="driverDelivered('${o.id}')">
                   ส่งสำเร็จ
                 </button>
-
                 <button
                   class="transport-btn danger"
                   onclick="driverFailed('${o.id}')">
                   ส่งไม่สำเร็จ
                 </button>
-
                 `
                 :''
               }
-
             </td>
-
           </tr>
-
         `).join('')}
-
       </table>
-
     </div>
-
   `;
-
 }
-
-
 /* =========================================================
    CUSTOMER ORDERS
 ========================================================= */
-
 function renderCustomerOrders(list){
-
   if(!list.length){
-
     return`
       <div class="transport-note">
         ยังไม่มีคำสั่งซื้อ
         กดสั่งซื้อนิยายจากหน้าร้านได้เลย
       </div>
     `;
-
   }
-
   return list.map(o=>`
-
     <div style="
       border:1px solid #e5e7eb;
       border-radius:12px;
       padding:10px;
       margin:7px 0;">
-
       <b>${esc(o.id)}</b>
-
       <span class="
         transport-status
         ${orderStatusClass(o.status)}
       ">
-
         ${orderStatusIcon(o.status)}
         ${esc(o.status)}
-
       </span>
-
       <div style="
         font-size:11px;
         margin-top:6px;">
-
         📚
         ${(o.items||[])
           .map(i=>esc(i.title))
           .join(', ')}
-
       </div>
-
-      <div style="
-        font-size:12px;
-        margin-top:5px;">
-
-        💰 <b>฿${money(o.total)}</b>
-        · ${esc(o.payment)}
-
-      </div>
-
+      <div style="font-size:12px;margin-top:5px;">💰 <b>฿${money(o.total)}</b> · ${esc(o.payment)}</div><div class="order-shipping-detail">⚖️ น้ำหนัก ${Number(o.weight||0).toFixed(2)} กก. · 🚚 ค่าส่ง ฿${money(o.shippingFee||0)} · 📚 ค่าหนังสือ ฿${money(o.subtotal||0)}</div>
       ${
         o.driver
         ?`
         <div style="
           font-size:11px;
           margin-top:5px;">
-
           🚚 คนขับ:
           <b>${esc(o.driver)}</b>
-
           ${
             o.vehicle
             ?` · รถ ${esc(o.vehicle)}`
             :''
           }
-
         </div>
         `
         :`
@@ -5454,7 +3732,6 @@ function renderCustomerOrders(list){
         </div>
         `
       }
-
       ${
         o.failureReason
         ?`
@@ -5465,14 +3742,10 @@ function renderCustomerOrders(list){
           padding:8px;
           border-radius:8px;
           font-size:10px;">
-
           ❌ จัดส่งไม่สำเร็จ
-
           <br>
-
           เหตุผล:
           <b>${esc(o.failureReason)}</b>
-
           ${
             o.failureOther
             ?`
@@ -5482,541 +3755,336 @@ function renderCustomerOrders(list){
             `
             :''
           }
-
         </div>
         `
         :''
       }
-
     </div>
-
   `).join('');
-
 }
-
-
 /* =========================================================
    TABLES
 ========================================================= */
-
 function renderCustomerTable(){
-
   return`
-
     <h4>
       👥 ลูกค้า
       (${transportData.customers.length})
     </h4>
-
     <table class="transport-table">
-
       <tr>
         <th>ID</th>
         <th>ชื่อ</th>
         <th>โทร</th>
         <th>ที่อยู่</th>
       </tr>
-
       ${transportData.customers.map(x=>`
-
         <tr>
-
           <td>${esc(x.id)}</td>
-
           <td>${esc(x.name||'-')}</td>
-
           <td>${esc(x.phone||'-')}</td>
-
           <td>${esc(x.address||'-')}</td>
-
         </tr>
-
       `).join('')}
-
     </table>
-
   `;
-
 }
-
 function renderDriverTable(){
-
   return`
-
     <h4 style="margin-top:12px">
       🚚 คนขับ
       (${transportData.drivers.length})
     </h4>
-
     <table class="transport-table">
-
       <tr>
         <th>ID</th>
         <th>ชื่อ</th>
         <th>โทร</th>
         <th>รถ</th>
       </tr>
-
       ${transportData.drivers.map(x=>`
-
         <tr>
-
           <td>${esc(x.id)}</td>
-
           <td>${esc(x.name)}</td>
-
           <td>${esc(x.phone)}</td>
-
           <td>${esc(x.vehicle)}</td>
-
         </tr>
-
       `).join('')}
-
     </table>
-
   `;
-
 }
-
 function renderVehicleTable(){
-
   return`
-
     <h4 style="margin-top:12px">
       🚗 รถ
     </h4>
-
     <table class="transport-table">
-
       <tr>
         <th>ID</th>
         <th>ทะเบียน</th>
         <th>ประเภท</th>
         <th>คนขับ</th>
       </tr>
-
       ${transportData.vehicles.map(x=>`
-
         <tr>
-
           <td>${esc(x.id)}</td>
-
           <td>${esc(x.plate)}</td>
-
           <td>${esc(x.type)}</td>
-
           <td>${esc(x.driver)}</td>
-
         </tr>
-
       `).join('')}
-
     </table>
-
   `;
-
 }
-
-
 /* =========================================================
    LINK NOVEL ORDER
 ========================================================= */
-
 function updateLinkedNovelOrder(id){
-
   const o=
     Array.isArray(orders)
     ?orders.find(x=>x.id===id)
     :null;
-
   const t=getTransportOrder(id);
-
   if(o && t){
-
     o.transportStatus=t.status;
     o.driver=t.driver||'';
     o.vehicle=t.vehicle||'';
-
   }
-
   saveTransportData();
-
   renderOrders();
-
 }
-
-
 /* =========================================================
    ADMIN ACCEPT
 ========================================================= */
-
 function adminAcceptOrder(id){
-
   const o=getTransportOrder(id);
-
   if(!o || !canAdmin())
     return;
-
   o.status='แอดมินรับออเดอร์แล้ว';
-
   o.acceptedAt=
     new Date().toLocaleString('th-TH');
-
   transportData.history.unshift({
-
     id:id,
     action:'แอดมินรับออเดอร์',
     time:o.acceptedAt
-
   });
-
   addTransportNotification(
     '🛠️',
     `แอดมินรับออเดอร์ ${id} แล้ว`
   );
-
   saveTransportData();
-
   updateLinkedNovelOrder(id);
-
   renderTransportAll();
-
   showTransportSection('orders');
-
 }
-
-
 /* =========================================================
    ADMIN ASSIGN DRIVER
 ========================================================= */
-
 function assignDriver(id){
-
   const o=getTransportOrder(id);
-
   if(!o || !canAdmin())
     return;
-
   const d=transportData.drivers.find(
     x=>x.username==='driver'
   );
-
   if(!d){
-
     alert('ยังไม่มีข้อมูลคนขับ');
     return;
-
   }
-
   o.driver=d.name;
   o.driverUsername=d.username;
   o.driverId=d.id;
   o.vehicle=d.vehicle;
-
   o.status='รอจัดส่ง';
-
   o.assignedAt=
     new Date().toLocaleString('th-TH');
-
   transportData.history.unshift({
-
     id:id,
     action:`มอบหมายให้ ${d.name}`,
     time:o.assignedAt
-
   });
-
   addTransportNotification(
     '🚚',
     `มอบหมายออเดอร์ ${id} ให้ ${d.name}`
   );
-
   saveTransportData();
-
   updateLinkedNovelOrder(id);
-
   renderTransportAll();
-
   showTransportSection('orders');
-
 }
-
-
 /* =========================================================
    DRIVER ACCEPT
 ========================================================= */
-
 function driverAcceptOrder(id){
-
   const o=getTransportOrder(id);
-
   if(
     !o ||
     !canDriver() ||
     o.driverUsername!=='driver'
   )
     return;
-
   o.status='กำลังจัดส่ง';
-
   o.pickedAt=
     new Date().toLocaleString('th-TH');
-
   transportData.history.unshift({
-
     id:id,
     action:'คนขับรับงานและเริ่มจัดส่ง',
     time:o.pickedAt
-
   });
-
   addTransportNotification(
     '🚚',
     `คนขับรับงาน ${id} แล้ว`
   );
-
   saveTransportData();
-
   updateLinkedNovelOrder(id);
-
   renderTransportAll();
-
   showTransportSection('orders');
-
 }
-
-
 /* =========================================================
    DRIVER DELIVERED
 ========================================================= */
-
 function driverDelivered(id){
-
   const o=getTransportOrder(id);
-
   if(
     !o ||
     !canDriver() ||
     o.driverUsername!=='driver'
   )
     return;
-
   o.status='ส่งสำเร็จ';
-
   o.deliveredAt=
     new Date().toLocaleString('th-TH');
-
   o.failureReason='';
   o.failureOther='';
-
   transportData.history.unshift({
-
     id:id,
     action:'ส่งสำเร็จ',
     time:o.deliveredAt
-
   });
-
   addTransportNotification(
     '✅',
     `ออเดอร์ ${id} ส่งสำเร็จ`
   );
-
   saveTransportData();
-
   updateLinkedNovelOrder(id);
-
   renderTransportAll();
-
   showTransportSection('orders');
-
 }
-
-
 /* =========================================================
    DRIVER FAILURE
 ========================================================= */
-
 let failureOrderId=null;
 let selectedFailureReason='';
-
 function driverFailed(id){
-
   const o=getTransportOrder(id);
-
   if(
     !o ||
     !canDriver() ||
     o.driverUsername!=='driver'
   )
     return;
-
   failureOrderId=id;
   selectedFailureReason='';
-
   document
     .querySelectorAll('.failure-option')
     .forEach(x=>x.classList.remove('selected'));
-
   document
     .getElementById('failure-other')
     .classList.remove('active');
-
   document
     .getElementById('failure-other-text')
     .value='';
-
   document
     .getElementById('failure-modal')
     .classList.add('active');
-
 }
-
 function selectFailureReason(element){
-
   document
     .querySelectorAll('.failure-option')
     .forEach(x=>x.classList.remove('selected'));
-
   element.classList.add('selected');
-
   selectedFailureReason=
     element.dataset.reason;
-
   const other=document.getElementById(
     'failure-other'
   );
-
   if(selectedFailureReason==='อื่น ๆ'){
-
     other.classList.add('active');
-
   }else{
-
     other.classList.remove('active');
-
   }
-
 }
-
 function closeFailureModal(){
-
   document
     .getElementById('failure-modal')
     .classList.remove('active');
-
   failureOrderId=null;
   selectedFailureReason='';
-
 }
-
 function confirmDriverFailure(){
-
   if(!failureOrderId){
-
     alert('ไม่พบออเดอร์');
     return;
-
   }
-
   if(!selectedFailureReason){
-
     alert(
       'กรุณาเลือกเหตุผลที่จัดส่งไม่สำเร็จ'
     );
-
     return;
-
   }
-
   let other='';
-
   if(selectedFailureReason==='อื่น ๆ'){
-
     other=document
       .getElementById('failure-other-text')
       .value
       .trim();
-
     if(!other){
-
       alert(
         'กรุณาระบุรายละเอียดเพิ่มเติม'
       );
-
       return;
-
     }
-
   }
-
   const o=getTransportOrder(
     failureOrderId
   );
-
   if(!o){
-
     alert('ไม่พบข้อมูลออเดอร์');
     return;
-
   }
-
   o.status='ส่งไม่สำเร็จ';
-
   o.failureReason=
     selectedFailureReason;
-
   o.failureOther=other;
-
   o.failedAt=
     new Date().toLocaleString('th-TH');
-
   transportData.history.unshift({
-
     id:o.id,
-
     action:
       `ส่งไม่สำเร็จ: ${selectedFailureReason}`,
-
     detail:other,
-
     time:o.failedAt
-
   });
-
   addTransportNotification(
     '❌',
     `ออเดอร์ ${o.id} ส่งไม่สำเร็จ: ${selectedFailureReason}`
   );
-
   saveTransportData();
-
   updateLinkedNovelOrder(o.id);
-
   closeFailureModal();
-
   renderTransportAll();
-
   showTransportSection('orders');
-
   alert(
     `❌ บันทึกการจัดส่งไม่สำเร็จแล้ว\n\n`+
     `ออเดอร์: ${o.id}\n`+
     `เหตุผล: ${selectedFailureReason}`+
     (other?`\nรายละเอียด: ${other}`:'')
   );
-
 }
-
-
 /* =========================================================
    START
 ========================================================= */
-
 init();
-
 </script>
-
 </body>
-</html>
+</html> 
